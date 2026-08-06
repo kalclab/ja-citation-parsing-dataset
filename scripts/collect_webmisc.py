@@ -7,8 +7,8 @@ Design (anti-fabrication): every recorded URL is obtained by
 No URL is written from model memory. Seeds that 404/403 are logged and skipped.
 
 Politeness: shared UA carrying a mailto contact, 1.5 s wait between requests,
-and we avoid the robots.txt Disallow paths observed on 2026-07-17 (documented in
-reports/qc/webmisc_targets.md). Only bibliographic metadata (title/url/org/year)
+and we avoid the robots.txt Disallow paths observed on 2026-07-17 (implemented
+in ROBOTS_DISALLOW below). Only bibliographic metadata (title/url/org/year)
 is stored; no page body or PDF content is saved.
 
 Cleaning rules (also in README):

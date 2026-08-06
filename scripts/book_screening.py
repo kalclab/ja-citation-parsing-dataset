@@ -26,7 +26,7 @@ and clinical practice texts from academic medical publishers, intro university
 textbooks. These are natural in a reference list.
 
 Each predicate returns (excluded: bool, reason: str). Reasons are logged and
-summarised in reports/qc/books.md.
+summarised in a QC report.
 """
 from __future__ import annotations
 

@@ -14,12 +14,12 @@ Operation notes
   queries grouped by field; the discipline label is taken from the query group
   (CiNii OpenSearch carries no NDC in the summary). Target ~35 per discipline.
 
-Quality / cleaning rules (see reports/qc/books.md)
+Quality / cleaning rules
 - ISBN gate: keep only records with an ISBN (drops pre-war reprints and
   ISBN-less pamphlets, biasing toward modern academic books).
 - Japanese-title gate: title must contain a Japanese character.
 - Author names: CiNii gives "姓, 名" (comma). Per the updated contract
-  (phase1_conventions L67, 仕様書 L91 のソース忠実性優先) we KEEP the source form
+  (ソース忠実性優先の規約) we KEEP the source form
   verbatim -- no reformatting in the collector -- and record in notes that the
   form differs from the "姓 名" basic form. The comma-form -> space-form
   adjustment for BibTeX name parsing happens only in the Phase 2 derived file.

@@ -86,7 +86,7 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--dataset-dir", type=Path, default=Path("dataset"))
     ap.add_argument("--rate", type=float, default=3.0, help="percent to sample (default 3)")
-    ap.add_argument("--out", type=Path, default=Path("reports/qc/final_url_check.md"))
+    ap.add_argument("--out", type=Path, default=Path("data/qc/final_url_check.md"))
     args = ap.parse_args()
 
     rows = list(csv.DictReader((args.dataset_dir / "metadata.csv").open(encoding="utf-8")))

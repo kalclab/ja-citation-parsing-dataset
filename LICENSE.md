@@ -32,7 +32,7 @@ Applies to `scripts/**` except the vendored style files listed below.
 ## Original data and documentation — CC BY 4.0
 
 Applies to `manifest.csv`, `key_map.csv`, `sample_100.txt`, `annotations/**`,
-`DATASET.md`, `docs/**`, and `reports/**`.
+and `DATASET.md`.
 
 Licensed under the Creative Commons Attribution 4.0 International licence
 (<https://creativecommons.org/licenses/by/4.0/>). Attribute to

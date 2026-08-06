@@ -6,7 +6,7 @@ No BibTeX is offered; records are built from the program index HTML, which
 lists, per paper, a paper id, title (span.title), a permanent PDF link, and an
 author line of the form `○著者1, 著者2 (所属), 著者3 (所属2)`.
 
-Output: data/interim/anlp/records.jsonl (docs/phase1_conventions.md schema).
+Output: data/interim/anlp/records.jsonl (interim record schema).
 Raw program indexes are cached under data/raw/anlp/ (bibliographic listing
 only; no paper full text is stored) together with fetch_log.json.
 

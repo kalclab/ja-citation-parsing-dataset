@@ -32,7 +32,7 @@ Design notes
 * Author format is already "姓 名" (space-separated) in J-Stage, matching the
   contract, so no author-format conversion is needed for this source.
 
-Cleaning rules (derived from QC, see reports/qc/jstage.md)
+Cleaning rules (derived from QC)
 ---------------------------------------------------------
 * Skip entries whose ja author list is empty (proceedings session headers).
 * Treat a whitespace-only ``prism:issn`` (pjsai returns spaces) as absent.

@@ -24,7 +24,6 @@ dataset locally, deterministically, from the original sources**:
 | `annotations/` | Name-boundary annotations: NDL-authority-based splits (`name_boundaries.jsonl`) and manually/web-verified splits (`manual_name_table.jsonl`) applied during rebuild |
 | `scripts/` | Collection, rebuild, validation, and reference-string generation pipeline |
 | `DATASET.md` | Schema and conventions of the rebuilt artefacts |
-| `docs/`, `reports/` | Collection conventions, compliance notes, and generation QC reports |
 
 The rebuilt files (`dataset/ja_bib_full.bib`, `dataset/ja_bib_derived.bib`,
 `dataset/metadata.csv`, `dataset/ref_strings.jsonl`) appear locally after
@@ -81,9 +80,11 @@ byte-identical to unmodified `jecon` output.
 
 ## Collection ethics
 
-Collection was API-first with 1–2 s waits and robots.txt compliance, and
-gathered bibliographic metadata only (no full texts or abstracts). See
-`docs/collection_compliance.md`.
+Collection was API-first with 1–2 s waits between requests and gathered
+bibliographic metadata only (no full texts or abstracts). robots.txt was
+checked per domain before collection; the observed Disallow paths are
+implemented in `ROBOTS_DISALLOW` in `scripts/collect_webmisc.py`, which
+also gates the rebuild.
 
 ## Licensing
 

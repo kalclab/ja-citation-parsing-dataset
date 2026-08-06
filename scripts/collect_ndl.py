@@ -15,7 +15,7 @@ grouped by discipline to steer the stratification, but the final `discipline`
 label for each record is derived from its actual NDC classification, not from
 the query bucket -- so labels stay accurate even when a publisher crosses fields.
 
-Quality gates (see reports/qc/books.md):
+Quality gates:
   - materialType must be Book (dcndl:materialType / description "type : book").
   - Title must contain a Japanese character (drop pure-English / romaji books).
   - ISBN must be present (proxy for a properly published academic book).
@@ -33,8 +33,8 @@ Cleaning rules resolved from the Phase 0-A survey observations:
     available (no structured foaf:Agent), we keep it as-is and record that in
     notes. Roles (編/著/訳/監修) are read from the dc:creator statements.
 
-Output: data/interim/ndl/records.jsonl (intermediate schema, see
-docs/phase1_conventions.md). Raw SRU XML is saved under data/raw/ndl/.
+Output: data/interim/ndl/records.jsonl (intermediate schema). Raw SRU XML is
+saved under data/raw/ndl/.
 The script is idempotent: it rewrites records.jsonl deterministically each run.
 """
 from __future__ import annotations

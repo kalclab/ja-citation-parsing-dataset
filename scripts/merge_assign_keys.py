@@ -1,6 +1,6 @@
 """Merge per-source intermediate records into the release BibTeX + metadata.
 
-Reads data/interim/<source>/records.jsonl (schema: docs/phase1_conventions.md),
+Reads data/interim/<source>/records.jsonl (schema: see the collect_*.py docstrings),
 detects cross-source duplicates, assigns final citation keys, and writes
 dataset/ja_bib_full.bib and dataset/metadata.csv.
 

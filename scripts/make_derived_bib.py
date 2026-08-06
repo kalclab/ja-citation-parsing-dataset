@@ -3,7 +3,7 @@
 
     dataset/ja_bib_full.bib  --(this script)-->  dataset/ja_bib_derived.bib
 
-The original is source-faithful (docs/phase1_conventions.md) and never modified.
+The original is source-faithful and never modified.
 The derived file mechanically fixes what would otherwise corrupt the generated
 reference strings:
 
@@ -13,7 +13,7 @@ reference strings:
    before step 2 so already-split names pass through untouched.
 2. Japanese author names in "姓 名" (single space) -> "姓, 名". BibTeX otherwise
    parses the space form as given/family and (u)pBibTeX / citeproc reverse or
-   drop the surname (see reports/style_survey.md). Romaji, institutional, and
+   drop the surname. Romaji, institutional, and
    already-comma names are left untouched; genuinely ambiguous names (Japanese
    with >1 internal space) are left as-is and logged to stderr.
 3. @misc URL duplication: keep the URL in `url` only and reduce `howpublished`

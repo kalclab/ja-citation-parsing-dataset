@@ -79,7 +79,7 @@ uv run python scripts/generate_refs_bst/generate_refs_bst.py --bib <bib> --out <
   - 同梱: `scripts/csl/*.csl`（CC BY-SA 3.0）, `bst/jecon.bst`（LPPL 1.3+）
   - 要 fetch（再配布不可のため非同梱・`.gitignore` 済み）: ipsjsort/jsai → `zsh scripts/generate_refs_bst/fetch_styles.sh`
   - TeX Live 由来: jplain/junsrt（`upbibtex` が既定パスで解決）
-  - 取得元 URL・バージョンは `reports/style_survey.md` と `fetch_styles.sh`。
+  - 取得元 URL・バージョンは `fetch_styles.sh` 参照。
 
 ## 決定済み事項（2026-07-17）
 

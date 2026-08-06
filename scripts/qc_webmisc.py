@@ -4,7 +4,7 @@
       i.e. not fabricated, and
   (b) is free of SEO boilerplate (site-name suffixes, "とは？ 意味や使い方",
       "統計局ホームページ", "（読み）", stray "｜" separators, etc.).
-Writes reports/qc/webmisc.md.
+Writes data/qc/webmisc.md.
 
 Usage: uv run scripts/qc_webmisc.py [--n 20] [--seed 424242]
 """
@@ -15,7 +15,7 @@ import requests
 
 ROOT = Path(__file__).resolve().parent.parent
 RECORDS = ROOT / "data" / "interim" / "webmisc" / "records.jsonl"
-OUT = ROOT / "reports" / "qc" / "webmisc.md"
+OUT = ROOT / "data" / "qc" / "webmisc.md"
 UA = "ja-citation-parsing-dataset (mailto:anonymous@example.org)"
 
 BOILERPLATE = re.compile(
@@ -78,6 +78,7 @@ def main():
     for k, st, judge, rt, note, url in rows:
         cell = rt.replace("|", "\\|")[:52]
         lines.append(f"| {k} | {st} | {judge} | {cell} | {note} | {url} |")
+    OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines) + "\n")
     print(f"pass {npass}/{len(sample)} -> {OUT}")
 

@@ -12,7 +12,7 @@ Usage:
     uv run python scripts/verify_refs.py \
         --refs data/interim/pilot/full/ref_strings_bst.jsonl \
                data/interim/pilot/full/ref_strings_csl.jsonl \
-        --bib dataset/ja_bib_full.bib --out reports/refs_verification.md
+        --bib dataset/ja_bib_full.bib --out data/refs_verification.md
 """
 from __future__ import annotations
 

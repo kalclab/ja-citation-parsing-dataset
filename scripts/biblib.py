@@ -1,7 +1,7 @@
 """Shared helpers for the Phase 1 merge/validate pipeline.
 
 Single source of truth for: the intermediate-record schema contract
-(docs/phase1_conventions.md), type->key-prefix mapping, required-field
+(see DATASET.md), type->key-prefix mapping, required-field
 policy (ja_bibtex_collection_prompt.md), difficulty-flag vocabulary,
 dedup normalisation, and verbatim BibTeX writing.
 

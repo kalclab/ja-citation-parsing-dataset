@@ -9,7 +9,7 @@ source_url page, and check that the record actually matches the page:
   - at least one author/editor surname (first 2 chars of the first name) appears.
 
 This catches parsing errors and broken links without re-deriving every field.
-Results are appended to reports/qc/books.md by the caller; this script prints a
+This script prints a
 machine-readable summary and the per-record findings.
 
 Run: uv run scripts/qc_books_sample.py   (stdlib only; ~2 s between fetches)

@@ -1,6 +1,6 @@
 """Collect English-mixed @article records from CrossRef REST (Japanese journals).
 
-Purpose (docs/phase1_conventions.md, prompt L61): deliberately supply the
+Purpose : deliberately supply the
 "欧文混じり" hard cases — Japanese-journal articles whose bibliography mixes
 scripts (romanized/English-caps author names, English titles/subtitles). Every
 emitted record carries the `english_mixed` flag.
