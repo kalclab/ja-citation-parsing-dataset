@@ -1,0 +1,14 @@
+{
+  "_comment": "Phase 0-B 承認スタイル（2026-07-17: junsrt 除外＝jplain と per-string 一致／jecon→jecon-mod に差し替え＝和文会議録名を出力する 1 トークン改変版、README 参照）。計7スタイル: bst 4 + csl 3。paths relative to repo root. source: vendored=同梱, fetch=fetch_styles.sh で取得（再配布不可の学会配布物）, texlive=TeX Live pbibtex-base 由来（upbibtex が既定パスで解決）。",
+  "csl": [
+    {"style": "sist02",              "file": "scripts/csl/sist02.csl",              "discipline": "分野横断（SIST02）",  "source": "vendored", "license": "CC BY-SA 3.0"},
+    {"style": "jpa2022",             "file": "scripts/csl/jpa2022.csl",             "discipline": "心理学（文系）",      "source": "vendored", "license": "CC BY-SA 3.0"},
+    {"style": "chicago-author-date", "file": "scripts/csl/chicago-author-date.csl", "discipline": "対照・和欧混在検証",  "source": "vendored", "license": "CC BY-SA 3.0"}
+  ],
+  "bst": [
+    {"style": "jecon-mod", "file": "scripts/generate_refs_bst/bst/jecon-mod.bst", "natbib": true,  "discipline": "経済学（文系・必須）", "source": "vendored", "license": "LPPL 1.3+（jecon 改変版・改変点は README/ファイル冒頭）"},
+    {"style": "ipsjsort", "file": "scripts/generate_refs_bst/bst/ipsjsort.bst", "natbib": false, "discipline": "情報処理学会（理工）", "source": "fetch",    "license": "IPSJ 配布物・再配布不可（要 fetch）"},
+    {"style": "jsai",     "file": "scripts/generate_refs_bst/bst/jsai.bst",     "natbib": false, "discipline": "人工知能学会（理工）", "source": "fetch",    "license": "JSAI 著作権・再配布不可（要 fetch）"},
+    {"style": "jplain",   "file": null,                                         "natbib": false, "discipline": "jBibTeX古典・整列",    "source": "texlive",  "license": "TeX Live pbibtex-base"}
+  ]
+}

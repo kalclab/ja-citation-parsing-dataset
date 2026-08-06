@@ -1,0 +1,4838 @@
+%% jecon.bst: 経済学用 BibTeX スタイルファイル（BibTeX style file for economics）
+%
+% Author: Shiro Takeda (武田史郎)
+% Maintainer: Shiro Takeda (武田史郎)
+% Copyright (C) 2002-2018 Shiro Takeda
+% First-written: <2002/11/03>
+% Time-stamp: <2025-12-12 09:58:51 st>
+% Version 6.6
+% Keywords: TeX, BibTeX, bst 
+% URL: https://github.com/ShiroTakeda/jecon-bst
+
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status "maintained".
+% 
+% The Current Maintainer of this work is Shiro Takeda.
+
+%% jecon.bst の主な特徴（Main features of jecon.bst）
+
+% "jecon.bst"は（主に）経済学用の BibTeX スタイルファイルです。以下のような特徴
+% があります。
+
+% 1) 「著者名（年）」形式（author-year format) で引用できます。
+% 2) 経済学でよく利用されるような参考文献の形式を実現できます（ただし、特定の雑
+%    誌向けというわけではないです）。
+% 3) 英語の文献だけでなく、日本語の文献も適切に処理できます。
+% 4) 他の BibTeX 用のスタイルファイルよりも表示形式のカスタマイズが簡単にできます。
+
+% バグ報告、要望は shiro.takeda@gmail.com までお願いします。
+
+% 変更履歴については CHANGES.md ファイルを見てください。
+
+
+% version 指定
+FUNCTION {jecon.version} { "6.6" }
+
+% Debug mode．0 以外を指定すると様々な情報を表示させることが可能．
+FUNCTION {jecon.debug}
+{ #0 }	  % Debug mode off.
+% { #1 }    % Debug mode on.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	用語
+
+%% 「エントリー」：一つの文献のこと．エントリーのタイプとは article，book 等の
+%% 文献の種類のこと．
+
+%% 「フィールド」：エントリー内で指定されている title, author, year 等のこと．
+
+%% 「キーワード」：\cite命令の引数となる各エントリーに指定されている文字列のこ
+%% と．
+
+ENTRY
+  %%% 文献フィールドの宣言
+  { access address author booktitle chapter doi edition editor howpublished
+    institution journal key month note number organization pages publisher
+    school series title type url volume year yomi language langid
+
+    % 以下は普通の bst ファイルでは利用されないフィールド
+    jauthor jkanyaku jtitle jpublisher jyear jnote
+    order absorder translator kanyaku nameorder sortname
+  }
+
+  % 以下，エントリー変数の定義．エントリー変数とは，文献エントリー別に異なっ
+  % た値を持つ変数のこと．
+
+  %% これは entry 別の整数型変数 (整数型エントリ変数)
+  { is.kanji.entry order.cited is.kanji.entry.author }
+
+  %% これは entry 別の文字列型変数 (文字列型エントリ変数)
+  { label cyear flabel alabel extra.label sort.label sort.label.abb
+    extra.label.bysame sort.name }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%	カスタマイズのための関数
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \bysame を使うか否か。使わないなら 0、使うなら 0 以外を指定 (bst ファイ
+% ルでは整数を表すとき数字に # を付ける)。
+% \bysame とは、参考文献部分同じ著者名が連続するときに --- で省略するもの。
+%
+FUNCTION {bst.use.bysame}
+% { #0 }    % Not use \bysame
+{ #1 }	  % -> Use \bysame (default)
+% { #2 }    % -> Use \bysame of alternative style.
+
+% \bysame の定義。\bysame を使ったときの横棒の形式を変えるには以下の定義を修正
+% する。
+%
+FUNCTION {bst.bysame.definition}
+{ "\hskip.3em \leavevmode\rule[.5ex]{2.5em}{.3pt}\hskip0.5em" } 
+
+% 日本語文献用の \bysame （\bysamejp）の定義
+% とりあえず英語文献用と同じ定義にしておく。
+FUNCTION {bst.bysame.definition.jp}
+{ "\hskip.2em \leavevmode\rule[.7ex]{2.5em}{.3pt}\hskip0.3em" } 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Economics の reference では, first author 名は「姓, 名」の順番で表記し、
+% second author 以下は「名 姓」とするという場合が多いが、これを変更するための関数。
+% Editor にも適用。日本語文献は関係なし。#0 か #1 か #2 を選択可。
+%
+FUNCTION {bst.author.name}
+{ #0 }	  % (default)
+% { #1 }
+% { #2 }
+
+% [#0 のケース] これ普通の経済学風。
+% Fujita, Masahisa, Paul R. Krugman, and Anthony J. Venables. 
+
+% [#1 のケース] 全員「姓, 名」のケース。
+% Fujita, Masahisa, Krugman, Paul R., and Venables, Anthony J.
+
+% [#2 のケース] 全員「名 姓」のケース。
+% Masahisa Fujita, Paul R. Krugman, and Anthony J. Venables.
+
+% Economics の reference では, first author 名は「姓, 名」の順番で表記し、
+% second author 以下は「名 姓」とするという場合が多いが、これを変更するための関数。
+% Editor にも適用。日本語文献は関係なし。#0 か #1 か #2 を選択可。
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% bibファイルにおける日本人名の記述方法の選択。
+%
+% 普通のbibファイルではauthorフィールドで日本人名は「author = {姓 名}」という書
+% き方をする。しかし、一部の文献管理ソフト、データベースでは日本人名も外国人名と
+% 同様に「author = {姓, 名}」という形式で扱っている。この関数でどちらの形式で扱
+% うかを決める。editor、yomi、jauthorにも同じ選択が適用されます。詳しくは
+% jecon-sample.pdfを見てください。
+%
+% 注：ver.5.5からデフォールトの設定を「author = {姓, 名}」に変更しました。
+%
+FUNCTION {bst.sei.mei.order}
+{ #1 }	  % (default) → author = {武田, 史郎} or author = {史郎 武田} 
+% { #0 }    % 昔からの普通の書き方 → author = {武田 史郎} or author = {史郎, 武田}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Author (editor) 名の first name を頭文字だけに略す。
+%
+FUNCTION {bst.first.name.initial}
+{ #0 }	  % #0 -> 略さない。 (default)
+% { #1 }    % #0 以外 -> first name を頭文字に略す。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title の先頭文字以外を小文字に変換する (book の tile は除く。元々小文
+% 字ならなにも変わらない)。
+%
+FUNCTION {bst.title.lower.case}
+{ #0 }	  % #0 なら小文字に変換しない (そのまま)  (default)
+% { #1 }    % #0 以外なら、小文字に変換する。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title を表示するかしないか．
+%
+FUNCTION {bst.hide.title}
+{ #0 }	  % #0 -> 表示する．普通はこちら． (default)
+% { #1 }    % #0 以外 -> 隠す (表示しない)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 同じ年に同じ著者の英語、日本語文献の両方があり、かつ日本語文献の yomi
+% に英語文献の著者と同じものが指定してあるときに、両者を混ぜて表示するた
+% めのオプション。
+% yomiを日本語で書いているなら関係なし．
+FUNCTION {bst.mixed.order}
+{ #0 }	  % #0 -> 混ぜない．普通はこちら． (default)
+% { #1 }    % #0 以外 -> 混ぜる。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% month を表示するか否か。隠す(表示しない)なら 0 以外、隠さない(表示する)なら 
+% 0 を指定。隠す場合でも month フィールドの値は並べ替えのキーとしては利用され
+% る。これも普通は変更しない．
+FUNCTION {bst.hide.month}
+{ #0 }	  % #0 -> 表示する．普通はこちら． (default)
+% { #1 }    % #0 以外 -> 隠す (表示しない)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% number filed を表示するか否か。隠す(表示しない)なら 0 以外、隠さない(表示す
+% る)なら 0 を指定。これも普通は変更しない．
+FUNCTION {bst.hide.number}
+{ #0 }	  % #0 -> 表示する．普通はこちら． (default)
+% { #1 }    % #0 以外 -> 隠す (表示しない)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% これの値に 0 以外を指定すると、reference 部分で plain.bst のように文献
+% の前に number index ([1]のようなもの)を付けることができる (引用部分は
+% author-yearで変わらない)。
+%
+FUNCTION {bst.use.number.index}
+{ #0 }	  % Not use number index  (default)
+% { #1 }    % #0 以外 -> Use number index
+
+% number index の前に付ける文字列 (bst.use.number.indexに0以外を指定していると
+% きのみ有効)．
+%
+FUNCTION {bst.number.index.pre}
+{ "[" }	   % (default) 
+
+% number index の後に付ける文字列。 \hskip1.0em は空白の大きさ。空白の長さは自
+% 分で調整したほうがよい。 (bst.use.number.indexに0以外を指定しているときのみ
+% 有効)．
+FUNCTION {bst.number.index.post}
+{ "]\hskip1.0em " }    % (default)
+
+% number index の最大の桁数 (文献が100個以上なら3、100個より少ないなら2、10個よ
+% り少なければ1を指定)。とりあえず 3 を指定しておけば問題ないが、3 だとインデン
+% トが大き目になる。値は 1, 2, 3 のどれかを指定．
+%
+FUNCTION {bst.number.index.digit}
+{ "3" }	   % (default)
+
+% 以下は、number index を表示するときに見た目を調整するための関数。computer
+% modern 以外のフォントを使用するようなときは要調整。
+%
+% Reference 部分の文献の2行目以降のインデント幅の値を指定．
+%
+% bst.number.index.digit の値によってインデント幅は変わるので，それぞれのケース
+% について指定する．
+%
+% bst.number.index.digit = 1 のときの設定
+FUNCTION {bst.number.index.bibhang.one}
+{ "2.05em" }	% (default)
+% bst.number.index.digit = 2 のときの設定
+FUNCTION {bst.number.index.bibhang.ten}
+{ "2.55em" }	% (default)
+% bst.number.index.digit = 3 のときの設定
+FUNCTION {bst.number.index.bibhang.hund}
+{ "3.05em" }	% (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% (u)pbibtex のバージョンの設定
+%
+% TeX Live 2021 以降の upbibtex を利用 -> #0 を設定（default）
+% TeX Live 2020 までの upbibtex を利用 -> #1 を設定
+% pbibtex を利用 -> #2 を設定
+%
+FUNCTION {bst.pbibtex.version}
+{ #0 }	  % TeX Live 2021 以降の upbibtex を利用（default）
+% { #1 }   % TeX Live 2020 までの upbibtex を利用
+% { #2 }   % pbibtex を利用
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 日本語文献の数字を漢数字にする．
+%
+% 縦書き用です．
+%
+% 0 以外なら漢数字に変換。
+FUNCTION {bst.kansuji.jp}
+{ #0 }	  % 変換しない。(default)
+% { #1 }    % 漢数字に変換する。
+
+% bst.kansuji.jp が非ゼロのときに，pages でのページ数とページ数を結ぶ線の定義
+% を指定する．pages = 100-200 と指定しているときに，"-" に置き換わる線の定義．
+%
+% 縦書きの表示を指定しているときでも - は横棒のまま表示されます．これを縦棒に
+% 表示するための指定です．
+% 
+FUNCTION {bst.tatebo.definition}
+{ "\hskip.1em \leavevmode\rule[0ex]{1em}{.3pt}\hskip0.1em" }	% (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% year の表示位置を変更。
+%
+% この関数でyearが表示される位置を変更できます。
+%
+% #0 ->	 yearは author のすぐ後に表示されます。
+% 非ゼロ -> article タイプ以外では year は 最後（note フィールドの前）に表示されます。
+%
+% Article タイプのエントリーでは次のように変わります。
+% 
+% #1 -> year は最後に表示されます。
+% #2 -> year は journal name の後に表示されます。
+% #3 -> year は volume の後に表示されます。
+%
+FUNCTION {bst.year.position}
+{ #0 }	  % autho のすぐ後 (default).
+% { #1 }    % 最後（note の前）
+% { #2 }    % journal name の後（article entryのみ）
+% { #3 }    % volume の後（article entryのみ）
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 0 以外を指定すると新しい年の文献を前にもってくる。
+%
+% 0 なら普通の並び順。通常は 0 のままでいいでしょう．
+%
+FUNCTION {bst.reverse.year}
+{ #0 }	  % 普通の並び順 (古い文献ほど上) (default)
+% { #1 }    % 普通とは逆 (新しい文献ほど上)
+
+% 0 以外なら year を優先的なキーとしてソート(並べ替え)をする。
+% 
+% 普通では古い文献ほど上に並べられるが、bst.reverse.year が非ゼロなら新しい文
+% 献ほど上となる。
+%
+FUNCTION {bst.sort.year}
+{ #0 }	  % この場合、year は author に次ぐソートのキー (普通のケース) (default)
+% { #1 }    % この場合、year は最優先されるソートのキー
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 引用順で参考文献を並べる設定．
+%
+% 0 以外を指定すると引用をしたそのままの順で reference に文献を並べる．\bysame 
+% と一緒に利用すると表示がおかしくなるケースあり．
+%
+FUNCTION {bst.no.sort}
+{ #0 }	  % 文献の順番を普通にソートする．(default)
+% { #1 }    % 引用順に並べる．
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 文献の並べ替えのとき文献エントリーのタイプ別 (article, book, incollection 等)
+% にまとめるための設定．
+%
+FUNCTION {bst.sort.entry.type}
+{ #0 }	  % #0 -> タイプ別にまとめない．(default)
+% { #1 }    % まとめる．
+%
+% この設定は absorder よりも優先します．どういう順番で並べるか (article, book,
+% incollection 等をどう並べるか) は bst.sort.entry.type.order という関数の設定
+% で決まります．デフォールトでは alphabet 順にしてあります (article, book,
+% booklet, comment,..., unpublished 順)．詳しくは jecon-sample.pdf を参照。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 文献の並べ替えのとき absorder filed の値を利用するか否か。利用するなら
+% 0、利用しないなら 0 以外を指定。
+%
+FUNCTION {bst.notuse.absorder.field}
+{ #0 }	  % #0 -> 利用する。(default)
+% { #1 }    % #0 以外 -> 利用しない。
+%
+% Reference での文献並べ替えの優先順序については 
+% 
+% absorder -> author (or yomi) -> year -> order -> month -> title
+%
+% としてある。詳しくは jecon-sample.pdf を参照。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 文献の並べ替えのとき order filed の値を利用するか否か。利用するなら
+% 0、利用しないなら 0 以外を指定。
+FUNCTION {bst.notuse.order.field}
+{ #0 }	  % #0 -> 利用する。(default)
+% { #1 }    % #0 以外 -> 利用しない。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	and
+
+%%% 二人の authors, editors の間の文字列
+%
+% "Mr.A _ Mr.B " の "_" の部分に入る文字列
+%
+FUNCTION {bst.and}
+{ " and " }    % (default)
+
+%%% 三人以上の authors, editors の間の文字列
+%
+% "Mr.A, Mr.B _ Mr.C" の "_" の部分に入る文字列
+%
+FUNCTION {bst.ands}
+{ ", and " }	% (default)
+
+% 複数の authors, editors の間の文字列 (日本語文献用)
+%
+% "A氏 _ B氏 _ C氏" の "_" の部分に入る文字列
+%
+FUNCTION {bst.and.jp}
+{ "・" }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	「引用部分」での author 名の間に入る文字列
+
+%%% 二人の authors, editors の間の文字列
+%
+% 引用部分の "Mr.A _ Mr.B " の "_" の部分に入る文字列
+%
+FUNCTION {bst.cite.and}
+{ " and " }    % (default)
+
+%%% 三人以上の authors, editors の間の文字列
+%
+% 引用部分の "Mr.A, Mr.B _ Mr.C" の "_" の部分に入る文字列
+%
+FUNCTION {bst.cite.ands}
+{ " and " }    % (default)
+
+% 複数の authors, editors の間の文字列 (日本語文献用)
+%
+% 引用部分の "A氏 _ B氏 _ C氏" の "_" の部分に入る文字列
+%
+FUNCTION {bst.cite.and.jp}
+{ "・" }    % (default)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% 何人以上の著者がいるときに引用部分で et al.で省略するか。3人以上のとき
+% に略すときは #3 を指定。
+FUNCTION {bst.and.others.num}
+{ #3 }	  % 3人以上なら省略する。(default)
+% { #4 }
+
+% 著者数がある値より大きい場合には、参考文献部分で著者の一部の名前しか表示されな
+% い。具体的には、著者数が N1 より大きい場合には、著者の中の最初の N2 人の名前だ
+% けが表示される（他の著者は et al.で省略される）
+% 
+% 次の関数により N1 の値を設定する。
+FUNCTION {bst.max.author.num}
+{ #8 }    % とりあえず8人より多い場合に設定 (default).
+
+% 次の関数により N2 の値を設定する。
+FUNCTION {bst.max.author.num.display}
+{ #3 }    % (default)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	author 名を略す際の文字列
+
+%%% 英語用
+%
+FUNCTION {bst.and.others}
+{ " et~al." }	 % (default)
+
+%%% 日本語用
+%
+FUNCTION {bst.and.others.jp}
+{ "他" }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	author 
+
+% author の前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.author.pre}
+{ "" }	  % (default)
+
+% author の後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.author.post}
+{ "" }	  % (default)
+
+% author の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.author.pre.jp}
+{ "" }	  % (default)
+
+% author の後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.author.post.jp}
+{ "" }	  % (default)
+
+%%% 日本語文献の author, editor の姓・名の間に入れる文字列 
+% (姓名のどちらか一方が一文字のケース)
+%
+FUNCTION {bst.sei.mei.one.jp}
+{ "" }	  % (default)
+% { "　" }
+
+%%% 日本語文献の author, editor の姓・名の間に入れる文字列 
+% (姓・名とも二文字以上のケース)
+%
+FUNCTION {bst.sei.mei.two.jp}
+{ "" }	  % (default)
+% { " " }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	year
+
+% year の前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.year.pre}
+{ " (" }    % (default)
+
+% year の後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.year.post}
+{ ") " }    % (default)
+
+% year の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.year.pre.jp}
+{ " (" }    % (default)
+
+% year の後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.year.post.jp}
+{ ") " }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	title (book 以外)
+
+% title の前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.title.pre}
+{ "``" }    % (default)
+
+% title の後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.title.post}
+{ ",''" }    % (default)
+
+% title の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.title.pre.jp}
+{ "「" }    % (default)
+
+% title の後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.title.post.jp}
+{ "」，" }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	book 用 title
+
+% book の title 前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.book.pre}
+{ " \textit{" }    % (default)
+
+% book の title 後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.book.post}
+{ "}" }	   % (default)
+
+% book の title 前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.book.pre.jp}
+{ "『" }    % (default)
+
+% book の title 後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.book.post.jp}
+{ "』" }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	booktitle
+
+% booktitle の前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.btitle.pre}
+{ " \textit{" }    % (default)
+
+% booktitle の後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.btitle.post}
+{ "}" }	   % (default)
+
+% booktitle の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.btitle.pre.jp}
+{ "『" }    % (default)
+
+% booktitle の後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.btitle.post.jp}
+{ "』" }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	journal name
+
+% journal name の前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.journal.pre}
+{ " \textit{" }    % (default)
+
+% journal name の後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.journal.post}
+{ "}" }	   % (default)
+
+% journal name の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.journal.pre.jp}
+{ "『" }    % (default)
+
+% journal name の後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.journal.post.jp}
+{ "』" }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	editor 記号
+
+% 複数 editor を表す文字列 (英語文献用)
+%
+FUNCTION {bst.editors}
+{ " eds. " }	% (default)
+
+% 一人の editor を表す文字列 (英語文献用)
+%
+FUNCTION {bst.editor}
+{ " ed. " }    % (default)
+
+% editor を表す文字列 (日本語文献用)
+%
+FUNCTION {bst.editor.jp}
+{ "（編）" }	% (default)
+
+% incollection、inproceedingsエントリーでのeditorとbooktitleの順序（英語文献用）
+%
+% #0: editors -> booktitleの順番
+% 非ゼロ: booktitle -> editorsの順番
+%
+FUNCTION {bst.editor.btitle.order}
+{ #0 }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	kanyaku (監訳者)
+
+% kanyaku の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.kanyaku.pre.jp}
+{ "，" }    % (default)
+
+% kanyaku の後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.kanyaku.post.jp}
+{ "監訳" }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	translator (翻訳者)
+
+% translator の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.translator.pre.jp}
+{ "，" }    % (default)
+
+% translator の後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.translator.post.jp}
+{ "訳" }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	edition
+
+% edition の前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.edition.pre}
+{ ", " }    % (default)
+
+% edition の後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.edition.post}
+{ " edition" }	  % (default)
+
+% edition の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.edition.pre.jp}
+{ "，第" }    % (default)
+
+% edition の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.edition.post.jp}
+{ "版" }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	volume
+
+% volume の前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.volume.pre}
+{ ", Vol. " }	 % (default)
+
+% volume の後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.volume.post}
+{ "" }	  % (default)
+
+% volume の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.volume.pre.jp}
+{ "，第" }    % (default)
+
+% volume の後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.volume.post.jp}
+{ "巻" }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	book 用の volume
+
+% book の volume の前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.bvolume.pre}
+{ ", Vol. " }	 % (default)
+
+% book の volume の後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.bvolume.post}
+{ "" }	  % (default)
+
+% book の volume の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.bvolume.pre.jp}
+{ "，第" }    % (default)
+
+% book の volume の後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.bvolume.post.jp}
+{ "巻" }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	number
+
+% number の前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.number.pre}
+{ ", No. " }	% (default)
+
+% number の後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.number.post}
+{ "" }	  % (default)
+
+% number の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.number.pre.jp}
+{ "，第" }    % (default)
+
+% number の後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.number.post.jp}
+{ "号" }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	in 
+
+% In (英語文献用)
+%
+FUNCTION {bst.in}
+{ " in " }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	page
+
+% page の前に付ける文字列 (複数ページ) (英語文献用)
+%
+FUNCTION {bst.pages.pre}
+{ ", pp." }    % (default)
+
+% page の前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.page.pre}
+{ ", p." }    % (default)
+
+% page の後に付ける文字列 (複数ページ) (英語文献用)
+%
+FUNCTION {bst.pages.post}
+{ "" }	  % (default)
+
+% page の後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.page.post}
+{ "" }	  % (default)
+
+% page の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.page.pre.jp}
+{ "，" }    % (default)
+
+% page の後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.page.post.jp}
+{ "頁" }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	chapter
+
+% chapter の前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.chapter.pre}
+{ ", Chap." }	 % (default)
+
+% chapter の後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.chapter.post}
+{ "" }	  % (default)
+
+% chapter の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.chapter.pre.jp}
+{ "，第" }    % (default)
+
+% chapter の後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.chapter.post.jp}
+{ "章" }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	month
+
+% month の前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.month.pre}
+{ ", " }    % (default)
+
+% month の後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.month.post}
+{ "" }	  % (default)
+
+% month の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.month.pre.jp}
+{ "，" }    % (default)
+
+% month の後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.month.post.jp}
+{ "月" }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	address
+% address の前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.address.pre}
+{ ", " }    % (default)
+
+% address の後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.address.post}
+{ "" }	  % (default)
+
+% address の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.address.pre.jp}
+{ "，" }    % (default)
+
+% address の後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.address.post.jp}
+{ "" }	  % (default)
+
+% address と publisher の順番の設定
+%
+% #0: address -> publisherの順番 (the default value).
+% non-zero: publisher -> address の順番
+
+FUNCTION {bst.address.position}
+{ #0 }    % address → publisher の順番 (default)
+% { #1 }    % publisher → address の順番
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	publisher
+
+% publisher の前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.publisher.pre}
+{ ": " }    % (default)
+
+% publisher の後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.publisher.post}
+{ "" }	  % (default)
+
+% publisher の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.publisher.pre.jp}
+{ "，" }    % (default)
+
+% publisher の後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.publisher.post.jp}
+{ "" }	  % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	series
+
+% series の前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.series.pre}
+{ ", " }    % (default)
+
+% series の後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.series.post}
+{ "" }	  % (default)
+
+% series の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.series.pre.jp}
+{ "，" }    % (default)
+
+% series の後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.series.post.jp}
+{ "" }	  % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	organization
+
+% organization の前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.organization.pre}
+{ ", " }    % (default)
+
+% organization の後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.organization.post}
+{ "" }	  % (default)
+% organization の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.organization.pre.jp}
+{ "，" }    % (default)
+
+% organization の後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.organization.post.jp}
+{ "" }	  % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	school
+
+% school の前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.school.pre}
+{ ", " }    % (default)
+
+% school の後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.school.post}
+{ "" }	  % (default)
+
+% school の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.school.pre.jp}
+{ "，" }    % (default)
+
+% school の後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.school.post.jp}
+{ "" }	  % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	institution
+
+% institution の前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.institution.pre}
+{ ", " }    % (default)
+
+% institution の後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.institution.post}
+{ "" }	  % (default)
+
+% institution の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.institution.pre.jp}
+{ "，" }    % (default)
+
+% institution の後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.institution.post.jp}
+{ "" }	  % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	howpublished
+
+% howpublished の前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.howpublished.pre}
+{ " " }	   % (default)
+
+% howpublished の後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.howpublished.post}
+{ "" }	  % (default)
+
+% howpublished の前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.howpublished.pre.jp}
+{ "，" }    % (default)
+
+% howpublished の後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.howpublished.post.jp}
+{ "" }	  % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	url
+
+% URLフィールド．非ゼロを指定するとURLが表示される．ゼロのときは非表示．
+FUNCTION {bst.show.url}
+{ #1 }	  % non-#0 -> URLを表示 (default)
+% { #0 }    % #0 -> URLを非表示
+
+% URLの前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.url.pre}
+{ ", URL: \url{" }	% (default)
+
+% URLの後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.url.post}
+{ "}" }	   % (default)
+
+% URLの前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.url.pre.jp}
+{ "，URL：\url{" }	% (default)
+
+% URLの後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.url.post.jp}
+{ "}" }	   % (default)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Access
+
+% Accessフィールド．accessフィールドはURLにアクセスした日付けを指定しておく．こ
+% れは普通のbibファイルにはないフィールド．
+
+% accessの前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.access.pre}
+{ ", accessed on " } % (default)
+
+% accessの後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.access.post}
+{ "" }	  % (default)
+
+% accessの前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.access.pre.jp}
+{ "（アクセス日: " } % (default)
+
+% accessの後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.access.post.jp}
+{ "）" }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	DOI (digital object identifier)
+
+% DOIフィールド．DOIを指定．これも普通のbibファイルにはないフィールド．
+
+% 非ゼロならDOIを表示．ゼロなら非表示．
+FUNCTION {bst.show.doi}
+{ #1 }	  % non-#0 -> Show DOI field (default)
+% { #0 }    % #0 -> Not show DOI field.
+
+% DOIの前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.doi.pre}
+{ ", DOI: \href{https://doi.org/" doi * "}{\urlstyle{tt}\nolinkurl{" * } % (default)
+
+% DOIの後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.doi.post}
+{ "}}" }	   % (default)
+
+% DOIの前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.doi.pre.jp}
+{ "，DOI: \href{https://doi.org/" doi * "}{\urlstyle{tt}\nolinkurl{" * } % (default)
+
+% DOIの後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.doi.post.jp}
+{ "}}" }	   % (default)
+
+% URL と DOI の表示方法
+%
+% DOI と URL が両方あるケースの DOI と URL の処理方法
+%
+% #0 -> 両方表示
+% #1 -> URL のみ表示
+% #2 -> DOI のみ表示
+%
+FUNCTION {bst.url.doi}
+% { #0 }    % (default) -> 両方表示
+% { #1 }    % -> URL のみ表示
+{ #2 }	  % -> DOI のみ表示
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	邦訳書
+
+FUNCTION {bst.hoyakusho.pre.jp}
+{ "（" }    % (default)
+
+FUNCTION {bst.hoyakusho.post.jp}
+{ "）" }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% 句点の指定．
+FUNCTION {bst.kuten.jp}
+{ "．" }    % (default)
+
+% 読点の指定．
+FUNCTION {bst.touten.jp}
+{ "，" }    % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	
+% 0 以外を指定すれば，page を繋ぐ "-" を "--" に変更しない．
+FUNCTION {bst.dashify.off}
+{ #0 }	  % (default)
+% { #1 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% 非ゼロを指定すると \harvarditem を出力しない．
+FUNCTION {bst.harvarditem.off}
+{ #0 }	  % (default)
+% { #1 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	\thebibliography環境の定義
+%
+% thebibliography命令の前や後に何かを入れたいときは変更してください．
+%
+FUNCTION {bst.thebibliography.begin}
+{
+  "\makeatletter" write$ newline$
+  "\@ifundefined{ifNAT@openbib}{\@latex@error{Package 'natbib' is not loaded! Please load Package 'natbib' in your preamble.\MessageBreak Additionally, if you use url field in your bib record entry, please also load Package 'hyperref' or 'pxjahyper', 'url' package.}\@ehc}{}\relax" write$ newline$
+  "\makeatother" write$ newline$ newline$
+  "\begin{thebibliography}{xxx}" write$ newline$
+}
+
+FUNCTION {bst.thebibliography.end}
+{ 
+  "" write$ newline$
+  "\end{thebibliography}" write$ newline$
+  "" write$ newline$
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	その他の関数
+
+% noteの前に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.note.pre}
+{ ", " }    % (default)
+
+% noteの後に付ける文字列 (英語文献用)
+%
+FUNCTION {bst.note.post}
+{ "" }	  % (default)
+
+% noteの前に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.note.pre.jp}
+{ "，" }    % (default)
+
+% noteの後に付ける文字列 (日本語文献用)
+%
+FUNCTION {bst.note.post.jp}
+{ "" }	  % (default)
+
+% Technical report を表す文字列 (英語文献用)
+%
+FUNCTION {bst.techrep}
+{ " Tech. Rep." }    % (default)
+
+% Technical report を表す文字列 (日本語文献用)
+%
+FUNCTION {bst.techrep.jp}
+{ " テクニカル・レポート" }    % (default)
+
+% master thesis を表す文字列 (英語文献用)
+%
+FUNCTION {bst.mthesis}
+{ " Master's thesis" }	  % (default)
+
+% master thesis を表す文字列 (日本語文献用)
+%
+FUNCTION {bst.mthesis.jp}
+{ "修士論文" }	  % (default)
+
+% phd thesis を表す文字列 (英語文献用)
+%
+FUNCTION {bst.phdthesis}
+{ " Ph.D. dissertation" }    % (default)
+
+% phd thesis を表す文字列 (日本語文献用)
+%
+FUNCTION {bst.phdthesis.jp}
+{ "博士論文" }	  % (default)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%	カスタマイズのための関数はここまで。
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% 以下は英語文献用
+
+FUNCTION {bst.first}
+{ "1st" }
+
+FUNCTION {bst.second}
+{ "2nd" }
+
+FUNCTION {bst.third}
+{ "3rd" }
+
+FUNCTION {bst.fourth}
+{ "4th" }
+
+FUNCTION {bst.fifth}
+{ "5th" }
+
+FUNCTION {bst.st}
+{ "st" }
+
+FUNCTION {bst.nd}
+{ "nd" }
+
+FUNCTION {bst.rd}
+{ "rd" }
+
+FUNCTION {bst.th}
+{ "th" }
+
+%%%%% memo by Takeda
+
+% "a" 'b := は b という変数に "a" という文字列を代入するということ。
+
+% #0 は整数の 0、#1 は整数の 1．．．を表す。
+
+%%% 関数の書式
+%
+% FUNCTION {name}
+% { 's :=
+%
+% }
+%
+% 上は name という関数の定義。呼出し側では
+%
+% "hoge" name
+%
+% という形で指定。"hoge" という文字列が、変数 s に代入される。
+%
+% 引数が二つ以上の関数の定義 --> 関数 chop.word を参照。
+
+%% 変数宣言
+
+%% 文字列型大域変数
+STRINGS { s t ss tt sss }
+STRINGS { year.num }
+STRINGS { preone preten }
+STRINGS { last.sort.label next.extra this.author prev.author prev.author.jecon }
+STRINGS { hang }
+STRINGS { item.type }
+STRINGS { tempa tempb tempc }
+STRINGS { templang }
+STRINGS { pc }
+STRINGS { kan.fn kan.ln zzz zz }
+STRINGS { da db dc dd }
+
+%% 整数型大域変数
+INTEGERS { nameptr namesleft numnames alphabet.in.author name.num numtrunc }
+INTEGERS { bysame.check }
+INTEGERS { multiresult }
+INTEGERS { index }
+INTEGERS { len }
+INTEGERS { last.extra.num }
+INTEGERS { output.state before.all mid.sentence }
+INTEGERS { last.period.comma }
+INTEGERS { len1.jecon len2.jecon i.jecon }
+INTEGERS { comma.period.a.p comma.period.b.p }
+INTEGERS { l1 l2 f1 f2 kan.p }
+INTEGERS { order.num }
+
+%%% 変数の説明
+
+% alabel: 引用部分で利用される author (editor) 名 (省略形)を保持する変数． 
+% reference 部分の表示には無関係．
+
+% flabel: 引用部分で利用される author (editor) 名を保持する変数． reference 部
+% 分の表示には無関係．
+
+% sort.label: 文献のソートのための author (editor) 名を保持する変数．
+
+% sort.label.abb: 文献のソートのための author (editor) 名を保持する変数．こちら
+% は abbreviated name での表現．
+
+% sort.key$: 文献のソート (並べ替え) のために利用される文字列を保持する．
+% jecon.debug を非ゼロにすればどのような値が入っているか表示できる (通常は 
+% author - year - title - month 等が繋った文字列が指定される)．
+
+% extra.label: 著者名が同じときに年に付けるアルファベット。
+
+% 以下は Type 1 の bysame を利用するときに使う変数。
+% 
+% this.author: 現在の author (or editor) を入れる変数
+% prev.author: 一個前の author (or editor) を入れる変数
+% extra.label.bysame:
+% これはエントリー変数。bysame を利用する文献の場合には、"bysame" を入れる。
+
+% 以下は Type 2 の bysame を利用するときに使う変数。
+% 
+% prev.author.jecon: 一個前の author (or editor) を入れる変数
+% len1.jecon len2.jecon i.jecon
+
+% debug.write: (s --)  デバッグ時だけ write$
+FUNCTION {debug.write}
+{ jecon.debug #0 =
+    { pop$ }   % debug=0 → 文字列を捨てる
+    { write$ } % debug!=0 → write$
+  if$
+}
+
+% debug.newline: (s --)  デバッグ時だけ newline$
+FUNCTION {debug.newline}
+{ jecon.debug #0 =
+    'skip$
+    { newline$ } 
+  if$
+}
+
+%%% 汎用の関数の定義
+
+FUNCTION {not}
+{   { #0 }
+    { #1 }
+  if$
+}
+
+FUNCTION {and}
+{   'skip$
+    { pop$ #0 }
+  if$
+}
+
+FUNCTION {or}
+{   { pop$ #1 }
+    'skip$
+  if$
+}
+
+%%% 変数の値を初期化する関数
+FUNCTION {init.state.consts}
+{ #0 'before.all :=
+  #1 'mid.sentence :=
+}
+
+%%% comma を除去し、period を付ける（に変える）関数（英語文献用）
+%
+% t #-1 #1 substring$ は文字列 t の後ろから一文字目を抜き出す処理をする。
+%%%
+FUNCTION {add.period.x}
+{ duplicate$ 't :=
+  % 後ろから1文字とって比較
+  t #-1 #1 substring$ "," =
+    { #-2 global.max$ substring$ "." * }
+    { % 後ろから2文字とって比較
+      t #-1 #2 substring$ ". " =
+	{ #-3 global.max$ substring$ "." * }
+	{ t #-1 #2 substring$ ". " =
+	    { #-3 global.max$ substring$ "." * }
+	    { t #-1 #2 substring$ ",'" =
+		{ #-3 global.max$ substring$ ".'" * }
+		{ t #-1 #2 substring$ ".'" =
+		    { #-3 global.max$ substring$ ".'" * }
+		    { t #-1 #2 substring$ ".~" =
+			{ #-3 global.max$ substring$ ".~" * }
+			{ t #-1 #2 substring$ ",~" =
+			  { #-3 global.max$ substring$ ".~" * }
+			  { % 後ろから3文字とって比較
+			    t #-1 #3 substring$ ",''" =
+			      { #-4 global.max$ substring$ ".''" * }
+			      { t #-1 #3 substring$ ".''" =
+				  { #-4 global.max$ substring$ ".''" * }
+				  { add.period$ }
+				if$
+			      }
+			    if$
+			  }
+			if$
+		      }
+		    if$
+		  }
+		if$
+	      }
+	    if$
+	  }
+	if$
+      }
+     if$
+   }
+  if$
+}
+
+%%% "、" や "，" を除去し、"．" を付ける（に変える）関数（日本語文献用）
+FUNCTION {add.kanji.period.x}
+{ duplicate$ 't :=
+  % 後ろから1文字とって比較
+  t #-1 #1 substring$ "，" =
+    { #-2 global.max$ substring$ bst.kuten.jp * }
+    { % 後ろから1文字とって比較
+      t #-1 #1 substring$ "、" =
+	{ #-2 global.max$ substring$ bst.kuten.jp * }
+	{ % 後ろから1文字とって比較
+	  t #-1 #1 substring$ "." =
+	    {#-2 global.max$ substring$ bst.kuten.jp * }
+	    {#-1 global.max$ substring$ bst.kuten.jp * }
+	  if$
+	}
+     if$
+   }
+  if$
+}
+
+%%% 与えられた文字列の最後の文字が period or comma かどうかを判定。 period or
+%%% comma の場合には last.period.comma に非ゼロを代入しておく。
+FUNCTION {period.comma.a.p}
+{ 'pc :=
+  pc #-1 #1 substring$ "." = 
+  pc #-1 #1 substring$ "," = or
+  pc #-1 #2 substring$ ". " = or
+  pc #-1 #2 substring$ ", " = or
+  pc #-1 #2 substring$ ".'" = or
+  pc #-1 #2 substring$ ",'" = or
+  pc #-1 #3 substring$ ".''" = or
+  pc #-1 #3 substring$ ",''" = or
+    { #1 'comma.period.a.p := }
+    { #0 'comma.period.a.p := }
+  if$
+}
+
+FUNCTION {period.comma.b.p}
+{ 'pc :=
+  bst.pbibtex.version #2 =
+    { pc #-1 #3 substring$ ".' " =
+      pc #-1 #3 substring$ ",' " = or
+      pc #-1 #4 substring$ ".'' " = or
+      pc #-1 #4 substring$ ",'' " = or
+      pc #-1 #2 substring$ ".~" = or
+      pc #-1 #2 substring$ ",~" = or
+      pc #-1 #1 substring$ "。" = or
+      pc #-1 #1 substring$ "．" = or
+      pc #-1 #1 substring$ "、" = or
+      pc #-1 #1 substring$ "，" = or
+	{ #1 'comma.period.b.p := }
+	{ #0 'comma.period.b.p := }
+      if$
+    }
+    { pc #-1 #3 substring$ ".' " =
+      pc #-1 #3 substring$ ",' " = or
+      pc #-1 #4 substring$ ".'' " = or
+      pc #-1 #4 substring$ ",'' " = or
+      pc #-1 #2 substring$ ".~" = or
+      pc #-1 #2 substring$ ",~" = or
+      pc #-1 #3 substring$ "。" = or
+      pc #-1 #3 substring$ "．" = or
+      pc #-1 #3 substring$ "、" = or
+      pc #-1 #3 substring$ "，" = or
+	{ #1 'comma.period.b.p := }
+	{ #0 'comma.period.b.p := }
+      if$
+    }
+  if$
+}
+
+% 直近の field が period or comma で終っているか判断。終っていたら
+% last.period.comma に #1 を代入。
+FUNCTION {period.comma.p}
+{ duplicate$ 't :=
+  t period.comma.a.p
+  t period.comma.b.p
+  comma.period.a.p #1 =
+  comma.period.b.p #1 = or
+    { #1 'last.period.comma := }
+    { #0 'last.period.comma := }
+  if$
+}
+
+%%% 文字列の最初についている comma or period を除去した文字列を返す。
+FUNCTION {remove.pre.comma.period}
+{ 's :=
+  s empty$
+    { "" }
+    %% ascii character
+    { s #1 #1 substring$ "," =		% s の最初の1文字が「,」に等しいか
+      s #1 #1 substring$ "." = or	% s の最初の1文字が「.」に等しいか
+       { s #2 global.max$ substring$ }
+       %% multi-byte character
+       { bst.pbibtex.version #2 =
+	   % pbibtex を使うケース
+	   { s #1 #2 substring$ "，" =		% s の最初の1文字が「，」に等しいか
+	     s #1 #2 substring$ "、" = or
+	     s #1 #2 substring$ "。" = or
+	     s #1 #2 substring$ "．" = or
+	      { s #3 global.max$ substring$ }
+	      's
+	     if$
+	   }
+	   % upbibtex を使うケース
+	   { s #1 #3 substring$ "，" =		% s の最初の1文字が「，」に等しいか
+	     s #1 #3 substring$ "、" = or
+	     s #1 #3 substring$ "。" = or
+	     s #1 #3 substring$ "．" = or
+	      { s #4 global.max$ substring$ }
+	      's
+	     if$
+	   }
+	 if$
+       }
+      if$
+    }
+  if$
+}
+
+%%% 出力のための関数
+FUNCTION {output.field}
+{ 's :=
+  output.state mid.sentence =
+    % mid.sentence のとき。 
+    { % ついでに直近の field が period or comma で終っているか判断。
+      period.comma.p
+      % pop して書き込み。
+      write$
+    }
+    % mid.sentence ではないとき
+    { output.state before.all =
+        % before.all のとき。そのまま write。
+        'write$
+        % before.all じゃないとき。 period を付加して write。
+        { is.kanji.entry
+            { add.kanji.period.x write$ }
+            { add.period$ " " * write$ }
+          if$
+        }
+      if$
+      % mid.sentence 以外のときは mid.sentence に状態を変更。
+      mid.sentence 'output.state :=
+    }
+  if$
+  % 直近の filed が period or comma で終わっているなら、その後の comma は除去する。
+  last.period.comma #0 =
+    { s }
+    { s remove.pre.comma.period }
+  if$
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% bbl ファイルへの出力の形式
+
+% \harvarditem[Brezis et~al.]{Brezis, Krugman and
+%   Tsiddon}{1993}{brezis93:_leapf_inter_compet}
+% Brezis, Elise~S., Paul~R. Krugman, and Daniel Tsiddon	 (1993) ``Leapfrogging in
+%   International Competition: A Theory of Cycles in National Technological
+%   Leadership.'', {\em American Economic Review.}, Vol.~83. No.~5. pp.
+%   1211--1219.
+
+% \harvarditem[abbreviated citation]{full citation}{year}{keyword} ...
+%
+% という形式で出力する。
+
+%%% period を付けて、改行する。
+FUNCTION {fin.entry}
+{ is.kanji.entry
+    { add.kanji.period.x }
+    { add.period.x }
+  if$
+  write$
+  newline$
+}
+
+FUNCTION {field.or.null}
+{ duplicate$ empty$
+    { pop$ "" }
+    'skip$
+  if$
+}
+
+FUNCTION {check.kanji.str.sub}
+{ 'zzz :=
+  zzz #1 "{ll}" format.name$ 'kan.ln :=		% kan.ln	<- 1st author の Last name
+  zzz #1 "{ff}" format.name$ 'kan.fn :=		% kan.fn	<- 1st author の first name
+  kan.ln #1 #1 substring$ is.kanji.str$ 'l1 :=	% l1		<- Last name の1文字目
+  kan.fn #1 #1 substring$ is.kanji.str$ 'f1 :=	% f1		<- First name の1文字目
+  kan.ln #-1 #1 substring$ is.kanji.str$ 'l2 := % l2		<- Last name の最後の1文字目
+  kan.fn #-1 #1 substring$ is.kanji.str$ 'f2 := % f2		<- First name の最後の1文字目
+
+  l1 #0 = f1 #0 = and l2 #0 = and f2 #0 = and
+  % Last name と First name の最初の1文字目、最後の1文字目がどれもアスキーなら 0 
+    { #0 'kan.p := }
+    { l1 #0 = l2 #0 = and
+      f1 #0 = f2 #0 = or and
+        { #0 'kan.p := }
+	{ #1 'kan.p := }
+      if$
+    }
+  if$
+  kan.p
+}
+
+FUNCTION {check.kanji.str}
+{ 'zzz :=
+  zzz empty$
+    { #1 }
+    { bst.pbibtex.version #0 =
+      bst.pbibtex.version #2 = or
+       { zzz is.kanji.str$ }
+       { zzz check.kanji.str.sub }
+      if$
+    }
+  if$
+}
+
+%%% journal の出力
+FUNCTION {format.output.journal}
+{ journal empty$
+    'skip$
+    { is.kanji.entry
+	{ bst.journal.pre.jp journal * bst.journal.post.jp * }
+	{ bst.journal.pre journal * bst.journal.post * }
+      if$
+      output.field
+    }
+  if$
+}
+
+%%% book の title の出力
+FUNCTION {format.output.book}
+{ title empty$
+    { "there's no title in " cite$ * warning$ }
+    { is.kanji.entry
+	{ bst.book.pre.jp title * bst.book.post.jp * }
+	{ bst.book.pre title * bst.book.post * }
+      if$
+      output.field
+    }
+  if$
+}
+
+%%% 以下、author, editor の処理
+
+% 日本語 author 名のときに alphabet が含まれているかどうか判断する関数。含まれ
+% ているなら alphabet.in.author に 1 を代入、含まれていないなら 0 を代入。これ
+% は Alphabet + 片仮名の外国人名を処理するためのもの。
+FUNCTION {set.alphabet.in.author}
+{ name.num "{ff}" format.name$ 't :=
+  #0 'alphabet.in.author :=
+  "" t =
+    % first name がないときは 0。
+    { #0 'alphabet.in.author := }
+    { % 記号除去
+      t purify$ 't :=
+      % 一文字目だけ取り出す。
+      t #1 text.prefix$ 't :=
+      % 日本語か alphabet か？
+      t is.kanji.str$
+	{ #0 'alphabet.in.author := }
+	{ #1 'alphabet.in.author := }
+      if$
+    }
+  if$
+}
+
+%%% 文字の数を判断する関数（日本語用）。
+% 日本語の場合 1 文字が 2 文字と判断されることに注意。
+FUNCTION {count.number.of.letters}
+{ 'sss :=
+  bst.pbibtex.version #2 =
+     % pbibtex のケース    
+     { sss text.length$ #2 =
+         % 一文字のケースでは "1" を返す。
+         { "1" }
+         % 一文字以外のケースでは "0" を返す。
+         { "0" }
+       if$
+     }
+     % upbibtex のケース    
+     { sss text.length$ #3 =
+         % 一文字のケースでは "1" を返す。
+         { "1" }
+         % 一文字以外のケースでは "0" を返す。
+         { "0" }
+       if$
+     }
+   if$
+}
+
+%%% name を処理する関数
+%
+% format.names は二つの引数をとる。
+%    Name1 Name2 format.names
+%
+% Name2: これは普通の名前が入る (authorフィールドの中身など）。
+% Name1: これは普通の名前か、bysame が入る。
+%
+% bysame は使わない部分では以下のようにする。
+%    "xxx" Name2 format.names
+%
+% 変数
+% nameptr: これは著者番号（何番目の著者かを表す）
+% numnames: これは著者数
+% namesleft: これはまだ処理されていない著者の数
+% numtrunc: これには bst.max.author.num.display の値を入れる
+% 
+FUNCTION {format.names}
+{ 'sss :=  % sss に省略されていない名前を代入
+  's :=    % s に省略された名前を代入
+
+  s "xxx" =
+    { sss 's := }
+    'skip$
+  if$
+
+  % nameptr に 1（初期値） を代入
+  #1 'nameptr :=
+  % numnames に著者数を代入
+  s num.names$ 'numnames :=
+  numnames 'namesleft :=
+
+  numnames bst.max.author.num >
+    % If numnames > bst.max.author.num
+    { bst.max.author.num.display 'numtrunc := }
+    { #0 'numtrunc := }
+  if$
+
+  % namesleft > 0 なら繰り返し (while) --- 繰り返し開始
+  { namesleft #0 > }
+
+  { 
+
+    % Block A starts
+    sss check.kanji.str
+
+      % A-1: 日本語含むケースの処理
+      { nameptr 'name.num :=		% name.num は次の行の set.alphabet.in.author で利用。
+        s set.alphabet.in.author 
+        alphabet.in.author #0 =
+
+          % A-1-1: first nameが日本語のケース（日本人名ということ）
+          { bst.sei.mei.order #0 =
+              % 姓名が普通の順番（名 → 姓）のケース
+              { s nameptr "{ff}" format.name$ 'ss :=
+                s nameptr "{ll}" format.name$ 'tt := }
+              % 普通と逆順（姓 → 名）のケース
+              { s nameptr "{ll}" format.name$ 'ss :=
+                s nameptr "{ff}" format.name$ 'tt := }
+            if$
+
+            ss "" =
+              %% 姓のみのケースはそのまま
+              { tt 't := }
+              %% 姓・名ともにあるケース
+              { ss count.number.of.letters "1" =
+                tt count.number.of.letters "1" = or
+                  { ss bst.sei.mei.one.jp * tt * 't := }
+                  { ss bst.sei.mei.two.jp * tt * 't := }
+                if$
+              }
+            if$
+          }
+
+          % A-1-2: first name が alphabet のケース (つまり、カタカナの外国人名)
+          { nameptr #1 =
+
+             % A-1-2-1: first author のケース (last name - first name の order)
+             { bst.author.name #0 =
+               bst.author.name #1 = or
+                 % Last name - first name
+                 { s nameptr "{ll}" format.name$ 'ss :=
+                   s nameptr "{ff}" format.name$ 'tt :=
+                   ss bst.touten.jp * tt * 't := }
+                 % First name - Last name
+                 { s nameptr "{ff~}{ll}" format.name$ 't := }
+               if$
+             }
+             % A-1-2-2: first author 以外のケース (first name - last name の order)
+             { bst.author.name #0 =
+               bst.author.name #2 = or
+                 % First name - Last name
+                 { s nameptr "{ff~}{ll}" format.name$ 't := }
+                 % Last name - First name
+                 { s nameptr "{ll}" format.name$ 'ss :=
+                   s nameptr "{ff}" format.name$ 'tt :=
+                   ss bst.touten.jp * tt * 't := }
+               if$
+             }
+            if$
+          }
+        if$
+      }
+
+      % A-2: author に日本語含まないケースの処理
+      { nameptr #1 =
+
+         % A-2-1: 一番目の author
+         { bst.author.name #0 =
+           bst.author.name #1 = or
+             { bst.first.name.initial #0 = 
+                { s nameptr "{vv~}{ll}{, ff}{, jj}" format.name$ 't := }
+                { s nameptr "{vv~}{ll}{, f.}{, jj}" format.name$ 't := }
+               if$
+             }
+             { bst.first.name.initial #0 = 
+                { s nameptr "{ff~}{vv~}{ll}{, jj}" format.name$ 't := }
+                { s nameptr "{f.~}{vv~}{ll}{, jj}" format.name$ 't := }
+               if$
+             }
+           if$
+         }
+         % A-2-2: 二番目以降の author
+         { bst.author.name #0 =
+           bst.author.name #2 = or
+             { bst.first.name.initial #0 = 
+                { s nameptr "{ff~}{vv~}{ll}{, jj}" format.name$ 't := }
+                { s nameptr "{f.~}{vv~}{ll}{, jj}" format.name$ 't := }
+              if$
+             }
+             { bst.first.name.initial #0 = 
+                { s nameptr "{vv~}{ll}{, ff}{, jj}" format.name$ 't := }
+                { s nameptr "{vv~}{ll}{, f.}{, jj}" format.name$ 't := }
+              if$
+             }
+           if$
+         }
+        if$
+      }
+    if$
+    % Block A ends
+
+    % Block B starts
+    nameptr #1 >
+
+      % B-1: 二番目以降の author のケースでの処理
+      {
+
+	nameptr #1 - numtrunc =
+          % If nameptr - 1 = numtrunc
+	  { #1 'namesleft := 
+	    "others" 't := }
+	  'skip$
+	if$
+
+        namesleft #1 >
+
+          % B-1-1: 最後の著者じゃないケース
+          { sss check.kanji.str
+              { bst.and.jp  * t * }
+              { ", " * t * }
+            if$
+          }
+
+          % B-1-2: 最後の著者のケース
+          { t "others" =
+
+              % B-1-2-1: 最後の著者 = others のケース
+              { s check.kanji.str
+                  { bst.and.others.jp * }
+                  { bst.and.others * }
+                if$
+              }
+
+              % B-1-2-2: 最後の著者が others ではないケース
+              { sss check.kanji.str
+                  { bst.and.jp * t * }
+                  { numnames #2 =
+                      % author が二人のケース
+                      { bst.and * t * }
+                      % author が3人以上のケース
+                      { bst.ands * t * }
+                    if$
+                  }
+                 if$
+              }
+            if$
+          }
+        if$
+      }
+
+      % B-2: 一番目の author なら何もなし。
+      't
+    if$
+    nameptr #1 + 'nameptr :=    	% nameptr を 1 増やす。
+    namesleft #1 - 'namesleft :=        % nameslest を 1 減らす。
+  }
+  while$  % 繰り返し終わり
+}
+
+% remove successive periods (commas) from author
+FUNCTION {remove.ss.period.auth}
+{ 's := % こちらは bysame で省略された名前
+  'tempc :=  % こちらは元の author (or editor) 名
+  s tempc format.names 'tempa :=
+
+  % For debug
+  "tempa = \texttt{" tempa * "}\\" * debug.write
+
+  tempc check.kanji.str
+    { bst.author.pre.jp tempa * 'tempa := }
+    { bst.author.pre tempa * 'tempa := }
+  if$
+
+  tempc check.kanji.str
+    { bst.author.post.jp 'tempb := }
+    { bst.author.post 'tempb := }
+  if$
+
+  tempb #1 #1 substring$ "}" =
+    % bst.author.post(.jp) の1文字目が" }" なら、何もしない。
+    { tempa tempb * }
+    % そうじゃないなら、tempa の最後の一文字と tempb の最初の一文字を比較
+    { tempa #-1 #1 substring$ tempb #1 #1 substring$ =
+	% 等しければ「tempa + tempb の最初の一文字を除いた文字列」
+	{ tempa tempb #2 global.max$ substring$ * }
+	% 等しくなれば「tempa + tempb」
+	{ tempa tempb * }
+      if$
+    }
+  if$
+}
+
+%%% \bysame (or \bysamejp) を挿入。
+FUNCTION {insert.bysame}
+{ 'zz := 
+  bst.pbibtex.version #0 =
+  bst.pbibtex.version #2 = or
+    { is.kanji.entry.author
+        { " \bysamejp{} " }
+        { " \bysame{} " }
+      if$
+    }
+    { zz check.kanji.str.sub
+        { " \bysamejp{} " }
+        { " \bysame{} " }
+      if$
+    }
+  if$
+}
+
+% <prev name list> <new name list> compare.names -> <modified name list>
+% この関数は bst.use.bysame が 2 のときのみ利用する。
+FUNCTION {compare.names.jecon}
+% <一個前の author> <現在の author> を引数にとる。
+{ 's :=		% 1つ前の author
+  'tempa :=	% 現在の author
+
+%   "author = " author * "\\" * debug.write debug.newline % For debug
+%   "current author = " s * "\\" * debug.write debug.newline % For debug
+%   "prev.author = " tempa * "\\" * debug.write debug.newline % For dedug
+
+  tempa num.names$ 'len1.jecon :=  % len1 = the number of previous authors
+  s num.names$ 'len2.jecon :=	   % len2 = the number of current authors
+
+% len1.jecon := min(len1.jecon,len2.jecon)
+% len1 -> min{the number of previous authors, the number of current authors}
+  len1.jecon len2.jecon >
+    { len2.jecon 'len1.jecon := }
+    'skip$
+  if$
+
+% start with an empty string, then while the components are the same
+% add "bysame"
+  ""
+  #1 'i.jecon :=
+  % i.jecon > len1.jeon でないなら繰り返し
+  { i.jecon len1.jecon > not }
+    % current author と previous author が等しいか？
+    { tempa i.jecon "{ff }{vv }{ll}{ jj}" format.name$
+      s	    i.jecon "{ff }{vv }{ll}{ jj}" format.name$ =
+	% 等しいとき
+	{ #1 i.jecon <
+	    { " and " * }	% bysame で省略する著者の前につく and 
+	    'skip$
+	  if$
+	  s insert.bysame *
+	  i.jecon #1 + 'i.jecon := }
+	% 等しくないときは len1.jecon にマイナス1を代入 → loop を抜ける。
+	{ #-1 'len1.jecon := }
+      if$
+    }
+  while$
+
+  % For debug
+  "i.jecon = " i.jecon int.to.str$ * "\\" * debug.write
+
+  % i.jecon には「prev.author と等しい author の数 + 1」が入っている。
+
+% add the rest of the second string
+  { i.jecon len2.jecon > not }
+    { #1 i.jecon <
+	% prev.author と同じ author が一人以上いるとき
+	{ " and " * }
+	{ }
+      if$
+      s i.jecon "{ff }{vv }{ll}{ jj}" format.name$ *
+      i.jecon #1 + 'i.jecon :=
+    }
+  while$
+}
+
+%%% authors の出力
+FUNCTION {format.output.authors}
+{ author empty$
+    'skip$
+    { bst.use.bysame #2 =
+	% 2 のタイプの bysame を利用するとき。
+	{ prev.author.jecon author compare.names.jecon 's :=
+
+          % For debug
+	  "prev.author.jecon = \texttt{" prev.author.jecon * "}\\" * debug.write
+	  "\noindent s = \texttt{" s * "}\\" * debug.write
+
+	  % prev.author.jecon に現在の author を代入しておく
+	  author 'prev.author.jecon :=
+	}
+	% bysame を利用しないか、1 のタイプの bysame を利用するときは author を
+	% s に代入。
+	{ author 's := }
+      if$
+      % extra.label.bysame に bysame という値が入っているか？
+      extra.label.bysame "bysame" =
+	% Yes なら bysame を挿入。
+	{ author insert.bysame }
+	% No なら ? を返す。
+	{ author s remove.ss.period.auth }
+      if$
+      output.field
+    }
+  if$
+}
+
+%%% editor の出力
+FUNCTION {format.output.editors}
+{ editor empty$
+    'skip$
+    { bst.use.bysame #2 =
+	{ prev.author.jecon editor compare.names.jecon 's :=
+
+          % For debug
+	  "prev.author.jecon = \texttt{" prev.author.jecon * "}\\" * debug.write
+	  "\noindent s = \texttt{" s * "}\\" * debug.write
+
+	  editor 'prev.author.jecon :=
+	}
+	{ editor 's := }
+      if$
+      % extra.label.bysame に bysame という値が入っているか？
+      extra.label.bysame "bysame" =
+	% Yes なら bysame.check に 1 を代入し、bysame を挿入
+	{ #1 'bysame.check :=
+	  editor insert.bysame }
+	{ editor s remove.ss.period.auth }
+      if$
+      s num.names$ #1 >
+        { s check.kanji.str
+            { bst.editor.jp * }
+            { bst.editors * }
+          if$
+        }
+        { s check.kanji.str
+            { bst.editor.jp * }
+            { bst.editor * }
+          if$
+        }
+      if$
+      output.field
+    }
+  if$
+}
+
+%%% author の整形
+FUNCTION {format.authors.alt}
+{ author empty$
+    { "" }
+    % extra.label.bysame に bysame という値が入っているか？
+    { extra.label.bysame "bysame" =
+	% Yes なら bysame を挿入
+	{ author insert.bysame }
+	{ author check.kanji.str
+	    { bst.author.pre.jp "xxx" author format.names * bst.author.post.jp * }
+	    { bst.author.pre "xxx" author format.names * bst.author.post * }
+	  if$
+	}
+      if$
+    }
+  if$
+}
+
+%%% editor の整形
+FUNCTION {format.editors.alt}
+{ editor empty$
+    { "" }
+    % extra.label.bysame に bysame という値が入っているか？
+    { extra.label.bysame "bysame" =
+	% Yes なら bysame.check に 1 を代入し、bysame を挿入
+	{ #1 'bysame.check :=
+	  editor insert.bysame }
+	{ editor check.kanji.str
+	    { bst.author.pre.jp "xxx" editor format.names * }
+	    { bst.author.pre "xxx" editor format.names * bst.author.post * }
+	  if$
+	}
+      if$
+    }
+  if$
+}
+
+%%% format.output.in.ed.booktitle 用
+FUNCTION {format.editors.x}
+{ editor empty$
+    { "" }
+    { "xxx" editor format.names 
+      editor num.names$ #1 >
+	{ editor check.kanji.str
+	    { bst.editor.jp * }
+	    { bst.editors * }
+	  if$
+	}
+	{ editor check.kanji.str
+	    { bst.editor.jp * }
+	    { bst.editor * }
+	  if$
+	}
+      if$
+    }
+  if$
+}
+
+%%% 「?.」、「?,」のようなケースで、period、comma を除去する関数
+FUNCTION {remove.irrelevant.period.comma}
+{ 's :=
+  s empty$
+    { "" }
+    % 後ろから3文字とって比較
+    { s #-1 #3 substring$ "?,'" =
+      s #-1 #3 substring$ "?.'" = or
+	% 後ろから3文字を除いたものに "'" を付ける．
+	{ s #-3 global.max$ substring$ "'" * }
+	{ s #-1 #4 substring$ "?,''" =
+	  s #-1 #4 substring$ "?.''" = or
+	    { s #-4 global.max$ substring$ "''" * }
+	    { s #-1 #2 substring$ "?," =
+	      s #-1 #2 substring$ "?." = or
+		{ s #-2 global.max$ substring$ "" * }
+		{ s #-1 #3 substring$ "?,~" =
+		  s #-1 #3 substring$ "?.~" = or
+		    { s #-4 global.max$ substring$ "?~" * }
+		    { s #-1 #3 substring$ "?, " =
+		      s #-1 #3 substring$ "?. " = or
+			{ s #-4 global.max$ substring$ "? " * }
+			's
+		      if$
+		    }
+		  if$
+		}
+	      if$
+	    }
+	  if$
+	}
+      if$
+    }
+  if$
+}
+
+%%% 最後についている「，」、「、」、「．」、「．」を除去する関数 (邦訳書用)
+FUNCTION {remove.irrelevant.kutoten}
+{ 's :=
+  s empty$
+    { "" * }
+    { bst.pbibtex.version #2 =
+	{ s #-1 #1 substring$ "、" =
+	  s #-1 #1 substring$ "，" = or
+	  s #-1 #1 substring$ "。" = or
+	  s #-1 #1 substring$ "．" = or
+	    { s #-2 global.max$ substring$ "" * }
+	    { s }
+	  if$
+	}
+	{ s #-1 #3 substring$ "、" =
+	  s #-1 #3 substring$ "，" = or
+	  s #-1 #3 substring$ "。" = or
+	  s #-1 #3 substring$ "．" = or
+ 	    { s #-6 global.max$ substring$ "" * }
+	    { s }
+	  if$
+	}
+      if$
+    }
+  if$
+}
+
+%%% 最初に「，，」、「、、」、「，、」、「、，」等が付いていたら一個目を除去した
+%%% 文字列を返す。
+FUNCTION {remove.irrelevant.pre.kutoten}
+{ 's :=
+  s empty$
+    { "" }
+    { bst.pbibtex.version #2 =
+	{ s #1 #4 substring$ "、、" =
+	  s #1 #4 substring$ "，，" = or
+	  s #1 #4 substring$ "，、" = or
+	  s #1 #4 substring$ "、，" = or
+	    { s #3 global.max$ substring$ }
+	    { s }
+	  if$
+	}
+	{ s #1 #6 substring$ "、、" =
+	  s #1 #6 substring$ "，，" = or
+	  s #1 #6 substring$ "，、" = or
+	  s #1 #6 substring$ "、，" = or
+	    { s #6 global.max$ substring$ }
+	    { s }
+	  if$
+	}
+      if$
+    }
+  if$
+}
+
+%%% title の整形
+FUNCTION {format.title.sub}
+{ bst.title.lower.case #0 =
+     { bst.title.pre title * bst.title.post * }
+     { bst.title.pre title "t" change.case$ * bst.title.post * }
+  if$
+}
+
+%%% title の出力
+FUNCTION {format.output.title}
+{ title empty$
+    { "there's no title in " cite$ * warning$ }
+    { bst.hide.title #0 = not
+	 'skip$
+         { is.kanji.entry
+             { bst.title.pre.jp title * bst.title.post.jp * output.field }
+             { format.title.sub remove.irrelevant.period.comma output.field }
+	   if$
+	 }
+      if$
+    }
+  if$
+}
+
+%%% jtitle の整形
+FUNCTION {format.jtitle}
+{ bst.book.pre.jp jtitle * bst.book.post.jp * }
+
+% - を -- にする関数 (pages 用)
+FUNCTION {n.dashify}
+{ 't :=
+  ""
+  %% while$ の条件 (t が empty でないなら実行)
+  { t empty$ not }
+  %% 処理
+  { t #1 #1 substring$ "-" =
+      { t #1 #2 substring$ "--" = not
+	  { bst.dashify.off
+	      { "-" * }
+	      { "--" * }
+	    if$
+	    t #2 global.max$ substring$ 't :=
+	  }
+	  { { t #1 #1 substring$ "-" = }
+	    { "-" *
+	      t #2 global.max$ substring$ 't :=
+	    }
+	    while$
+	  }
+	if$
+      }
+      { t #1 #1 substring$ is.kanji.str$
+	{ t #1 #2 substring$ *
+	  t #3 global.max$ substring$ 't :=
+	}
+	 { t #1 #1 substring$ *
+	  t #2 global.max$ substring$ 't :=
+	}
+	if$
+      }
+    if$
+  }
+  while$
+}
+
+%%% 与えられた数を漢数字に変換: 0->〇, 1->一, 2->二,..., 9->九 という対応関係。
+%%% さらに、"-" は縦棒に変換する。
+FUNCTION {convert.num.kanji}
+{ 's :=
+  s "1" =
+    { "一" }
+    { s "2" =
+	{ "二" }
+	{ s "3" =
+	    { "三" }
+	    { s "4" =
+		{ "四" }
+		{ s "5" =
+		    { "五" }
+		    { s "6" =
+			{ "六" }
+			{ s "7" =
+			    { "七" }
+			    { s "8" =
+				{ "八" }
+				{ s "9" =
+				    { "九" }
+				    { s "0" =
+					{ "〇" }
+					{ s "-" =
+					   { "\tatebo{}" }
+					   { s }
+					  if$
+					}
+				      if$
+				    }
+				if$
+				}
+			    if$
+			    }
+			if$
+			}
+		    if$
+		    }
+		if$
+		}
+	    if$
+	    }
+	if$
+	}
+    if$
+    }
+  if$
+}
+
+%%% 半角の alphabet を全角の alphabet に変更する関数 (a-j までのみ)。
+FUNCTION {convert.alphabet.zenkaku}
+{ 's :=
+  s "a" =
+    { "ａ" }
+    { s "b" =
+	{ "ｂ" }
+	{ s "c" =
+	    { "ｃ" }
+	    { s "d" =
+		{ "ｄ" }
+		{ s "e" =
+		    { "ｅ" }
+		    { s "f" =
+			{ "ｆ" }
+			{ s "g" =
+			    { "ｇ" }
+			    { s "h" =
+				{ "ｈ" }
+				{ s "i" =
+				    { "ｉ" }
+				    { s "j" =
+					{ "ｊ" }
+					{ s }
+				    if$
+				    }
+				if$
+				}
+			    if$
+			    }
+			if$
+			}
+		    if$
+		    }
+		if$
+		}
+	    if$
+	    }
+	if$
+	}
+    if$
+    }
+  if$
+}
+
+%%% year を漢数字に変換
+FUNCTION{convert.year.kanji}
+{ 't :=
+  %% bst.kansuji.jp が非ゼロでかつ，t が漢字じゃないのなら，漢字に変換
+  bst.kansuji.jp #0 = not t is.kanji.str$ not and 
+     { "" 'tt :=
+       { t empty$ not }
+       { tt t #1 #1 substring$ convert.num.kanji convert.alphabet.zenkaku * 'tt :=
+	 t #2 global.max$ substring$ 't := }
+       while$
+     }
+     { t 'tt := }
+  if$
+ tt
+}
+
+%%% bst.kansuji.jp が非ゼロのとき、数字を漢数字に変換する関数。
+FUNCTION{convert.num}
+{ 't :=
+  bst.kansuji.jp #0 = t is.kanji.str$ or
+     { t 'tt := }
+     { "" 'tt :=
+       { t empty$ not }
+       { t #1 #1 substring$ convert.num.kanji 'ss :=
+	 tt ss * 'tt :=
+	 t #2 global.max$ substring$ 't :=
+	 }
+       while$
+     }
+  if$
+ tt
+}
+
+%% 変数定義
+%% pages の "--" を "-" に変換する．
+FUNCTION {remove.duplicate.dash}
+{ 'da :=
+  "" 'db :=
+  "" 'dc :=
+  "" 'dd :=
+  { da empty$ not }
+  { da #1 #1 substring$ 'db :=
+    db "-" = dc "-" = and
+       'skip$
+       { dd db * 'dd := }
+    if$
+    db 'dc :=
+    da #2 global.max$ substring$ 'da :=
+  }
+  while$
+  dd
+}
+
+%%% bst.kansuji.jp が非ゼロのとき、pages を漢数字に変換する関数。
+FUNCTION{convert.num.pages}
+{ 't :=
+  bst.kansuji.jp #0 = t is.kanji.str$ or
+     { t 'tt := }
+     { "" 'tt :=
+       t remove.duplicate.dash 't :=
+       { t empty$ not }
+       { t #1 #1 substring$ convert.num.kanji 'ss :=
+	 tt ss * 'tt :=
+	 t #2 global.max$ substring$ 't :=
+	 }
+       while$
+     }
+  if$
+ tt
+}
+
+%%% year を出力
+FUNCTION {format.output.year}
+{ year empty$
+    { "there's no year in " cite$ * warning$ }
+    { is.kanji.entry
+	{ bst.kansuji.jp #0 =
+	   { bst.year.pre.jp year * extra.label * bst.year.post.jp * }
+	   { bst.year.pre.jp year convert.year.kanji *
+	     extra.label convert.alphabet.zenkaku * bst.year.post.jp * }
+	  if$
+	}
+	{ bst.year.pre year * extra.label * bst.year.post * }
+      if$
+      output.field
+    }
+  if$
+}
+
+%%% 2文字以下なら前に tie を付ける．
+FUNCTION {tie.or.space.connect}
+{ duplicate$ text.length$ #3 <
+    { "~" }
+    { " " }
+  if$
+  swap$ * *
+}
+
+FUNCTION {tie.or.space.connect.alt}
+{ duplicate$ text.length$ #3 <
+    { "~" }
+    { " " }
+  if$
+  swap$ *
+}
+
+FUNCTION {either.or.check}
+{ empty$
+    'pop$
+    { "can't use both " swap$ * " fields in " * cite$ * warning$ }
+  if$
+}
+
+%%% book 用の volume を出力
+FUNCTION {format.output.bvolume}
+{ volume empty$
+    'skip$
+    { is.kanji.entry
+	{ bst.bvolume.pre.jp volume convert.num * bst.bvolume.post.jp * }
+        { bst.bvolume.pre volume * bst.bvolume.post * }
+      if$
+      series empty$
+         'skip$
+         %% series もあるとき
+         { is.kanji.entry
+             { bst.series.pre.jp * series convert.num * bst.series.post.jp * }
+             { " of " * series * bst.series.post * }
+           if$
+         }
+      if$
+      output.field
+    }
+  if$
+}
+
+%%% series を出力
+FUNCTION {format.output.series}
+{ series empty$
+    'skip$
+    { is.kanji.entry
+        { bst.series.pre.jp series convert.num * bst.series.post.jp * }
+        { bst.series.pre series * bst.series.post * }
+      if$
+      output.field
+    }
+ if$
+}
+
+%%% number & seriesを一括で出力
+FUNCTION {format.output.number.series}
+{ number empty$
+  bst.hide.number #0 = not or
+     % number is empty
+     { series empty$
+         'skip$
+         % series is not empty.
+         { format.output.series }
+       if$
+     }
+     % number is not empty$
+     { series empty$
+	 { is.kanji.entry
+	     { bst.number.pre.jp number convert.num * bst.number.post.jp * }
+	     { bst.number.pre number * bst.number.post * }
+	   if$
+	   output.field
+	 }
+	 % series is not empty.  日本語と英語で順序逆にする。
+	 { is.kanji.entry
+	     { bst.series.pre.jp series convert.num * bst.series.post.jp *
+	       bst.number.pre.jp * number convert.num * bst.number.post.jp * }
+	     { bst.in bst.series.pre * series * bst.series.post *
+	       bst.number.pre * number * bst.number.post * }
+	   if$
+	   output.field
+	 }
+       if$
+     }
+  if$
+}
+
+%%% 数字かどうか判断する
+FUNCTION {is.num}
+{ chr.to.int$
+  duplicate$ "0" chr.to.int$ < not
+  swap$ "9" chr.to.int$ > not and
+}
+
+FUNCTION {extract.num}
+{ duplicate$ 't :=
+  "" 's :=
+  { t empty$ not }
+  { t #1 #1 substring$
+    t #2 global.max$ substring$ 't :=
+    duplicate$ is.num
+      { s swap$ * 's := }
+      { pop$ "" 't := }
+    if$
+  }
+  while$
+  s empty$
+    'skip$
+    { pop$ s }
+  if$
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	edition 処理用のプログラム
+
+% 英語の edition は全て 1st, 2nd, 3rd, 4th etc. に変換する。
+FUNCTION {eng.ord}
+{ duplicate$ "1" swap$ *
+  #-2 #1 substring$ "1" =
+     { bst.th * }
+     { duplicate$ #-1 #1 substring$
+       duplicate$ "1" =
+	 { pop$ bst.st * }
+	 { duplicate$ "2" =
+	     { pop$ bst.nd * }
+	     { "3" =
+		 { bst.rd * }
+		 { bst.th * }
+	       if$
+	     }
+	   if$
+	  }
+       if$
+     }
+   if$
+}
+
+% edition entry の first, second 等を 1st, 2nd に変換する (from jfm.bst)。
+FUNCTION {convert.edition}
+{ edition extract.num "l" change.case$ 's :=
+  s "first" = s "1" = or
+    { bst.first }
+    { s "second" = s "2" = or
+	{ bst.second }
+	{ s "third" = s "3" = or
+	    { bst.third }
+	    { s "fourth" = s "4" = or
+		{ bst.fourth }
+		{ s "fifth" = s "5" = or
+		    { bst.fifth }
+		    { s #1 #1 substring$ is.num
+			{ s eng.ord }
+			{ edition }
+		      if$
+		    }
+		  if$
+		}
+	      if$
+	    }
+	  if$
+	}
+      if$
+    }
+  if$
+}
+
+% jan -> January というような変換
+FUNCTION {convert.month}
+{ 't :=
+  t "l" change.case$ 'tt := 
+  tt "jan" =
+    { "January" }
+    { tt "feb" =
+	{ "February" }
+	{ tt "mar" =
+	    { "March" }
+	    { tt "apr" =
+		{ "April" }
+		{ tt "may" =
+		    { "May" }
+		    { tt "jun" =
+			{ "Jun" }
+			{ tt "jul" =
+			    { "July" }
+			    { tt "aug" =
+				{ "August" }
+				{ tt "sep" =
+				    { "September" }
+				    { tt "oct" =
+					{ "October" }
+					{ tt "nov" =
+					    { "November" }
+					    { tt "dec" =
+						{ "December" }
+						't
+					    if$
+					    }
+					if$
+					}
+				    if$
+				    }
+				if$
+				}
+			    if$
+			    }
+			if$
+			}
+		    if$
+		    }
+		if$
+		}
+	    if$
+	    }
+	if$
+	}
+    if$
+    }
+  if$
+}
+
+% 日本語文献の場合には英語の月を数字に変換する。
+FUNCTION {convert.month.kanji}
+{ 't := 
+  t "January" =
+    { "1" }
+    { t "February" =
+	{ "2" }
+	{ t "March" =
+	    { "3" }
+	    { t "April" =
+		{ "4" }
+		{ t "May" =
+		    { "5" }
+		    { t "June" =
+			{ "6" }
+			{ t "July" =
+			    { "7" }
+			    { t "August" =
+				{ "8" }
+				{ t "September" =
+				    { "9" }
+				    { t "October" =
+					{ "10" }
+					{ t "November" =
+					    { "11" }
+					    { t "December" =
+						{ "12" }
+						't
+					    if$
+					    }
+					if$
+					}
+				    if$
+				    }
+				if$
+				}
+			    if$
+			    }
+			if$
+			}
+		    if$
+		    }
+		if$
+		}
+	    if$
+	    }
+	if$
+	}
+    if$
+    }
+  if$
+}
+
+%%% edition の出力
+FUNCTION {format.output.edition}
+{ edition empty$
+    'skip$
+    { is.kanji.entry
+        { bst.edition.pre.jp edition convert.num * bst.edition.post.jp * }
+        { output.state mid.sentence =
+	    { bst.edition.pre convert.edition "l" change.case$ * bst.edition.post * }
+	    { bst.edition.pre convert.edition "t" change.case$ * bst.edition.post * }
+	  if$
+	}
+      if$
+      output.field
+    }
+  if$
+}
+
+%%% month の出力
+FUNCTION {format.output.month}
+{ month empty$
+  bst.hide.month #0 = not or
+    % bst.hide.month が非ゼロなら month は出力せず
+    'skip$
+    { is.kanji.entry
+	{ bst.month.pre.jp month convert.month convert.month.kanji convert.num * bst.month.post.jp * }
+        { bst.month.pre month convert.month * bst.month.post * }
+      if$
+      output.field
+    }
+  if$
+}
+
+%%% year & date の出力
+FUNCTION {format.output.date}
+{ month empty$
+    { year empty$
+        'skip$
+	{ format.output.year }
+      if$
+    }
+    { year empty$
+        { format.output.month }
+        { is.kanji.entry
+            %% 日本語文献 -> 年 - 月
+	    { format.output.year format.output.month }
+            %% 英語 -> 月 - 年
+	    { format.output.month format.output.year }
+	  if$
+	}
+      if$
+    }
+  if$ 
+}
+
+%%% 複数のページが指定されているかチェック (1-100等のように)．
+FUNCTION { multi.page.check }
+{ 't :=
+  #0 'multiresult :=
+    { multiresult not
+      t empty$ not
+      and
+    }
+    { t #1 #1 substring$
+      duplicate$ "-" =
+      swap$ duplicate$ "," =
+      swap$ "+" =
+      or or
+	{ #1 'multiresult := }
+	{ t #2 global.max$ substring$ 't := }
+      if$
+    }
+  while$
+  multiresult
+}
+
+%%% pages の整形
+FUNCTION {format.pages}
+{ is.kanji.entry
+    { pages multi.page.check
+        { bst.page.pre.jp pages n.dashify convert.num.pages * bst.page.post.jp * }
+        { bst.page.pre.jp pages convert.num.pages * bst.page.post.jp * }
+      if$
+    }
+    { pages multi.page.check
+        { bst.pages.pre pages n.dashify tie.or.space.connect.alt * bst.pages.post * }
+        { bst.page.pre pages tie.or.space.connect.alt * bst.page.post * }
+      if$
+    }
+  if$
+}
+
+%%% pages の出力
+FUNCTION {format.output.pages}
+{ pages empty$
+    'skip$
+    { format.pages output.field }
+ if$
+}
+
+%%% number の出力
+FUNCTION {format.output.number}
+{ number empty$
+  bst.hide.number #0 = not or
+    'skip$
+    { is.kanji.entry
+	{ bst.number.pre.jp number convert.num * bst.number.post.jp * }
+	{ bst.number.pre number * bst.number.post * }
+      if$
+      output.field
+    }
+  if$
+}
+
+%%% volume の出力
+FUNCTION {format.output.volume}
+{ volume empty$
+    'skip$
+    { is.kanji.entry
+	{ bst.volume.pre.jp volume convert.num * bst.volume.post.jp * output.field }
+        { bst.volume.pre volume * bst.volume.post * output.field }
+      if$
+    }
+  if$
+}
+
+%%% chapter の出力
+FUNCTION {format.output.chapter}
+{ chapter empty$
+    'skip$
+    { is.kanji.entry
+        { bst.chapter.pre.jp chapter convert.num * bst.chapter.post.jp * }
+        { bst.chapter.pre chapter tie.or.space.connect * bst.chapter.post }
+      if$
+      output.field
+    }
+  if$
+}
+
+%%% booktitle の整形
+FUNCTION {format.btitle}
+{ is.kanji.entry
+    { bst.btitle.pre.jp booktitle * bst.btitle.post.jp * }
+    { bst.btitle.pre booktitle * bst.btitle.post * }
+  if$
+}
+
+%%% editor and booktitle の出力
+FUNCTION {format.output.in.ed.booktitle}
+{ booktitle empty$
+    'skip$
+    { editor empty$
+	{ is.kanji.entry
+	    { }
+	    { bst.in format.btitle * }
+	  if$
+	}
+	{ is.kanji.entry
+	    { format.editors.x "" * format.btitle * }
+            { bst.editor.btitle.order #0 =
+                { bst.in format.editors.x * " " * format.btitle * }
+                { bst.in format.btitle * " " * format.editors.x * }
+              if$
+            }
+	  if$
+	}
+      if$
+      output.field
+    }
+  if$
+}
+
+%%% translator & kankyaku の出力
+FUNCTION {format.output.translator}
+{ kanyaku empty$
+   { translator empty$
+       'skip$
+       { bst.translator.pre.jp "xxx" translator format.names * bst.translator.post.jp * output.field }
+    if$
+   }
+   { translator empty$
+       { bst.kanyaku.pre.jp "xxx" kanyaku format.names * bst.kanyaku.post.jp * }
+       { bst.kanyaku.pre.jp "xxx" kanyaku format.names * bst.kanyaku.post.jp * 
+	 bst.translator.pre.jp * "xxx" translator format.names * bst.translator.post.jp * }
+     if$
+     output.field
+   }
+  if$
+}
+
+%%% howpublished の出力
+FUNCTION {format.output.howpublished}
+{ howpublished empty$
+    'skip$
+    { is.kanji.entry
+	{ bst.howpublished.pre.jp howpublished * bst.howpublished.post.jp * }
+	{ bst.howpublished.pre howpublished * bst.howpublished.post * }
+      if$
+    output.field
+    }
+  if$
+}
+
+%%% address の出力
+FUNCTION {format.output.address}
+{ address empty$
+    'skip$
+    { is.kanji.entry
+	{ bst.address.pre.jp address * bst.address.post.jp * }
+	{ bst.address.pre address * bst.address.post * }
+      if$
+      output.field
+    }
+  if$
+}
+
+%%% publisher の出力
+FUNCTION {format.output.publisher}
+{ publisher empty$
+    'skip$
+    { is.kanji.entry 
+	{ bst.publisher.pre.jp publisher * bst.publisher.post.jp * }
+	{ bst.publisher.pre publisher * bst.publisher.post * }
+      if$
+      output.field
+    }
+  if$
+}
+
+%%% organization の出力
+FUNCTION {format.output.organization}
+{ organization empty$
+    'skip$
+    { is.kanji.entry
+	{ bst.organization.pre.jp organization * bst.organization.post.jp * }
+	{ bst.organization.pre organization * bst.organization.post * }
+      if$
+      output.field
+    }
+  if$
+}
+
+%% publisher と address を出力する関数
+FUNCTION {format.output.publisher.address}
+    { bst.address.position #0 = 
+    { format.output.address
+      format.output.publisher }
+    { format.output.publisher
+      format.output.address }
+  if$
+}
+
+%% address, organization, publisher を出力する関数
+FUNCTION {format.output.address.organization.publisher}
+{ format.output.organization
+  bst.address.position #0 = 
+    { format.output.address
+      format.output.publisher }
+    { format.output.publisher
+      format.output.address }
+  if$
+}
+
+%%% misc 用
+FUNCTION {empty.misc.check}
+{ author empty$ title empty$ howpublished empty$
+  month empty$ year empty$ note empty$
+  and and and and and
+  key empty$ not and
+    { "All relevant fields are empty in " cite$ * warning$ }
+    'skip$
+  if$
+}
+
+%%% thesis type の整形
+FUNCTION {format.thesis.type}
+{ type empty$
+    'skip$
+    { pop$ " " type * }
+  if$
+}
+
+%%% technical report number の整形
+FUNCTION {format.tr.number}
+{ type empty$
+    { is.kanji.entry
+	{ bst.techrep.jp }
+	{ bst.techrep }
+      if$
+    }
+    { " " type * }
+  if$
+  number empty$
+    { "t" change.case$ }
+    { number tie.or.space.connect }
+  if$
+}
+
+%%% phdthesis の出力
+FUNCTION {format.output.phd}
+{ is.kanji.entry
+    { bst.phdthesis.jp format.thesis.type }
+    { bst.phdthesis format.thesis.type }
+  if$
+  output.field
+}  
+
+%%% mastersthesis の出力
+FUNCTION {format.output.mthesis}
+{ is.kanji.entry
+    { bst.mthesis.jp format.thesis.type }
+    { bst.mthesis format.thesis.type }
+  if$
+  output.field
+}  
+
+%%% school の出力
+FUNCTION {format.output.school}
+{ school empty$
+    'skip$
+    { is.kanji.entry
+	{ bst.school.pre.jp school * bst.school.post.jp * }
+	{ bst.school.pre school * bst.school.post * }
+      if$
+      output.field
+    }
+  if$
+}
+
+%%% institution の出力
+FUNCTION {format.output.institution}
+{ institution empty$
+    'skip$
+    { is.kanji.entry
+	{ bst.institution.pre.jp institution * bst.institution.post.jp * }
+	{ bst.institution.pre institution * bst.institution.post * }
+      if$
+      output.field
+    }
+  if$
+}
+
+%%% 邦訳書の情報の出力
+FUNCTION {format.output.hoyakusho}
+{ jauthor empty$
+  jkanyaku empty$
+  jtitle empty$
+  jpublisher empty$
+  jyear empty$
+  jnote empty$
+  and and and and and
+    'skip$
+    {
+      bst.hoyakusho.pre.jp
+      jauthor empty$
+	{ jkanyaku empty$
+            'skip$
+	    { "xxx" jkanyaku format.names * "監訳" * }
+	  if$
+	}
+	{ "xxx" jauthor format.names * "訳" *
+	  jkanyaku empty$
+            'skip$
+	    { bst.touten.jp * "xxx" jkanyaku format.names * "監訳" * }
+	  if$
+	}
+      if$
+      jtitle empty$
+        'skip$
+	{ bst.touten.jp format.jtitle * bst.touten.jp * remove.irrelevant.pre.kutoten * }
+      if$
+      jpublisher empty$
+        'skip$
+	{ jpublisher * bst.touten.jp * }
+      if$
+      jyear empty$
+        'skip$
+	{ jyear convert.year.kanji * "年" * bst.touten.jp * }
+      if$
+      jnote empty$
+        'skip$
+        { jnote *}
+      if$
+      remove.irrelevant.kutoten bst.hoyakusho.post.jp *
+      output.field
+    }
+  if$
+}
+
+%%% url の出力
+FUNCTION {format.output.url}
+{ type$ "online" = bst.show.url or
+    { is.kanji.entry
+        { bst.url.pre.jp url * bst.url.post.jp *
+	  access empty$
+	     { "" * output.field }
+	     { bst.access.pre.jp * access * bst.access.post.jp * output.field }
+	  if$
+	}
+        { bst.url.pre url * bst.url.post *
+          access empty$
+             { "" * output.field }
+             { bst.access.pre * access * bst.access.post * output.field }
+          if$
+        }
+      if$
+    }
+    'skip$
+  if$
+}
+
+%%% DOI の出力
+FUNCTION {format.output.doi}
+{ bst.show.doi
+    { is.kanji.entry
+	{ bst.doi.pre.jp doi * bst.doi.post.jp * output.field }
+	{ bst.doi.pre doi * bst.doi.post * output.field }
+      if$
+    }
+    'skip$
+  if$
+}
+
+%%% URL & DOI の出力
+FUNCTION {format.output.url.doi}
+{ url empty$
+    { doi empty$
+        'skip$
+        { format.output.doi }
+      if$
+    }
+    { doi empty$
+        { format.output.url }
+        { bst.url.doi #0 =
+            { format.output.url 
+	      format.output.doi  }
+            { bst.url.doi #1 =
+                { format.output.url } 
+                { format.output.doi }
+              if$
+            }
+          if$
+        }
+      if$
+    }
+  if$
+}
+
+%%% note の出力
+FUNCTION {format.output.note}
+{ note empty$
+    'skip$
+    { is.kanji.entry
+	{ bst.note.pre.jp note * bst.note.post.jp * }
+	{ bst.note.pre note * bst.note.post * }
+      if$
+      output.field
+    }
+  if$
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	 \havarditem の出力．
+
+FUNCTION {output.number.index}
+{
+  bst.use.number.index #0 =
+     'skip$
+     { index #1 + 'index :=
+       "" 'preone :=
+       "" 'preten :=
+       bst.number.index.digit "1" =
+	 'skip$
+	 { bst.number.index.digit "2" =
+	   { "\hskip0.5em" 'preone := }
+	   { bst.number.index.digit "3" =
+	      { "\hskip1em" 'preone :=
+		"\hskip0.5em" 'preten := }
+	      'skip$
+	     if$
+	   }
+	 if$
+	 }
+       if$  
+     }
+  if$
+  newline$
+  ""
+  % 以下も、number index を付ける場合の処理
+  bst.use.number.index #0 =
+     'skip$
+     { index #10 <
+	 % number index の桁に応じて前に空白を入れる。
+	 { preone }
+	 { index #100 <
+	     { preten }
+	     { "" }
+	   if$
+	 }
+       if$
+       bst.number.index.pre * index int.to.str$ * bst.number.index.post * write$
+     }
+ if$
+}
+
+FUNCTION {output.bibitem}
+{ bst.harvarditem.off
+    { "" }
+    { newline$
+      "\harvarditem[" write$
+      alabel write$			% alabel が abbreviated citation
+      "]{" write$
+      flabel write$			% flabel が full citation
+      "}{" write$
+      is.kanji.entry
+	 { cyear convert.year.kanji write$ }	% cyear が year
+	 { cyear write$ }
+      if$
+      % cyear が year
+      "}{" write$
+      cite$ write$			% cite$ で keyword がプッシュされる。
+      "}" write$
+      % 以下は、number index を付ける場合の処理
+      output.number.index
+    }
+  if$
+  before.all 'output.state :=
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	 エントリーのタイプ別の処理
+
+% FUNCTION {article} は article タイプのエントリーを処理するための関数。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	 article の処理
+
+FUNCTION {article}
+{ output.bibitem
+  format.output.authors
+  bst.year.position #0 =
+    { format.output.year }
+    'skip$
+  if$
+  format.output.title
+  format.output.journal
+  bst.year.position #2 =
+    { format.output.date }
+    'skip$
+  if$
+  format.output.volume
+  bst.year.position #3 =
+    { format.output.year }
+    'skip$
+  if$
+  format.output.number
+  format.output.pages
+  bst.year.position #1 =
+    { format.output.date }
+    { format.output.month }
+  if$
+  format.output.url.doi
+  format.output.note
+  fin.entry
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	 book の処理
+
+FUNCTION {book}
+{ output.bibitem
+  author empty$
+    { format.output.editors }
+    { format.output.authors
+      "author and editor" editor either.or.check }
+  if$
+  bst.year.position #0 =
+    { format.output.year }
+    'skip$
+  if$
+  format.output.book
+  format.output.translator
+  format.output.bvolume
+  format.output.number.series
+  format.output.edition
+  format.output.publisher.address
+  bst.year.position #0 = not
+    { format.output.year }
+    'skip$
+  if$
+  format.output.url.doi
+  format.output.note
+  format.output.hoyakusho
+  fin.entry
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	 booklet の処理
+
+FUNCTION {booklet}
+{ output.bibitem
+  format.output.authors
+  bst.year.position #0 =
+    { format.output.year }
+    'skip$
+  if$
+  format.output.title
+  format.output.howpublished
+  format.output.address
+  bst.year.position #0 = not
+    { format.output.year }
+    'skip$
+  if$
+  format.output.url.doi
+  format.output.note
+  fin.entry
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	inbook の処理
+
+FUNCTION {inbook}
+{ output.bibitem
+  author empty$
+    { format.output.editors }
+    { format.output.authors
+      "author and editor" editor either.or.check }
+  if$
+  bst.year.position #0 =
+    { format.output.year }
+    'skip$
+  if$
+  format.output.book
+  format.output.edition
+  format.output.bvolume
+  format.output.chapter
+  format.output.pages
+  format.output.number.series
+  format.output.publisher.address
+  bst.year.position #0 = not
+    { format.output.year }
+    'skip$
+  if$
+  format.output.url.doi
+  format.output.note
+  fin.entry
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	incollection の処理
+
+FUNCTION {incollection}
+{ output.bibitem
+  format.output.authors
+  bst.year.position #0 =
+    { format.output.year }
+    'skip$
+  if$
+  format.output.title
+  format.output.in.ed.booktitle
+  format.output.bvolume
+  format.output.edition
+  format.output.chapter
+  format.output.pages
+  format.output.address.organization.publisher
+  bst.year.position #0 = not
+    { format.output.year }
+    'skip$
+  if$
+  format.output.url.doi
+  format.output.note
+  fin.entry
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	inproceedings の処理
+
+FUNCTION {inproceedings}
+{ output.bibitem
+  format.output.authors
+  bst.year.position #0 =
+    { format.output.year }
+    'skip$
+  if$
+  format.output.title
+  format.output.in.ed.booktitle
+  format.output.bvolume
+  format.output.number.series
+  format.output.pages
+  format.output.address.organization.publisher
+  bst.year.position #0 = not
+    { format.output.date }
+    { format.output.month }
+  if$
+  format.output.url.doi
+  format.output.note
+  fin.entry
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	conference の処理
+FUNCTION {conference}
+{ inproceedings }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	manual の処理
+
+FUNCTION {manual}
+{ output.bibitem
+  author empty$
+    { organization empty$
+	'skip$
+	{ format.output.organization }
+      if$
+    }
+    { format.output.authors }
+  if$
+  bst.year.position #0 =
+    { format.output.year }
+    'skip$
+  if$
+  format.output.book
+  format.output.address.organization.publisher
+  format.output.edition
+  bst.year.position #0 = not
+    { format.output.year }
+    'skip$
+  if$
+  format.output.url.doi
+  format.output.note
+  fin.entry
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	mastersthesis の処理
+
+FUNCTION {mastersthesis}
+{ output.bibitem
+  format.output.authors
+  bst.year.position #0 =
+    { format.output.year }
+    'skip$
+  if$
+  format.output.title
+  format.output.mthesis  
+  format.output.school
+  format.output.address
+  bst.year.position #0 = not
+    { format.output.year }
+    'skip$
+  if$
+  format.output.url.doi
+  format.output.note
+  fin.entry
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	phdthesis の処理
+
+FUNCTION {phdthesis}
+{ output.bibitem
+  format.output.authors
+  bst.year.position #0 =
+    { format.output.year }
+    'skip$
+  if$
+  format.output.title
+  format.output.phd
+  format.output.school
+  format.output.address
+  bst.year.position #0 = not
+    { format.output.year }
+    'skip$
+  if$
+  format.output.url.doi
+  format.output.note
+  fin.entry
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	proceedings の処理
+
+FUNCTION {proceedings}
+{ output.bibitem
+  editor empty$
+    { format.output.organization }
+    { format.output.editors }
+  if$
+  bst.year.position #0 =
+    { format.output.year }
+    'skip$
+  if$
+  format.output.book
+  format.output.bvolume
+  format.output.number.series
+  format.output.address.organization.publisher
+  bst.year.position #0 = not
+    { format.output.year }
+    'skip$
+  if$
+  format.output.url.doi
+  format.output.note
+  fin.entry
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	techreport の処理
+
+FUNCTION {techreport}
+{ output.bibitem
+  format.output.authors
+  bst.year.position #0 =
+    { format.output.year }
+    'skip$
+  if$
+  format.output.title
+  format.tr.number output.field
+  format.output.institution
+  format.output.address
+  format.output.chapter
+  format.output.pages
+  bst.year.position #0 = not
+    { format.output.year }
+    'skip$
+  if$
+  format.output.url.doi
+  format.output.note
+  fin.entry
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	unpublished の処理
+
+FUNCTION {unpublished}
+{ output.bibitem
+  format.output.authors
+  bst.year.position #0 =
+    { format.output.year }
+    'skip$
+  if$
+  format.output.title
+  bst.year.position #0 = not
+     { format.output.date }
+     { format.output.month }
+  if$
+  format.output.url.doi
+  format.output.note
+  fin.entry
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	online の処理
+
+FUNCTION {online}
+{ output.bibitem
+  format.output.authors
+  bst.year.position #0 =
+    { format.output.year }
+    'skip$
+  if$
+  format.output.title
+  bst.year.position #0 = not
+    { format.output.date }
+    { format.output.month }
+  if$
+  format.output.url.doi
+  format.output.note
+  fin.entry
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	misc の処理
+
+FUNCTION {misc}
+{ output.bibitem
+  format.output.authors
+  bst.year.position #0 =
+    { format.output.year }
+    'skip$
+  if$
+  format.output.title
+  format.output.howpublished
+  bst.year.position #0 = not
+    { format.output.date }
+    { format.output.month }
+  if$
+  format.output.url.doi
+  format.output.note
+  fin.entry
+  empty.misc.check
+}
+
+FUNCTION {default.type}
+{ misc }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	月の略称定義
+
+MACRO {jan} {"January"}
+MACRO {feb} {"February"}
+MACRO {mar} {"March"}
+MACRO {apr} {"April"}
+MACRO {may} {"May"}
+MACRO {jun} {"June"}
+MACRO {jul} {"July"}
+MACRO {aug} {"August"}
+MACRO {sep} {"September"}
+MACRO {oct} {"October"}
+MACRO {nov} {"November"}
+MACRO {dec} {"December"}
+
+%%% エントリを読み込む
+READ
+
+FUNCTION {set.sort.name.mess}
+{ "\noindent \textbf{Iteration of set.sort.name}\\" debug.write
+  "sort.name の値 → sortname or yomi フィールドが設定されていればその値。なければ空\\ \\" debug.write
+  newline$
+}
+
+%%% sortname or yomi フィールドの値を sort.name に代入。
+FUNCTION {set.sort.name}
+{ sortname empty$ not 
+    { sortname 'sort.name := }
+    { yomi empty$ not
+      { yomi 'sort.name := }
+      'skip$
+      if$
+    }
+  if$
+
+  % For debug
+  "\noindent sort.name = \texttt{" sort.name * "}\\" * debug.write
+
+}
+
+%%% 全てのエントリーに対し実行
+EXECUTE {set.sort.name.mess}
+ITERATE {set.sort.name}
+
+%%% author or editor が日本語かどうかを判断するための関数
+FUNCTION {set.is.kanji.entry.author}
+{
+  author    field.or.null is.kanji.str$
+  editor    field.or.null is.kanji.str$ or
+  'is.kanji.entry.author :=
+}
+
+%%% エントリーが日本語文献か判断するための関数。
+FUNCTION {set.is.kanji.entry}
+%% まず、langid (or language) フィールドで判断
+{ langid empty$
+  language empty$ and
+    { #0 'is.kanji.entry := }
+    { langid empty$
+        { language "l" change.case$ 'templang := }
+        { langid "l" change.case$ 'templang := }
+      if$
+      templang "japanese" =
+      templang "chinese" = or
+      templang "korean" = or
+        { #1 'is.kanji.entry := }
+        { #0 'is.kanji.entry := }
+      if$
+    }
+  if$
+  %% 次にフィールドの値で自動判別
+  is.kanji.entry
+  bst.pbibtex.version #1 = not and
+    'skip$
+    { author	field.or.null is.kanji.str$
+      title 	field.or.null is.kanji.str$ or
+      editor	field.or.null is.kanji.str$ or
+      journal	field.or.null is.kanji.str$ or
+      booktitle field.or.null is.kanji.str$ or
+      'is.kanji.entry := }
+  if$
+}
+
+%%% 全てのエントリーに対し実行
+ITERATE {set.is.kanji.entry.author}
+ITERATE {set.is.kanji.entry}
+
+%%% 引用順を保持する変数
+FUNCTION {initialize.order.num}
+{
+  #1 'order.num :=
+}
+%%% 初期値に1を設定
+EXECUTE {initialize.order.num}
+
+%%% 変数 order.cited には引用順の数値が入る．
+FUNCTION {set.order.cited}
+{
+  order.num 'order.cited :=
+  #1 order.num + 'order.num :=
+}
+%%% 全てのエントリーに対し実行
+ITERATE {set.order.cited}
+  
+%%% 記号を除去し、小文字に変換
+FUNCTION {sortify}
+{ purify$ "l" change.case$ }
+
+%%% 先頭何文字かを除去する。
+% s の最初から len 文字を除去
+FUNCTION {chop.word}
+{ 's :=
+  'len :=
+  s #1 len substring$ =
+    { s len #1 + global.max$ substring$ }
+    's
+  if$
+}
+
+%%% ソート用に名前を加工
+FUNCTION {sort.format.names}
+{ 's :=
+  sort.name empty$
+     'skip$
+     { sort.name 's := }
+  if$
+  #1 'nameptr :=
+  ""
+  s num.names$ 'numnames :=
+  numnames 'namesleft :=
+    { namesleft #0 > }
+    { nameptr #1 >
+	{ ", " * }
+	'skip$
+      if$
+      s check.kanji.str
+	 { bst.sei.mei.order #0 =
+	     { s nameptr "{ff }{ll}" format.name$ 't := }
+	     { s nameptr "{ll }{ff}" format.name$ 't := }
+	   if$
+	 }
+	 { s nameptr "{ll}{ ff}{ jj}" format.name$ 't := }
+      if$
+      nameptr #1 =
+	 { t " 0 " * 't := }
+	 'skip$
+      if$
+      nameptr numnames = t "others" = and
+	{ s check.kanji.str
+		{ bst.and.others.jp * }
+		{ bst.and.others * }
+	  if$
+	}
+	{ t sortify * }
+      if$
+      nameptr #1 + 'nameptr :=
+      namesleft #1 - 'namesleft :=
+    }
+  while$
+}
+
+%%% ソート用に名前を加工
+FUNCTION {sort.format.names.abb}
+{ 's :=
+  sort.name empty$
+     'skip$
+     { sort.name 's := }
+  if$
+  s num.names$ 'numnames :=
+  numnames bst.and.others.num <
+     { s sort.format.names }
+     { s check.kanji.str
+	 % author 名が日本語を含むケース
+	 { bst.sei.mei.order #0 =
+	     { s #1 "{ff }{ll}" format.name$ " et al. " * }
+	     { s #1 "{ll }{ff}" format.name$ " et al. " * }
+	   if$
+	 }
+	 { s #1 "{ll}{ ff}{ jj}" format.name$ " et al. " * }
+       if$
+     }
+  if$
+}
+
+%%% Full author name の label の作成
+FUNCTION {format.lab.names.full}
+{ 's :=
+  #1 'nameptr :=
+  s num.names$ 'numnames :=
+  numnames 'namesleft :=
+    { namesleft #0 > }
+      { s check.kanji.str
+	  % author 名に日本語含むケース
+	  { nameptr 'name.num :=
+	    s set.alphabet.in.author
+	    alphabet.in.author #0 =
+	      % first name も日本語（日本人名のケース）
+	      { s nameptr "{ll}" format.name$ 't :=
+		t "others" =
+		  'skip$
+		  { bst.sei.mei.order #0 =
+		     { s nameptr "{ff}" format.name$ 't := }
+		     { s nameptr "{ll}" format.name$ 't := }
+		   if$
+		  }
+		if$
+		t empty$
+		  { s #1 "{ll}" format.name$ 't := }
+		  'skip$
+		if$
+	      }
+	      % first name が alphabet のケース（外国人名のケース）
+	      { s nameptr "{ll}" format.name$ 't := }
+	    if$
+	    nameptr #1 >
+	      { namesleft #1 >
+		  { bst.cite.and.jp * t * }
+		  { t "others" =
+		      { bst.and.others.jp * }
+		      { bst.cite.and.jp * t * }
+		    if$
+		  }
+		if$
+	      }
+	      't
+	    if$
+	    nameptr #1 + 'nameptr :=
+	    namesleft #1 - 'namesleft :=
+	  }
+
+	  % author 名に日本語含まないケース
+	  { s nameptr "{vv~}{ll}" format.name$ 't :=
+	      nameptr #1 >
+		{ namesleft #1 >
+		    { ", " * t * }
+		    { t "others" =
+			{ bst.and.others * }
+			{ numnames #2 > 
+			   { bst.cite.ands * t * }
+			   { bst.cite.and * t * }
+			  if$
+			}
+		      if$
+		    }
+		  if$
+		}
+		't
+	      if$
+	      nameptr #1 + 'nameptr :=
+	      namesleft #1 - 'namesleft :=
+	  }
+	if$
+      }
+    while$
+    numnames #1 > #1 #2 = and {", eds" *} {} if$
+    numnames #1 = #1 #2 = and {", ed" *} {} if$
+}
+
+%%% author name の label の作成 (abbreviated name).
+FUNCTION {format.lab.names.abb}
+{ 's :=
+   s num.names$ 'numnames :=
+   numnames bst.and.others.num <
+     % author 数が bst.and.others.num より小さいなら full で表示。
+     { s format.lab.names.full }
+     % author 数が bst.and.others.num 以上なら 1st author のみ表示。あとは略。
+     { s check.kanji.str
+	 % author 名が日本語を含むケース
+	 { #1 'name.num :=
+	   s set.alphabet.in.author
+	   alphabet.in.author #0 =
+	    % first name も日本語のケース（日本人名のケース）
+	    
+	    % 注：日本語の author は "姓 名" の順で指定されるが、bst では
+	    % 順番通りに姓＝first name、名＝last name として扱われる。
+	    { bst.sei.mei.order #0 =
+		{ s #1 "{ff}" format.name$ 't := }
+		{ s #1 "{ll}" format.name$ 't := }
+	      if$
+	      t empty$
+		{ s #1 "{ll}" format.name$ 't := }
+		'skip$
+	      if$
+	      t bst.and.others.jp * }
+
+	    % first name が alphabet のケース（外国人名のケース）
+	    { s #1 "{ll}" format.name$ 't := 
+	      t bst.and.others.jp * }
+	  if$
+	 }
+	 % author名がアルファベットのケース
+	 { s #1 "{ll}" format.name$ bst.and.others * }
+       if$
+     }
+   if$
+}
+
+%%% これは abbreviated author 名
+FUNCTION {author.key.label.abb}
+{ author empty$
+    { key empty$
+	{ cite$ #1 #3 substring$ }
+	{ key #3 text.prefix$ }
+      if$
+    }
+    { author format.lab.names.abb }
+  if$
+}
+
+%%% これは full author 名
+FUNCTION {author.key.label.full}
+{ author empty$
+    { key empty$
+	{ cite$ #1 #3 substring$ }
+	{ key #3 text.prefix$ }
+      if$
+    }
+    { author format.lab.names.full }
+  if$
+}
+
+%%% これは sort 用の author 名
+FUNCTION {author.key.label.sort}
+{ author empty$
+    { key empty$
+	{ cite$ #1 #3 substring$ }
+	{ key #3 text.prefix$ }
+      if$
+    }
+    { author sort.format.names }
+  if$
+}
+
+%%% これは sort 用の名前を作成
+FUNCTION {author.editor.key.label.sort}
+{ author empty$
+    { editor empty$
+	{ key empty$
+	    { cite$ #1 #3 substring$ }
+	    { key #3 text.prefix$ }
+	  if$
+	}
+	{ sort.name empty$
+	   { editor sort.format.names }
+	   { bst.mixed.order #0 = 
+	      { editor sort.format.names }
+	      { sort.name sort.format.names }
+	if$
+	  }
+	  if$
+	}
+      if$
+    }
+    { sort.name empty$
+       { author sort.format.names }
+       { bst.mixed.order #0 = 
+	  { author sort.format.names }
+	  { sort.name sort.format.names }
+	if$
+      }
+      if$
+    }
+  if$
+}
+
+%%% これは abbreviated author 名を作成する関数
+FUNCTION {author.editor.key.label.abb}
+{ author empty$
+    { editor empty$
+	{ key empty$
+	    { cite$ #1 #3 substring$ }
+	    { key #3 text.prefix$ }
+	  if$
+	}
+	{ editor format.lab.names.abb }
+      if$
+    }
+    { author format.lab.names.abb }
+  if$
+}
+
+%%% これは full author 名
+FUNCTION {author.editor.key.label.full}
+{ author empty$
+    { editor empty$
+	{ key empty$
+	    { cite$ #1 #3 substring$ }
+	    { key #3 text.prefix$ }
+	  if$
+	}
+	{ editor format.lab.names.full }
+      if$
+    }
+    { author format.lab.names.full }
+  if$
+}
+
+FUNCTION {author.key.organization.label.full}
+{ author empty$
+    { key empty$
+	{ organization empty$
+	    { cite$ #1 #3 substring$ }
+	    { "The " #4 organization chop.word #3 text.prefix$ }
+	  if$
+	}
+	{ key #3 text.prefix$ }
+      if$
+    }
+    { author format.lab.names.full }
+  if$
+}
+
+FUNCTION {author.key.organization.label.abb}
+{ author empty$
+    { key empty$
+	{ organization empty$
+	    { cite$ #1 #3 substring$ }
+	    { "The " #4 organization chop.word #3 text.prefix$ }
+	  if$
+	}
+	{ key #3 text.prefix$ }
+      if$
+    }
+    { author format.lab.names.abb }
+  if$
+}
+
+FUNCTION {editor.key.organization.label.full}
+{ editor empty$
+    { key empty$
+	{ organization empty$
+	    { cite$ #1 #3 substring$ }
+	    { "The " #4 organization chop.word #3 text.prefix$ }
+	  if$
+	}
+	{ key #3 text.prefix$ }
+      if$
+    }
+    { editor format.lab.names.full }
+  if$
+}
+
+FUNCTION {editor.key.organization.label.abb}
+{ editor empty$
+    { key empty$
+	{ organization empty$
+	    { cite$ #1 #3 substring$ }
+	    { "The " #4 organization chop.word #3 text.prefix$ }
+	  if$
+	}
+	{ key #3 text.prefix$ }
+      if$
+    }
+    { editor format.lab.names.abb }
+  if$
+}
+
+%%% 与えられた数を変換: 0->9, 1->8, 2->7,..., 9->0 という対応関係。
+FUNCTION {reverse.num}
+{ 's :=
+  s "1" =
+    { "8" 'year.num := }
+    { s "2" =
+	{ "7" 'year.num := }
+	{ s "3" =
+	    { "6" 'year.num := }
+	    { s "4" =
+		{ "5" 'year.num := }
+		{ s "5" =
+		    { "4" 'year.num := }
+		    { s "6" =
+			{ "3" 'year.num := }
+			{ s "7" =
+			    { "2" 'year.num := }
+			    { s "8" =
+				{ "1" 'year.num := }
+				{ s "9" =
+				    { "0" 'year.num := }
+				    { s "0" =
+					{ "9" 'year.num := }
+					{ "9" 'year.num := }
+				    if$
+				    }
+				if$
+				}
+			    if$
+			    }
+			if$
+			}
+		    if$
+		    }
+		if$
+		}
+	    if$
+	    }
+	if$
+	}
+    if$
+    }
+  if$
+  year.num
+}
+
+%%% year を変換 (大きい数字 -> 小さい数字)
+FUNCTION {convert.year}
+{ 't := 
+  bst.reverse.year #0 =
+    % 普通の year の並び順
+    { t 'tt := }
+    % year の並び順をひっくり返すケース (新しいほど先に表示するケース)。
+    { t #1 #1 substring$ reverse.num 
+      t #2 #1 substring$ reverse.num *
+      t #3 #1 substring$ reverse.num *
+      t #4 #1 substring$ reverse.num * 'tt := }
+  if$
+  tt
+}
+
+%%% cyear を計算． cyear は引用部分で表示される年を保持する変数．reference 部
+%%% 分の表示には関係ない．また同時にここで sort.label を計算している．
+%%% sort.label は文献の sort のために利用される author (editor) 名を保持する変
+%%% 数．yomi field がある場合には結局 sort.label の中身は使われない．
+FUNCTION {calc.cyear}
+{ type$ "book" =
+  type$ "inbook" =
+  or
+    'author.editor.key.label.sort
+    { type$ "proceedings" =
+	'editor.key.organization.label.full
+	{ type$ "manual" =
+	    'author.key.organization.label.full
+	    'author.key.label.sort
+	  if$
+	}
+      if$
+    }
+  if$
+  duplicate$
+  year 'cyear :=
+  " " year convert.year * field.or.null *
+  sortify 'sort.label :=
+
+  % For debug
+  "sort.label = ``\texttt{" debug.write
+  sort.label debug.write
+  "}''\\" debug.write
+  debug.newline
+
+}
+
+FUNCTION {calc.sort.label.abb}
+{ sort.name empty$
+    { author empty$
+	{ editor empty$
+	   { "" }
+	   { editor 's := }
+	  if$
+	}
+	{ author 's := }
+      if$
+    }
+    { sort.name 's := }
+  if$
+  s sort.format.names.abb 't := 
+  t sortify " " * year convert.year * 'sort.label.abb :=
+
+  % For debug
+  "sort.label.abb = ``\texttt{" debug.write
+  sort.label.abb debug.write
+  "}''\\" debug.write
+  debug.newline
+
+}
+
+%%% flabel を計算．flabel は引用部分の著者名を保持する変数．reference 部分には
+%%% 関係ない．
+FUNCTION {calc.flabel}
+{ type$ "book" =
+  type$ "inbook" =
+  or
+    'author.editor.key.label.full
+    { type$ "proceedings" =
+	'editor.key.organization.label.full
+	{ type$ "manual" =
+	    'author.key.organization.label.full
+	    'author.key.label.full
+	  if$
+	}
+      if$
+    }
+  if$
+  'flabel :=
+  author empty$
+    'skip$
+    { author num.names$ 'numnames :=
+      numnames bst.max.author.num >
+        { alabel 'flabel := }
+        'skip$
+      if$
+    }
+  if$
+
+  % For debug
+  "flabel = ``\texttt{" debug.write
+  flabel debug.write
+  "}''\\" debug.write
+  debug.newline
+
+}
+
+%%% alabel を計算．alabel は引用部分の著者名 (短縮形表示) を保持する変数．
+%%% reference 部分は関係ない．
+FUNCTION {calc.alabel}
+{ type$ "book" =
+  type$ "inbook" =
+  or
+    'author.editor.key.label.abb
+    { type$ "proceedings" =
+	'editor.key.organization.label.abb
+	{ type$ "manual" =
+	    'author.key.organization.label.abb
+	    'author.key.label.abb
+	  if$
+	}
+      if$
+    }
+  if$
+  'alabel :=
+
+  % For debug
+  "alabel = ``\texttt{" debug.write
+  alabel debug.write
+  "}''\\" debug.write
+  debug.newline
+
+}
+
+%%% ソート用に title を加工
+FUNCTION {sort.format.title}
+{ 't :=
+  "A " #2
+    "An " #3
+      "The " #4 t chop.word
+    chop.word
+  chop.word
+  sortify
+  #1 global.max$ substring$
+}
+
+%%% 数字が一文字 (つまり, 1,...,9等) ならその前に 00 を，数字が二文字
+%%% (10,...,99) なら 0 を付ける．10, 11, 12 の指定が 2, 3, 4,... よりも優先さ
+%%% れるのを防ぐため。
+FUNCTION {add.zero.to.number}
+{ 's :=
+    s text.length$ #1 =
+      { "00" s * }
+      { s text.length$ #2 =
+	  { "0" s * }
+	  { s }
+	if$
+      }
+   if$
+}
+
+%% entry type に数値を割当てる．数値が小さいほうが bst.sort.entry.type が非ゼ
+%% ロのときに先に列挙されることになる．
+FUNCTION {bst.sort.entry.type.order}
+{ 'item.type :=
+  item.type "article" =
+     { "01" }
+     { item.type "book" =
+	 { "02" }
+	 { item.type "booklet" =
+	     { "03" }
+	     { item.type "comment" =
+		 { "04" }
+		 { item.type "conference" =
+		     { "05" }
+		     { item.type "inbook" =
+			 { "06" }
+			 { item.type "incollection" =
+			     { "07" }
+			     { item.type "inproceedings" =
+				 { "08" }
+				 { item.type "manual" =
+				     { "09" }
+				     { item.type "masterthesis" =
+					 { "10" }
+					 { item.type "misc" =
+					     { "11" }
+					     { item.type "phdthesis" =
+						 { "12" }
+						 { item.type "proceedings" =
+						     { "13" }
+						     { item.type "techreport" =
+							 { "14" }
+							 { item.type "unpublished" =
+							     { "15" }
+							     { "16" }
+							   if$
+							 }
+						       if$
+						     }
+						   if$
+						 }
+					       if$
+					     }
+					   if$
+					 }
+				       if$
+				     }
+				 if$
+				 }
+			     if$
+			     }
+			 if$
+			 }
+		     if$
+		     }
+		 if$
+		 }
+	     if$
+	     }
+	 if$
+	 }
+     if$
+     }
+  if$
+}
+
+%%% まず、author -> year -> absorder -> order -> month -> title で sort.key$ を
+%%% 作成する。一回目のソートで利用する．
+FUNCTION {presort.one}
+{ calc.cyear
+  pop$
+  ""
+  sort.label.abb *
+  " "
+  bst.no.sort #0 = not
+    { * order.cited int.to.str$ add.zero.to.number * " " * }
+    { * " " * }
+  if$
+  is.kanji.entry
+    { bst.mixed.order #0 =
+       { "" }
+       { " " }
+     if$
+    }
+    { " " }
+  if$
+  "" *
+  bst.sort.entry.type #0 = not
+    { type$ bst.sort.entry.type.order * " " * }
+    'skip$
+  if$
+  absorder empty$
+    % absorder が empty のときは 0 のときと一緒 /// (これは数字よりは前)
+    { "/// " * }
+    { bst.notuse.absorder.field #0 =
+       { absorder "999" =
+	  % 999 のときは zz 
+	  { "zzz " * }
+	  { absorder add.zero.to.number "000" =
+	     % 000 のときは /// (これは数字よりは前)
+	     { "/// " * }
+	     { absorder add.zero.to.number * " " * }
+	    if$
+	  }
+	 if$
+       }
+       % absorder field を参照しない場合は ///
+       { "/// " * }
+      if$
+    }
+  if$
+  " " *
+  order empty$
+    % order が empty のときは 0 のときと一緒で /// (これは数字よりは前)
+    { "/// " * }
+    { bst.notuse.order.field #0 =
+       { order "999" =
+	  % 999 のときは zz 
+	  { "zzz " * }
+	  { order add.zero.to.number "000" =
+	     % 000 のときは /// (これは数字よりは前)
+	     { "/// " * }
+	     { order add.zero.to.number * " " * }
+	    if$
+	  }
+	 if$
+       }
+       % order field を参照しない場合は ///
+       { "/// " * }
+      if$
+    }
+  if$
+  month empty$
+    % month が empty のときは 0 のときと一緒で /// (これは数字よりは前)
+    { * "/// " * }
+       { month "999" =
+	  % 999 のときは zz 
+	  { * month add.zero.to.number * "zzz " * }
+	  { month add.zero.to.number "000" =
+	     % 000 のときは /// (これは数字よりは前)
+	     { * month add.zero.to.number * "/// " * }
+	     { * month convert.month convert.month.kanji add.zero.to.number * " " * }
+	    if$
+	  }
+	 if$
+       }
+  if$
+  title field.or.null sort.format.title
+  *
+  #1 entry.max$ substring$
+  'sort.key$ :=
+
+  % For debug．デバッグするときにはこの関数で作成される sort.key$の中身を出力
+  % する．
+  "\verb|sort.key$| = ``\texttt{" debug.write
+  sort.key$ debug.write
+  "}''\\" debug.write
+  debug.newline
+
+}
+
+%%% これは absorder -> author -> year -> order -> month -> title で sort.key$ を
+%%% 作成する。最終的な並べ替えはこちらで指定する sort.key$ でおこなう。
+FUNCTION {presort.two}
+{ bst.no.sort #0 = not
+    %% 並べ替えしない(引用順でそのまま並べる)ケースのための設定．
+    { order.cited int.to.str$ add.zero.to.number " " * }
+    { "" }
+  if$
+  bst.sort.year #0 = not
+    %% year をキーとして並べるための設定．
+    { year convert.year * }
+    'skip$
+  if$
+  bst.sort.entry.type #0 = not
+    %% エントリーのタイプ別に分けて並べるための設定．
+    { type$ bst.sort.entry.type.order * " " * }
+    'skip$
+  if$
+  absorder empty$
+    % absorder が empty のときは 0 のときと一緒 /// (これは数字よりは前)
+    { "/// " * }
+    { bst.notuse.absorder.field #0 =
+       { absorder "999" =
+	  % 999 のときは zz 
+	  { "zzz " * }
+	  { absorder add.zero.to.number "000" =
+	     % 000 のときは /// (これは数字よりは前)
+	     { "/// " * }
+	     { absorder add.zero.to.number * " " * }
+	    if$
+	  }
+	 if$
+       }
+       % absorder field を参照しない場合は ///
+       { "/// " * }
+      if$
+    }
+  if$
+  " " * sort.label.abb * " " *
+  is.kanji.entry
+    { bst.mixed.order #0 =
+       { "" }
+       { " " }
+     if$
+    }
+    { " " }
+  if$
+  order empty$
+    % order が empty のときは 0 のときと一緒で /// (これは数字よりは前)
+    { "/// " * }
+    { bst.notuse.order.field #0 =
+       { order "999" =
+	  % 999 のときは zz 
+	  { "zzz " * }
+	  { order add.zero.to.number "000" =
+	     % 000 のときは /// (これは数字よりは前)
+	     { "/// " * }
+	     { order add.zero.to.number * " " * }
+	    if$
+	  }
+	 if$
+       }
+       % order field を参照しない場合は ///
+       { "/// " * }
+      if$
+    }
+  if$
+  month empty$
+    % month が empty のときは 0 のときと一緒で /// (これは数字よりは前)
+    { * "/// " * }
+       { month "999" =
+	  % 999 のときは zz 
+	  { * month add.zero.to.number * "zzz " * }
+	  { month add.zero.to.number "000" =
+	     % 000 のときは /// (これは数字よりは前)
+	     { * month add.zero.to.number * "/// " * }
+	     { * month convert.month convert.month.kanji add.zero.to.number * " " * }
+	    if$
+	  }
+	 if$
+       }
+  if$
+  title field.or.null sort.format.title
+  *
+  #1 entry.max$ substring$
+  'sort.key$ :=
+
+  % For debug．デバッグするときにはこの関数で作成される sort.key$の中身を出力
+  % する．
+  "\verb|sort.key$| = ``\texttt{" debug.write
+  sort.key$ debug.write
+  "+}''\\" debug.write
+  debug.newline
+
+}
+
+%%% 以下はデバッグ用のコード
+FUNCTION {calc.alabel.mess}
+{ "\\ \noindent \textbf{Iteration of calc.alabel}\\" debug.write
+  "alabel: 引用部分で利用される author (editor) 名 (省略形)を保持する変数．\\ \\" debug.write
+  debug.newline
+}
+
+FUNCTION {calc.flabel.mess}
+{ "\\ \noindent \textbf{Iteration of calc.flabel}\\" debug.write
+  "flabel: 引用部分で利用される author (editor) 名（full）を保持する変数．\\ \\" debug.write
+  debug.newline
+}
+
+FUNCTION {calc.sort.label.abb.mess}
+{ "\\ \noindent \textbf{Iteration of calc.sort.label.abb}\\" debug.write
+  "sort.label.abb: 文献のソートのための author (editor) 名（省略形）を保持する変数\\ \\" debug.write
+  debug.newline
+}
+
+FUNCTION {presort.one.mess}
+{ "\\ \noindent \textbf{Iteration of presort.one (ソート1回目)}\\" debug.write
+  "sort.label: 文献のソートのための author (editor) 名を保持する変数．\\" debug.write
+  "sort.key\$: 文献のソート (並べ替え) のために利用される文字列を保持する．\\ \\" debug.write
+  debug.newline
+}
+
+FUNCTION {presort.two.mess}
+{ "\\ \noindent \textbf{Iteration of presort.two (ソート2回目)}\\" debug.write
+  "sort.key\$: 文献のソート (並べ替え) のために利用される文字列を保持する．\\ \\" debug.write
+  debug.newline
+}
+%%% デバッグ用コードここまで．
+
+%%% alabel の作成
+EXECUTE {calc.alabel.mess}
+ITERATE {calc.alabel}
+
+%%% flabel の作成
+EXECUTE {calc.flabel.mess}
+ITERATE {calc.flabel}
+
+%%%
+EXECUTE {calc.sort.label.abb.mess}
+ITERATE {calc.sort.label.abb}
+
+%%% presort の実行 
+EXECUTE {presort.one.mess}
+ITERATE {presort.one}
+
+%%% sort.key$ を利用して文献の並べ替え．一回目の並べ替え．
+
+% これは仮の並び順を決めるためのもので，最終的にはもう一度並べ替えをおこなう．二
+% 回並び替えをするのは bst.mixed.order で指定する「同じ年に同じ著者の英語、日本
+% 語文献の両方があり、かつ日本語文献の yomi に英語文献の著者と同じものが指定して
+% あるときに、両者を混ぜて表示する」に対応するため．
+
+SORT
+
+% last.sort.label: 一個前の sort.label.abb の値を保持。
+FUNCTION {forward.pass}
+{ last.sort.label sort.label.abb =
+    { last.extra.num #1 + 'last.extra.num :=
+      last.extra.num int.to.chr$ 'extra.label :=
+    }
+    { "a" chr.to.int$ 'last.extra.num :=
+      "" 'extra.label :=
+      sort.label.abb 'last.sort.label :=
+    }
+  if$
+  bst.use.bysame #0 = bst.use.bysame #2 = or
+    % 2 のタイプの bysame を使う場合か bysame を利用しない場合
+    'skip$
+    % 1 のタイプの bysame を使う場合
+    % this.author に現在の author (or editor) を代入
+    { author empty$
+	{ editor empty$
+	    { "" }
+	    'format.editors.alt
+	  if$
+	}
+	'format.authors.alt
+      if$
+      'this.author :=
+      % 現在の author (this.author) が一個前の author (prev.author) と同じか？
+      this.author prev.author =
+	% 同じなら extra.labe.bysame に bysame を代入
+	{ "bysame" 'extra.label.bysame := }
+	% 同じではないなら prev.author に this.author を代入しておく。
+	{ this.author "" =
+	    { "abcxyz" }
+	    'this.author
+	  if$
+	  'prev.author :=
+	}
+      if$
+    }
+  if$
+}
+
+%%% 同じ年に同じ著者の文献が複数あるときの year に alphabet を付けるための関数
+FUNCTION {reverse.pass}
+{ next.extra "b" =
+    { "a" 'extra.label := }
+    'skip$
+  if$
+  extra.label empty$ not
+    { cyear extra.label * }
+    { cyear }
+  if$
+  "" field.or.null *
+  'cyear :=
+  % next.extra に extra.label を代入
+  extra.label 'next.extra :=
+}
+
+%%% bysame を付ける。
+ITERATE {forward.pass}
+
+%%% 同じ著者の同じ年の文献が複数あるとき alphabet を付ける。
+REVERSE {reverse.pass}
+
+%%% 2回目の並べ替え．これで最終的に文献の並び順が選択される．
+EXECUTE {presort.two.mess}
+ITERATE {presort.two}
+
+%%% sort.key$ を利用して文献の並べ替え (2回目)
+SORT
+
+FUNCTION {reset.prev.author}
+{ "xxyyzz" 'prev.author := }
+
+EXECUTE {reset.prev.author}
+
+FUNCTION {forward.pass.two}
+{ bst.use.bysame #1 =
+    % Type 1 の bysame を使うケース。
+    { author empty$
+	{ editor empty$
+	    { "" }
+	    'format.editors.alt
+	  if$
+	}
+	'format.authors.alt
+      if$
+      'this.author :=
+      % 現在の author (this.author) が一個前の author (prev.author) と同じか？
+      this.author prev.author =
+	% 同じなら extra.labe.bysame に bysame を代入
+	{ "bysame" 'extra.label.bysame := }
+	% 同じではないなら prev.author に this.author を代入しておく。
+	{ this.author "" =
+	    { "abcxyz" }
+	    'this.author
+	  if$
+	  'prev.author :=
+	}
+      if$
+    }
+    % bysame を利用しないか、Type 2 の bysame を使うケースではなにもしない。
+    'skip$
+  if$
+}
+
+ITERATE {forward.pass.two}
+
+FUNCTION{punctuation}
+{
+  "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"	 write$ newline$
+  "%"									 write$ newline$
+  "%  This bbl file is created by jecon.bst ver." jecon.version *	 write$ newline$
+  "%  The latest jecon.bst is available at"				 write$ newline$
+  "%  <https://github.com/ShiroTakeda/jecon-bst>"		         write$ newline$
+  "%"									 write$ newline$
+  "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"	 write$ newline$
+  newline$
+}
+
+EXECUTE {punctuation}
+
+FUNCTION {begin.bib}
+{ preamble$ empty$
+    'skip$
+    { preamble$ write$ newline$ }
+  if$
+  bst.use.bysame #0 =
+     % bysame を使わないケース
+     'skip$
+     % bysame を使うケース
+     { "%%% Definition of \bysame" write$ newline$
+       "\ifx\undefined\bysame%" write$ newline$
+       "\newcommand{\bysame}{" bst.bysame.definition * "}" *
+       write$ newline$
+       "\fi" write$ newline$ newline$
+       "%%% Definition of \bysamejp" write$ newline$
+       "\ifx\undefined\bysamejp%" write$ newline$
+       "\newcommand{\bysamejp}{" bst.bysame.definition.jp * "}" *
+       write$ newline$
+       "\fi" write$ newline$ newline$
+     }
+  if$
+  %% 数字を漢数字に変換するときの処理
+  bst.kansuji.jp #0 =
+     'skip$
+     { "%%% Definition of \tatebo" write$ newline$
+       "\ifx\undefined\tatebo" write$ newline$
+       "\newcommand{\tatebo}{" bst.tatebo.definition * "}" *
+       write$ newline$
+       "\fi" write$ newline$ newline$ }
+  if$
+  %% 文献に number index を付けるときの処理
+  bst.use.number.index #0 =
+     'skip$
+     { bst.number.index.digit "1" =
+	 % 一桁のとき
+	 { bst.number.index.bibhang.one }
+	 { bst.number.index.digit "2" =
+	    % 二桁のとき
+	    { bst.number.index.bibhang.ten }
+	    % 三桁以上のとき
+	    { bst.number.index.bibhang.hund }
+	   if$
+	 }
+       if$
+       'hang :=
+       "%%% Redefinition of \bibhang" write$ newline$
+       "\ifx\undefined\bibhang" write$ newline$
+       "\relax" write$ newline$
+       "\else" write$ newline$
+       "\setlength{\bibhang}{"
+       hang * "}" * write$ newline$ 
+       "\fi" write$ newline$ newline$
+       }
+  if$
+
+  bst.thebibliography.begin
+
+  %% 変数 index を初期化している．
+  #0 'index :=
+}
+
+FUNCTION {end.bib}
+{ bst.thebibliography.end }
+
+EXECUTE {begin.bib}
+
+EXECUTE {init.state.consts}
+
+%% 各エントリーにそのエントリーのタイプを実行する．つまり，article エントリー
+%% には article という関数を実行する等．
+ITERATE {call.type$}
+
+EXECUTE {end.bib}
+
+% 終．
+
+% --------------------
+% Local Variables:
+% fill-column: 80
+% mode: bst
+% coding: utf-8-dos
+% End:
+

@@ -1,0 +1,989 @@
+key,entry_type,discipline,subfield,difficulty_flags,source_name,source_url,retrieved_at
+art0001,article,人文社会,歴史学,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781796603650,2026-07-17T14:30:14+09:00
+art0002,article,人文社会,歴史学,nonstandard_volume,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781798116621,2026-07-17T14:30:14+09:00
+art0003,article,人文社会,歴史学,nonstandard_volume;subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781824720774,2026-07-17T14:30:14+09:00
+art0004,article,人文社会,歴史学,nonstandard_volume,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781836516381,2026-07-17T14:30:14+09:00
+art0005,article,人文社会,歴史学,nonstandard_volume,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781841829899,2026-07-17T14:30:14+09:00
+art0006,article,医学生命,老年社会科学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781843321352,2026-07-17T14:30:21+09:00
+art0007,article,人文社会,歴史学,nonstandard_volume,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781895470208,2026-07-17T14:30:14+09:00
+art0008,article,人文社会,歴史学,nonstandard_volume,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781897949450,2026-07-17T14:30:14+09:00
+art0009,article,医学生命,老年社会科学,nonstandard_volume,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000782088742531,2026-07-17T14:30:21+09:00
+art0010,article,医学生命,老年社会科学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000782115138177,2026-07-17T14:30:21+09:00
+art0011,article,医学生命,老年社会科学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000782115138181,2026-07-17T14:30:21+09:00
+art0012,article,理工,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000782142698243,2026-07-17T14:30:19+09:00
+art0013,article,理工,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000782243212673,2026-07-17T14:30:19+09:00
+art0014,article,理工,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000782271978755,2026-07-17T14:30:19+09:00
+art0015,article,医学生命,老年社会科学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000782281617681,2026-07-17T14:30:21+09:00
+art0016,article,医学生命,老年社会科学,english_mixed,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000782307551104,2026-07-17T14:30:21+09:00
+art0017,article,医学生命,老年社会科学,nonstandard_volume,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010282257052801679,2026-07-17T14:30:21+09:00
+art0018,article,医学生命,老年社会科学,english_mixed,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010282257065235072,2026-07-17T14:30:21+09:00
+art0019,article,医学生命,老年社会科学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010282257090114563,2026-07-17T14:30:21+09:00
+art0020,article,医学生命,老年社会科学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010282257272612101,2026-07-17T14:30:21+09:00
+art0021,article,医学生命,老年社会科学,nonstandard_volume,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010285300563378048,2026-07-17T14:30:21+09:00
+art0022,article,医学生命,老年社会科学,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010302693954752129,2026-07-17T14:30:21+09:00
+art0023,article,医学生命,老年社会科学,nonstandard_volume,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010306730179195140,2026-07-17T14:30:21+09:00
+art0024,article,理工,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1050001339237143168,2026-07-17T14:30:19+09:00
+art0025,article,人文社会,教育社会学,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1050001339237145344,2026-07-17T14:30:16+09:00
+art0026,article,人文社会,教育社会学,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1390001205396255488,2026-07-17T14:30:16+09:00
+art0027,article,人文社会,教育社会学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1390001205396373760,2026-07-17T14:30:16+09:00
+art0028,article,人文社会,教育社会学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1390001205396724352,2026-07-17T14:30:16+09:00
+art0029,article,人文社会,教育社会学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1390001205396729984,2026-07-17T14:30:16+09:00
+art0030,article,人文社会,教育社会学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1390001205396742656,2026-07-17T14:30:16+09:00
+art0031,article,人文社会,教育社会学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1390001205396745216,2026-07-17T14:30:16+09:00
+art0032,article,理工,地理学,english_mixed,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1520009407370836096,2026-07-17T14:30:19+09:00
+art0033,article,理工,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1520009410244131328,2026-07-17T14:30:19+09:00
+art0034,article,理工,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1520018042628138496,2026-07-17T14:30:19+09:00
+art0035,article,理工,地理学,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1520020773627049216,2026-07-17T14:30:19+09:00
+art0036,article,理工,地理学,english_mixed,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1520290883190178560,2026-07-17T14:30:19+09:00
+art0037,article,理工,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1520294894487122560,2026-07-17T14:30:19+09:00
+art0038,article,理工,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1520572360189314432,2026-07-17T14:30:19+09:00
+art0039,article,理工,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1520574798841314944,2026-07-17T14:30:19+09:00
+art0040,article,理工,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1520579521861747328,2026-07-17T14:30:19+09:00
+art0041,article,人文社会,社会学,english_mixed;subtitle,Crossref REST API,https://doi.org/10.4057/jsr.71.171,2026-07-17T14:20:56+09:00
+art0042,article,人文社会,社会学,english_mixed;subtitle,Crossref REST API,https://doi.org/10.4057/jsr.71.347,2026-07-17T14:20:56+09:00
+art0043,article,人文社会,社会学,english_mixed;subtitle,Crossref REST API,https://doi.org/10.4057/jsr.71.352,2026-07-17T14:20:56+09:00
+art0044,article,人文社会,社会学,english_mixed;subtitle,Crossref REST API,https://doi.org/10.4057/jsr.72.395,2026-07-17T14:20:56+09:00
+art0045,article,人文社会,社会学,english_mixed;subtitle,Crossref REST API,https://doi.org/10.4057/jsr.72.71,2026-07-17T14:20:56+09:00
+art0046,article,人文社会,社会学,english_mixed;subtitle,Crossref REST API,https://doi.org/10.4057/jsr.73.184,2026-07-17T14:20:56+09:00
+art0047,article,人文社会,社会学,english_mixed;subtitle,Crossref REST API,https://doi.org/10.4057/jsr.73.67,2026-07-17T14:20:56+09:00
+art0048,article,人文社会,社会学,english_mixed;subtitle,Crossref REST API,https://doi.org/10.4057/jsr.74.177,2026-07-17T14:20:56+09:00
+art0049,article,人文社会,社会学,english_mixed,Crossref REST API,https://doi.org/10.4057/jsr.74.2,2026-07-17T14:20:56+09:00
+art0050,article,人文社会,社会学,english_mixed;subtitle,Crossref REST API,https://doi.org/10.4057/jsr.74.355,2026-07-17T14:20:56+09:00
+art0051,article,人文社会,教育社会学,english_mixed;subtitle,Crossref REST API,https://doi.org/10.11151/eds.105.202,2026-07-17T14:21:20+09:00
+art0052,article,人文社会,教育社会学,english_mixed;subtitle,Crossref REST API,https://doi.org/10.11151/eds.106.222,2026-07-17T14:21:20+09:00
+art0053,article,人文社会,教育社会学,english_mixed,Crossref REST API,https://doi.org/10.11151/eds.113.73,2026-07-17T14:21:20+09:00
+art0054,article,人文社会,教育社会学,english_mixed,Crossref REST API,https://doi.org/10.11151/eds.93.27,2026-07-17T14:21:20+09:00
+art0055,article,人文社会,教育社会学,english_mixed,Crossref REST API,https://doi.org/10.11151/eds.93.47,2026-07-17T14:21:20+09:00
+art0056,article,理工,電子情報通信,english_mixed,Crossref REST API,https://doi.org/10.1587/bplus.13.264,2026-07-17T14:21:39+09:00
+art0057,article,理工,電子情報通信,english_mixed,Crossref REST API,https://doi.org/10.1587/bplus.13.314,2026-07-17T14:21:39+09:00
+art0058,article,理工,電子情報通信,english_mixed,Crossref REST API,https://doi.org/10.1587/bplus.13.317,2026-07-17T14:21:39+09:00
+art0059,article,理工,電子情報通信,english_mixed,Crossref REST API,https://doi.org/10.1587/bplus.14.113,2026-07-17T14:21:39+09:00
+art0060,article,理工,電子情報通信,english_mixed,Crossref REST API,https://doi.org/10.1587/bplus.14.126,2026-07-17T14:21:39+09:00
+art0061,article,理工,電子情報通信,english_mixed,Crossref REST API,https://doi.org/10.1587/bplus.14.133,2026-07-17T14:21:39+09:00
+art0062,article,理工,電子情報通信,english_mixed,Crossref REST API,https://doi.org/10.1587/bplus.14.148,2026-07-17T14:21:39+09:00
+art0063,article,理工,電子情報通信,english_mixed,Crossref REST API,https://doi.org/10.1587/bplus.14.160,2026-07-17T14:21:39+09:00
+art0064,article,理工,電子情報通信,english_mixed,Crossref REST API,https://doi.org/10.1587/bplus.14.162,2026-07-17T14:21:39+09:00
+art0065,article,理工,電子情報通信,english_mixed,Crossref REST API,https://doi.org/10.1587/bplus.14.171,2026-07-17T14:21:39+09:00
+art0066,article,理工,電子情報通信,english_mixed,Crossref REST API,https://doi.org/10.1587/bplus.14.19,2026-07-17T14:21:39+09:00
+art0067,article,理工,電子情報通信,english_mixed,Crossref REST API,https://doi.org/10.1587/bplus.14.246,2026-07-17T14:21:39+09:00
+art0068,article,理工,電子情報通信,english_mixed,Crossref REST API,https://doi.org/10.1587/bplus.14.261,2026-07-17T14:21:39+09:00
+art0069,article,理工,電子情報通信,english_mixed,Crossref REST API,https://doi.org/10.1587/bplus.14.265,2026-07-17T14:21:39+09:00
+art0070,article,理工,電子情報通信,english_mixed,Crossref REST API,https://doi.org/10.1587/bplus.14.272,2026-07-17T14:21:39+09:00
+art0071,article,理工,電子情報通信,english_mixed,Crossref REST API,https://doi.org/10.1587/bplus.14.281,2026-07-17T14:21:39+09:00
+art0072,article,理工,電子情報通信,english_mixed,Crossref REST API,https://doi.org/10.1587/bplus.14.287,2026-07-17T14:21:39+09:00
+art0073,article,理工,電子情報通信,english_mixed,Crossref REST API,https://doi.org/10.1587/bplus.14.289,2026-07-17T14:21:39+09:00
+art0074,article,理工,電子情報通信,english_mixed,Crossref REST API,https://doi.org/10.1587/bplus.14.292,2026-07-17T14:21:39+09:00
+art0075,article,理工,電子情報通信,english_mixed,Crossref REST API,https://doi.org/10.1587/bplus.14.302,2026-07-17T14:21:39+09:00
+art0076,article,医学生命,老年医学,english_mixed,Crossref REST API,https://doi.org/10.3143/geriatrics.60.193,2026-07-17T14:21:56+09:00
+art0077,article,医学生命,老年医学,english_mixed,Crossref REST API,https://doi.org/10.3143/geriatrics.61.495,2026-07-17T14:21:56+09:00
+art0078,article,医学生命,老年医学,english_mixed,Crossref REST API,https://doi.org/10.3143/geriatrics.61.497,2026-07-17T14:21:56+09:00
+art0079,article,医学生命,老年医学,english_mixed,Crossref REST API,https://doi.org/10.3143/geriatrics.61.498,2026-07-17T14:21:56+09:00
+art0080,article,医学生命,老年医学,english_mixed,Crossref REST API,https://doi.org/10.3143/geriatrics.62.108,2026-07-17T14:21:56+09:00
+art0081,article,医学生命,老年医学,english_mixed,Crossref REST API,https://doi.org/10.3143/geriatrics.62.110,2026-07-17T14:21:56+09:00
+art0082,article,医学生命,老年医学,english_mixed;subtitle,Crossref REST API,https://doi.org/10.3143/geriatrics.62.114,2026-07-17T14:21:56+09:00
+art0083,article,医学生命,老年医学,english_mixed,Crossref REST API,https://doi.org/10.3143/geriatrics.62.115,2026-07-17T14:21:56+09:00
+art0084,article,医学生命,老年医学,english_mixed,Crossref REST API,https://doi.org/10.3143/geriatrics.62.330,2026-07-17T14:21:56+09:00
+art0085,article,医学生命,老年医学,english_mixed,Crossref REST API,https://doi.org/10.3143/geriatrics.62.333,2026-07-17T14:21:56+09:00
+art0086,article,医学生命,老年医学,english_mixed,Crossref REST API,https://doi.org/10.3143/geriatrics.62.334,2026-07-17T14:21:56+09:00
+art0087,article,医学生命,老年医学,english_mixed,Crossref REST API,https://doi.org/10.3143/geriatrics.62.335,2026-07-17T14:21:56+09:00
+art0088,article,医学生命,医学図書館情報,english_mixed,Crossref REST API,https://doi.org/10.7142/igakutoshokan.54.122,2026-07-17T14:22:27+09:00
+art0089,article,医学生命,医学図書館情報,english_mixed,Crossref REST API,https://doi.org/10.7142/igakutoshokan.54.132,2026-07-17T14:22:27+09:00
+art0090,article,医学生命,医学図書館情報,english_mixed,Crossref REST API,https://doi.org/10.7142/igakutoshokan.54.138,2026-07-17T14:22:27+09:00
+art0091,article,医学生命,医学図書館情報,english_mixed,Crossref REST API,https://doi.org/10.7142/igakutoshokan.54.143,2026-07-17T14:22:27+09:00
+art0092,article,医学生命,医学図書館情報,english_mixed;subtitle,Crossref REST API,https://doi.org/10.7142/igakutoshokan.54.146,2026-07-17T14:22:27+09:00
+art0093,article,医学生命,内科学,english_mixed,Crossref REST API,https://doi.org/10.2169/naika.113.1414,2026-07-17T14:22:46+09:00
+art0094,article,医学生命,内科学,english_mixed,Crossref REST API,https://doi.org/10.2169/naika.113.1498,2026-07-17T14:22:46+09:00
+art0095,article,医学生命,内科学,english_mixed,Crossref REST API,https://doi.org/10.2169/naika.113.1948,2026-07-17T14:22:46+09:00
+art0096,article,医学生命,内科学,english_mixed,Crossref REST API,https://doi.org/10.2169/naika.113.2106,2026-07-17T14:22:46+09:00
+art0097,article,医学生命,内科学,english_mixed,Crossref REST API,https://doi.org/10.2169/naika.113.831,2026-07-17T14:22:46+09:00
+art0098,article,人文社会,社会学,,J-Stage WebAPI,https://doi.org/10.4057/jsr.58.104,2026-07-17T18:22:16+09:00
+art0099,article,人文社会,社会学,,J-Stage WebAPI,https://doi.org/10.4057/jsr.58.116,2026-07-17T18:22:16+09:00
+art0100,article,人文社会,社会学,subtitle,J-Stage WebAPI,https://doi.org/10.4057/jsr.58.254,2026-07-17T18:22:16+09:00
+art0101,article,人文社会,社会学,,J-Stage WebAPI,https://doi.org/10.4057/jsr.58.286,2026-07-17T18:22:16+09:00
+art0102,article,人文社会,社会学,,J-Stage WebAPI,https://doi.org/10.4057/jsr.58.379,2026-07-17T18:22:16+09:00
+art0103,article,人文社会,社会学,,J-Stage WebAPI,https://doi.org/10.4057/jsr.58.415,2026-07-17T18:22:16+09:00
+art0104,article,人文社会,社会学,,J-Stage WebAPI,https://doi.org/10.4057/jsr.58.576,2026-07-17T18:22:16+09:00
+art0105,article,人文社会,社会学,subtitle,J-Stage WebAPI,https://doi.org/10.4057/jsr.58.634,2026-07-17T18:22:16+09:00
+art0106,article,人文社会,社会学,,J-Stage WebAPI,https://doi.org/10.4057/jsr.59.186,2026-07-17T18:22:16+09:00
+art0107,article,人文社会,社会学,subtitle,J-Stage WebAPI,https://doi.org/10.4057/jsr.59.244,2026-07-17T18:22:16+09:00
+art0108,article,人文社会,社会学,,J-Stage WebAPI,https://doi.org/10.4057/jsr.59.57,2026-07-17T18:22:16+09:00
+art0109,article,人文社会,社会学,,J-Stage WebAPI,https://doi.org/10.4057/jsr.59.349,2026-07-17T18:22:16+09:00
+art0110,article,人文社会,社会学,subtitle,J-Stage WebAPI,https://doi.org/10.4057/jsr.59.436,2026-07-17T18:22:16+09:00
+art0111,article,人文社会,社会学,,J-Stage WebAPI,https://doi.org/10.4057/jsr.59.551,2026-07-17T18:22:16+09:00
+art0112,article,人文社会,社会学,,J-Stage WebAPI,https://doi.org/10.4057/jsr.59.630,2026-07-17T18:22:16+09:00
+art0113,article,人文社会,社会学,english_mixed,J-Stage WebAPI,https://doi.org/10.4057/jsr.59.752,2026-07-17T18:22:16+09:00
+art0114,article,人文社会,社会学,subtitle,J-Stage WebAPI,https://doi.org/10.4057/jsr.59.830,2026-07-17T18:22:16+09:00
+art0115,article,人文社会,社会学,subtitle,J-Stage WebAPI,https://doi.org/10.4057/jsr.60.163,2026-07-17T18:22:16+09:00
+art0116,article,人文社会,社会学,,J-Stage WebAPI,https://doi.org/10.4057/jsr.60.209,2026-07-17T18:22:16+09:00
+art0117,article,人文社会,社会学,,J-Stage WebAPI,https://doi.org/10.4057/jsr.60.304,2026-07-17T18:22:16+09:00
+art0118,article,人文社会,社会学,subtitle,J-Stage WebAPI,https://doi.org/10.4057/jsr.60.320,2026-07-17T18:22:16+09:00
+art0119,article,人文社会,社会学,,J-Stage WebAPI,https://doi.org/10.4057/jsr.60.433,2026-07-17T18:22:16+09:00
+art0120,article,人文社会,社会学,,J-Stage WebAPI,https://doi.org/10.4057/jsr.60.465,2026-07-17T18:22:16+09:00
+art0121,article,人文社会,心理学,,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.79.1,2026-07-17T18:22:17+09:00
+art0122,article,人文社会,心理学,,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.79.107,2026-07-17T18:22:17+09:00
+art0123,article,人文社会,心理学,,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.79.207,2026-07-17T18:22:17+09:00
+art0124,article,人文社会,心理学,subtitle,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.79.317,2026-07-17T18:22:17+09:00
+art0125,article,人文社会,心理学,english_mixed;subtitle,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.79.399,2026-07-17T18:22:17+09:00
+art0126,article,人文社会,心理学,,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.79.481,2026-07-17T18:22:17+09:00
+art0127,article,人文社会,心理学,,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.80.1,2026-07-17T18:22:17+09:00
+art0128,article,人文社会,心理学,,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.80.114,2026-07-17T18:22:17+09:00
+art0129,article,人文社会,心理学,,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.80.199,2026-07-17T18:22:17+09:00
+art0130,article,人文社会,心理学,,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.80.304,2026-07-17T18:22:17+09:00
+art0131,article,人文社会,心理学,subtitle,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.80.397,2026-07-17T18:22:17+09:00
+art0132,article,人文社会,心理学,,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.80.494,2026-07-17T18:22:17+09:00
+art0133,article,人文社会,心理学,,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.81.35,2026-07-17T18:22:17+09:00
+art0134,article,人文社会,心理学,,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.81.140,2026-07-17T18:22:17+09:00
+art0135,article,人文社会,心理学,,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.81.234,2026-07-17T18:22:17+09:00
+art0136,article,人文社会,心理学,,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.81.381,2026-07-17T18:22:17+09:00
+art0137,article,人文社会,心理学,,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.81.462,2026-07-17T18:22:17+09:00
+art0138,article,人文社会,心理学,subtitle,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.81.551,2026-07-17T18:22:17+09:00
+art0139,article,人文社会,心理学,,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.81.625,2026-07-17T18:22:17+09:00
+art0140,article,人文社会,心理学,,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.82.63,2026-07-17T18:22:17+09:00
+art0141,article,人文社会,心理学,subtitle,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.82.175,2026-07-17T18:22:17+09:00
+art0142,article,人文社会,心理学,,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.82.270,2026-07-17T18:22:17+09:00
+art0143,article,人文社会,心理学,,J-Stage WebAPI,https://doi.org/10.4992/jjpsy.82.392,2026-07-17T18:22:17+09:00
+art0144,article,人文社会,教育心理学,,J-Stage WebAPI,https://doi.org/10.5926/jjep.57.1,2026-07-17T18:22:19+09:00
+art0145,article,人文社会,教育心理学,,J-Stage WebAPI,https://doi.org/10.5926/jjep.57.131,2026-07-17T18:22:19+09:00
+art0146,article,人文社会,教育心理学,,J-Stage WebAPI,https://doi.org/10.5926/jjep.57.274,2026-07-17T18:22:19+09:00
+art0147,article,人文社会,教育心理学,subtitle,J-Stage WebAPI,https://doi.org/10.5926/jjep.57.407,2026-07-17T18:22:19+09:00
+art0148,article,人文社会,教育心理学,subtitle,J-Stage WebAPI,https://doi.org/10.5926/jjep.58.12,2026-07-17T18:22:19+09:00
+art0149,article,人文社会,教育心理学,,J-Stage WebAPI,https://doi.org/10.5926/jjep.58.151,2026-07-17T18:22:19+09:00
+art0150,article,人文社会,教育心理学,,J-Stage WebAPI,https://doi.org/10.5926/jjep.58.298,2026-07-17T18:22:19+09:00
+art0151,article,人文社会,教育心理学,,J-Stage WebAPI,https://doi.org/10.5926/jjep.58.426,2026-07-17T18:22:19+09:00
+art0152,article,人文社会,教育心理学,,J-Stage WebAPI,https://doi.org/10.5926/jjep.59.27,2026-07-17T18:22:19+09:00
+art0153,article,人文社会,教育心理学,,J-Stage WebAPI,https://doi.org/10.5926/jjep.59.179,2026-07-17T18:22:19+09:00
+art0154,article,人文社会,教育心理学,subtitle,J-Stage WebAPI,https://doi.org/10.5926/jjep.59.330,2026-07-17T18:22:19+09:00
+art0155,article,人文社会,教育心理学,english_mixed;subtitle,J-Stage WebAPI,https://doi.org/10.5926/jjep.59.474,2026-07-17T18:22:19+09:00
+art0156,article,人文社会,教育心理学,,J-Stage WebAPI,https://doi.org/10.5926/jjep.60.137,2026-07-17T18:22:19+09:00
+art0157,article,人文社会,教育心理学,,J-Stage WebAPI,https://doi.org/10.5926/jjep.60.285,2026-07-17T18:22:19+09:00
+art0158,article,人文社会,教育心理学,subtitle,J-Stage WebAPI,https://doi.org/10.5926/jjep.60.430,2026-07-17T18:22:19+09:00
+art0159,article,人文社会,教育心理学,,J-Stage WebAPI,https://doi.org/10.5926/jjep.61.121,2026-07-17T18:22:19+09:00
+art0160,article,人文社会,教育心理学,,J-Stage WebAPI,https://doi.org/10.5926/jjep.61.265,2026-07-17T18:22:19+09:00
+art0161,article,人文社会,教育心理学,,J-Stage WebAPI,https://doi.org/10.5926/jjep.61.412,2026-07-17T18:22:19+09:00
+art0162,article,人文社会,教育心理学,,J-Stage WebAPI,https://doi.org/10.5926/jjep.62.156,2026-07-17T18:22:19+09:00
+art0163,article,人文社会,教育心理学,,J-Stage WebAPI,https://doi.org/10.5926/jjep.62.283,2026-07-17T18:22:19+09:00
+art0164,article,理工,物理学,english_mixed,J-Stage WebAPI,https://doi.org/10.11316/butsuri.81.1_39_1,2026-07-17T18:22:21+09:00
+art0165,article,理工,物理学,institutional_author;subtitle,J-Stage WebAPI,https://doi.org/10.11316/butsuri.81.1_31,2026-07-17T18:22:21+09:00
+art0166,article,理工,物理学,english_mixed,J-Stage WebAPI,https://doi.org/10.11316/butsuri.81.2_51,2026-07-17T18:22:21+09:00
+art0167,article,理工,物理学,english_mixed;subtitle,J-Stage WebAPI,https://doi.org/10.11316/butsuri.81.2_78,2026-07-17T18:22:21+09:00
+art0168,article,理工,物理学,,J-Stage WebAPI,https://doi.org/10.11316/butsuri.81.2_96,2026-07-17T18:22:21+09:00
+art0169,article,理工,物理学,,J-Stage WebAPI,https://doi.org/10.11316/butsuri.81.3_110,2026-07-17T18:22:21+09:00
+art0170,article,理工,物理学,english_mixed;subtitle,J-Stage WebAPI,https://doi.org/10.11316/butsuri.81.3_135,2026-07-17T18:22:21+09:00
+art0171,article,理工,物理学,english_mixed;subtitle,J-Stage WebAPI,https://doi.org/10.11316/butsuri.81.4_198,2026-07-17T18:22:21+09:00
+art0172,article,理工,物理学,institutional_author;subtitle,J-Stage WebAPI,https://doi.org/10.11316/butsuri.81.4_186,2026-07-17T18:22:21+09:00
+art0173,article,理工,物理学,,J-Stage WebAPI,https://doi.org/10.11316/butsuri.81.5_257,2026-07-17T18:22:21+09:00
+art0174,article,理工,物理学,,J-Stage WebAPI,https://doi.org/10.11316/butsuri.81.5_242,2026-07-17T18:22:21+09:00
+art0175,article,理工,物理学,,J-Stage WebAPI,https://doi.org/10.11316/butsuri.81.5_259,2026-07-17T18:22:21+09:00
+art0176,article,理工,物理学,english_mixed,J-Stage WebAPI,https://doi.org/10.11316/butsuri.81.6_282,2026-07-17T18:22:21+09:00
+art0177,article,理工,物理学,english_mixed;subtitle,J-Stage WebAPI,https://doi.org/10.11316/butsuri.81.6_304,2026-07-17T18:22:21+09:00
+art0178,article,理工,物理学,,J-Stage WebAPI,https://doi.org/10.11316/butsuri.64.10_752,2026-07-17T18:22:21+09:00
+art0179,article,理工,物理学,,J-Stage WebAPI,https://doi.org/10.11316/butsuri.64.10_777,2026-07-17T18:22:21+09:00
+art0180,article,理工,物理学,english_mixed,J-Stage WebAPI,https://doi.org/10.11316/butsuri.64.10_788_1,2026-07-17T18:22:21+09:00
+art0181,article,理工,物理学,,J-Stage WebAPI,https://doi.org/10.11316/butsuri.64.11_817,2026-07-17T18:22:21+09:00
+art0182,article,理工,物理学,subtitle,J-Stage WebAPI,https://doi.org/10.11316/butsuri.64.11_849,2026-07-17T18:22:21+09:00
+art0183,article,理工,物理学,,J-Stage WebAPI,https://doi.org/10.11316/butsuri.64.11_858,2026-07-17T18:22:21+09:00
+art0184,article,理工,物理学,,J-Stage WebAPI,https://doi.org/10.11316/butsuri.64.11_867,2026-07-17T18:22:21+09:00
+art0185,article,理工,物理学,,J-Stage WebAPI,https://doi.org/10.11316/butsuri.64.12_920,2026-07-17T18:22:21+09:00
+art0186,article,理工,物理学,,J-Stage WebAPI,https://doi.org/10.11316/butsuri.64.12_945,2026-07-17T18:22:21+09:00
+art0187,article,理工,物理学,,J-Stage WebAPI,https://doi.org/10.11316/butsuri.64.12_960,2026-07-17T18:22:21+09:00
+art0188,article,理工,機械工学,page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014bms0019,2026-07-17T18:22:22+09:00
+art0189,article,理工,機械工学,page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014fe0004,2026-07-17T18:22:22+09:00
+art0190,article,理工,機械工学,english_mixed;page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014trans0001,2026-07-17T18:22:22+09:00
+art0191,article,理工,機械工学,page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014fe0024,2026-07-17T18:22:22+09:00
+art0192,article,理工,機械工学,page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014bms0056,2026-07-17T18:22:22+09:00
+art0193,article,理工,機械工学,page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014dsm0054,2026-07-17T18:22:22+09:00
+art0194,article,理工,機械工学,page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014tep0044,2026-07-17T18:22:22+09:00
+art0195,article,理工,機械工学,page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014dr0101,2026-07-17T18:22:22+09:00
+art0196,article,理工,機械工学,page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014fe0091,2026-07-17T18:22:22+09:00
+art0197,article,理工,機械工学,english_mixed;page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014smm0087,2026-07-17T18:22:22+09:00
+art0198,article,理工,機械工学,page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014trans0060,2026-07-17T18:22:22+09:00
+art0199,article,理工,機械工学,english_mixed;page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014trans0070,2026-07-17T18:22:22+09:00
+art0200,article,理工,機械工学,page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014bms0138,2026-07-17T18:22:22+09:00
+art0201,article,理工,機械工学,page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014dr0127,2026-07-17T18:22:22+09:00
+art0202,article,理工,機械工学,page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014dsm0137,2026-07-17T18:22:22+09:00
+art0203,article,理工,機械工学,english_mixed;page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014smm0111,2026-07-17T18:22:22+09:00
+art0204,article,理工,機械工学,page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014dr0162,2026-07-17T18:22:22+09:00
+art0205,article,理工,機械工学,page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014dr0171,2026-07-17T18:22:22+09:00
+art0206,article,理工,機械工学,english_mixed;page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014smm0146,2026-07-17T18:22:22+09:00
+art0207,article,理工,機械工学,english_mixed;page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014tep0157,2026-07-17T18:22:22+09:00
+art0208,article,理工,機械工学,page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014bms0215,2026-07-17T18:22:22+09:00
+art0209,article,理工,機械工学,page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014dsm0211,2026-07-17T18:22:22+09:00
+art0210,article,理工,機械工学,english_mixed;page_style,J-Stage WebAPI,https://doi.org/10.1299/transjsme.2014smm0185,2026-07-17T18:22:22+09:00
+art0211,article,理工,化学工学,,J-Stage WebAPI,https://doi.org/10.1252/kakoronbunshu1953.33.429,2026-07-17T18:22:24+09:00
+art0212,article,理工,化学工学,,J-Stage WebAPI,https://doi.org/10.1252/kakoronbunshu1953.33.492,2026-07-17T18:22:24+09:00
+art0213,article,理工,化学工学,,J-Stage WebAPI,https://doi.org/10.1252/kakoronbunshu1953.33.563,2026-07-17T18:22:24+09:00
+art0214,article,理工,化学工学,,J-Stage WebAPI,https://doi.org/10.1252/kakoronbunshu1953.33.625,2026-07-17T18:22:24+09:00
+art0215,article,理工,化学工学,,J-Stage WebAPI,https://doi.org/10.1252/kakoronbunshu1953.33.684,2026-07-17T18:22:24+09:00
+art0216,article,理工,化学工学,,J-Stage WebAPI,https://doi.org/10.1252/kakoronbunshu1953.33.769,2026-07-17T18:22:24+09:00
+art0217,article,理工,化学工学,,J-Stage WebAPI,https://doi.org/10.1252/kakoronbunshu1953.33.834,2026-07-17T18:22:24+09:00
+art0218,article,理工,化学工学,,J-Stage WebAPI,https://doi.org/10.1252/kakoronbunshu1953.33.893,2026-07-17T18:22:24+09:00
+art0219,article,理工,化学工学,,J-Stage WebAPI,https://doi.org/10.1252/kakoronbunshu1953.34.37,2026-07-17T18:22:24+09:00
+art0220,article,理工,化学工学,,J-Stage WebAPI,https://doi.org/10.1252/kakoronbunshu1953.34.87,2026-07-17T18:22:24+09:00
+art0221,article,理工,化学工学,,J-Stage WebAPI,https://doi.org/10.1252/kakoronbunshu1953.34.1041,2026-07-17T18:22:24+09:00
+art0222,article,理工,化学工学,,J-Stage WebAPI,https://doi.org/10.1252/kakoronbunshu1953.34.1115,2026-07-17T18:22:24+09:00
+art0223,article,理工,化学工学,,J-Stage WebAPI,https://doi.org/10.1252/kakoronbunshu1953.34.1185,2026-07-17T18:22:24+09:00
+art0224,article,理工,化学工学,english_mixed,J-Stage WebAPI,https://doi.org/10.1252/kakoronbunshu1953.34.1251,2026-07-17T18:22:24+09:00
+art0225,article,理工,化学工学,,J-Stage WebAPI,https://doi.org/10.1252/kakoronbunshu1953.34.1308,2026-07-17T18:22:24+09:00
+art0226,article,理工,化学工学,,J-Stage WebAPI,https://doi.org/10.1252/kakoronbunshu1953.34.122,2026-07-17T18:22:24+09:00
+art0227,article,理工,化学工学,,J-Stage WebAPI,https://doi.org/10.1252/kakoronbunshu1953.34.175,2026-07-17T18:22:24+09:00
+art0228,article,理工,化学工学,,J-Stage WebAPI,https://doi.org/10.1252/kakoronbunshu1953.34.246,2026-07-17T18:22:24+09:00
+art0229,article,理工,化学工学,,J-Stage WebAPI,https://doi.org/10.1252/kakoronbunshu1953.34.305,2026-07-17T18:22:24+09:00
+art0230,article,理工,化学工学,,J-Stage WebAPI,https://doi.org/10.1252/kakoronbunshu1953.34.364,2026-07-17T18:22:24+09:00
+art0231,article,医学生命,医療情報学,,J-Stage WebAPI,https://doi.org/10.14948/jami.20.1,2026-07-17T18:22:26+09:00
+art0232,article,医学生命,医療情報学,subtitle,J-Stage WebAPI,https://doi.org/10.14948/jami.20.135,2026-07-17T18:22:26+09:00
+art0233,article,医学生命,医療情報学,english_mixed,J-Stage WebAPI,https://doi.org/10.14948/jami.20.79,2026-07-17T18:22:26+09:00
+art0234,article,医学生命,医療情報学,english_mixed,J-Stage WebAPI,https://doi.org/10.14948/jami.20.231,2026-07-17T18:22:26+09:00
+art0235,article,医学生命,医療情報学,subtitle,J-Stage WebAPI,https://doi.org/10.14948/jami.20.309,2026-07-17T18:22:26+09:00
+art0236,article,医学生命,医療情報学,,J-Stage WebAPI,https://doi.org/10.14948/jami.20.419,2026-07-17T18:22:26+09:00
+art0237,article,医学生命,医療情報学,,J-Stage WebAPI,https://doi.org/10.14948/jami.20.503,2026-07-17T18:22:26+09:00
+art0238,article,医学生命,医療情報学,,J-Stage WebAPI,https://doi.org/10.14948/jami.21.131,2026-07-17T18:22:26+09:00
+art0239,article,医学生命,医療情報学,,J-Stage WebAPI,https://doi.org/10.14948/jami.21.69,2026-07-17T18:22:26+09:00
+art0240,article,医学生命,医療情報学,,J-Stage WebAPI,https://doi.org/10.14948/jami.21.173,2026-07-17T18:22:26+09:00
+art0241,article,医学生命,医療情報学,english_mixed,J-Stage WebAPI,https://doi.org/10.14948/jami.21.253,2026-07-17T18:22:26+09:00
+art0242,article,医学生命,医療情報学,,J-Stage WebAPI,https://doi.org/10.14948/jami.21.325,2026-07-17T18:22:26+09:00
+art0243,article,医学生命,医療情報学,english_mixed;subtitle,J-Stage WebAPI,https://doi.org/10.14948/jami.21.425,2026-07-17T18:22:26+09:00
+art0244,article,医学生命,医療情報学,,J-Stage WebAPI,https://doi.org/10.14948/jami.22.141,2026-07-17T18:22:26+09:00
+art0245,article,医学生命,医療情報学,,J-Stage WebAPI,https://doi.org/10.14948/jami.22.59,2026-07-17T18:22:26+09:00
+art0246,article,医学生命,医療情報学,subtitle,J-Stage WebAPI,https://doi.org/10.14948/jami.22.197,2026-07-17T18:22:26+09:00
+art0247,article,医学生命,医療情報学,,J-Stage WebAPI,https://doi.org/10.14948/jami.22.267,2026-07-17T18:22:26+09:00
+art0248,article,医学生命,医療情報学,,J-Stage WebAPI,https://doi.org/10.14948/jami.22.347,2026-07-17T18:22:26+09:00
+art0249,article,医学生命,医療情報学,,J-Stage WebAPI,https://doi.org/10.14948/jami.22.453,2026-07-17T18:22:26+09:00
+art0250,article,医学生命,医療情報学,subtitle,J-Stage WebAPI,https://doi.org/10.14948/jami.23.45,2026-07-17T18:22:26+09:00
+art0251,article,医学生命,医療情報学,,J-Stage WebAPI,https://doi.org/10.14948/jami.23.153,2026-07-17T18:22:26+09:00
+art0252,article,医学生命,医療情報学,subtitle,J-Stage WebAPI,https://doi.org/10.14948/jami.23.293,2026-07-17T18:22:26+09:00
+art0253,article,医学生命,医療情報学,,J-Stage WebAPI,https://doi.org/10.14948/jami.23.373,2026-07-17T18:22:26+09:00
+art0254,article,医学生命,医療情報学,,J-Stage WebAPI,https://doi.org/10.14948/jami.23.451,2026-07-17T18:22:26+09:00
+art0255,article,医学生命,内科学,,J-Stage WebAPI,https://doi.org/10.2169/naika.103.1,2026-07-17T18:22:28+09:00
+art0256,article,医学生命,内科学,english_mixed,J-Stage WebAPI,https://doi.org/10.2169/naika.103.160,2026-07-17T18:22:28+09:00
+art0257,article,医学生命,内科学,,J-Stage WebAPI,https://doi.org/10.2169/naika.103.205,2026-07-17T18:22:28+09:00
+art0258,article,医学生命,内科学,english_mixed,J-Stage WebAPI,https://doi.org/10.2169/naika.103.61,2026-07-17T18:22:28+09:00
+art0259,article,医学生命,内科学,,J-Stage WebAPI,https://doi.org/10.2169/naika.103.2407,2026-07-17T18:22:28+09:00
+art0260,article,医学生命,内科学,,J-Stage WebAPI,https://doi.org/10.2169/naika.103.2481,2026-07-17T18:22:28+09:00
+art0261,article,医学生命,内科学,english_mixed,J-Stage WebAPI,https://doi.org/10.2169/naika.103.2568,2026-07-17T18:22:28+09:00
+art0262,article,医学生命,内科学,,J-Stage WebAPI,https://doi.org/10.2169/naika.103.2613,2026-07-17T18:22:28+09:00
+art0263,article,医学生命,内科学,,J-Stage WebAPI,https://doi.org/10.2169/naika.103.2701,2026-07-17T18:22:28+09:00
+art0264,article,医学生命,内科学,,J-Stage WebAPI,https://doi.org/10.2169/naika.103.2754,2026-07-17T18:22:28+09:00
+art0265,article,医学生命,内科学,,J-Stage WebAPI,https://doi.org/10.2169/naika.103.2829,2026-07-17T18:22:28+09:00
+art0266,article,医学生命,内科学,subtitle,J-Stage WebAPI,https://doi.org/10.2169/naika.103.2913,2026-07-17T18:22:28+09:00
+art0267,article,医学生命,内科学,,J-Stage WebAPI,https://doi.org/10.2169/naika.103.2971,2026-07-17T18:22:28+09:00
+art0268,article,医学生命,内科学,,J-Stage WebAPI,https://doi.org/10.2169/naika.103.3019,2026-07-17T18:22:28+09:00
+art0269,article,医学生命,内科学,,J-Stage WebAPI,https://doi.org/10.2169/naika.103.3049,2026-07-17T18:22:28+09:00
+art0270,article,医学生命,内科学,,J-Stage WebAPI,https://doi.org/10.2169/naika.103.3080,2026-07-17T18:22:28+09:00
+art0271,article,医学生命,内科学,,J-Stage WebAPI,https://doi.org/10.2169/naika.103.273,2026-07-17T18:22:28+09:00
+art0272,article,医学生命,内科学,,J-Stage WebAPI,https://doi.org/10.2169/naika.103.345,2026-07-17T18:22:28+09:00
+art0273,article,医学生命,内科学,english_mixed,J-Stage WebAPI,https://doi.org/10.2169/naika.103.433,2026-07-17T18:22:28+09:00
+art0274,article,医学生命,内科学,,J-Stage WebAPI,https://doi.org/10.2169/naika.103.539,2026-07-17T18:22:28+09:00
+art0275,article,医学生命,内科学,,J-Stage WebAPI,https://doi.org/10.2169/naika.103.587,2026-07-17T18:22:28+09:00
+art0276,article,医学生命,内科学,subtitle,J-Stage WebAPI,https://doi.org/10.2169/naika.103.630,2026-07-17T18:22:28+09:00
+art0277,article,医学生命,看護学,page_style;subtitle,J-Stage WebAPI,https://doi.org/10.5630/jans.26.1_13,2026-07-17T18:22:29+09:00
+art0278,article,医学生命,看護学,page_style,J-Stage WebAPI,https://doi.org/10.5630/jans.26.1_85,2026-07-17T18:22:29+09:00
+art0279,article,医学生命,看護学,page_style,J-Stage WebAPI,https://doi.org/10.5630/jans.26.3_22,2026-07-17T18:22:29+09:00
+art0280,article,医学生命,看護学,page_style;subtitle,J-Stage WebAPI,https://doi.org/10.5630/jans.26.4_3,2026-07-17T18:22:29+09:00
+art0281,article,医学生命,看護学,page_style;subtitle,J-Stage WebAPI,https://doi.org/10.5630/jans.27.1_3,2026-07-17T18:22:29+09:00
+art0282,article,医学生命,看護学,page_style;subtitle,J-Stage WebAPI,https://doi.org/10.5630/jans.27.2_25,2026-07-17T18:22:29+09:00
+art0283,article,医学生命,看護学,page_style;subtitle,J-Stage WebAPI,https://doi.org/10.5630/jans.27.3_3,2026-07-17T18:22:29+09:00
+art0284,article,医学生命,看護学,page_style,J-Stage WebAPI,https://doi.org/10.5630/jans.27.4_33,2026-07-17T18:22:29+09:00
+art0285,article,医学生命,看護学,page_style;subtitle,J-Stage WebAPI,https://doi.org/10.5630/jans.28.1_41,2026-07-17T18:22:29+09:00
+art0286,article,医学生命,看護学,page_style,J-Stage WebAPI,https://doi.org/10.5630/jans.28.2_3,2026-07-17T18:22:29+09:00
+art0287,article,医学生命,看護学,page_style,J-Stage WebAPI,https://doi.org/10.5630/jans.28.3_52,2026-07-17T18:22:29+09:00
+art0288,article,医学生命,看護学,page_style,J-Stage WebAPI,https://doi.org/10.5630/jans.29.1_25,2026-07-17T18:22:29+09:00
+art0289,article,医学生命,看護学,page_style,J-Stage WebAPI,https://doi.org/10.5630/jans.29.2_50,2026-07-17T18:22:29+09:00
+art0290,article,医学生命,看護学,page_style,J-Stage WebAPI,https://doi.org/10.5630/jans.29.3_76,2026-07-17T18:22:29+09:00
+art0291,article,医学生命,看護学,page_style,J-Stage WebAPI,https://doi.org/10.5630/jans.29.4_88,2026-07-17T18:22:29+09:00
+art0292,article,医学生命,看護学,page_style,J-Stage WebAPI,https://doi.org/10.5630/jans.30.1_80,2026-07-17T18:22:29+09:00
+art0293,article,医学生命,看護学,english_mixed;page_style,J-Stage WebAPI,https://doi.org/10.5630/jans.30.2_44,2026-07-17T18:22:29+09:00
+art0294,article,医学生命,看護学,page_style,J-Stage WebAPI,https://doi.org/10.5630/jans.30.3_3,2026-07-17T18:22:29+09:00
+art0295,article,医学生命,看護学,page_style,J-Stage WebAPI,https://doi.org/10.5630/jans.30.4_6,2026-07-17T18:22:29+09:00
+art0296,article,医学生命,看護学,page_style,J-Stage WebAPI,https://doi.org/10.5630/jans.31.2_1,2026-07-17T18:22:29+09:00
+inp0001,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2015/pdf_dir/B5-1.pdf,2026-07-17T13:52:48+09:00
+inp0002,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2015/pdf_dir/C2-1.pdf,2026-07-17T13:52:48+09:00
+inp0003,inproceedings,理工,自然言語処理,english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2015/pdf_dir/P1-1.pdf,2026-07-17T13:52:48+09:00
+inp0004,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2015/pdf_dir/P2-17.pdf,2026-07-17T13:52:48+09:00
+inp0005,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2015/pdf_dir/P3-11.pdf,2026-07-17T13:52:48+09:00
+inp0006,inproceedings,理工,自然言語処理,english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2015/pdf_dir/P4-8.pdf,2026-07-17T13:52:48+09:00
+inp0007,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2016/pdf_dir/A3-2.pdf,2026-07-17T13:52:50+09:00
+inp0008,inproceedings,理工,自然言語処理,english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2016/pdf_dir/A5-4.pdf,2026-07-17T13:52:50+09:00
+inp0009,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2016/pdf_dir/B2-3.pdf,2026-07-17T13:52:50+09:00
+inp0010,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2016/pdf_dir/P1-1.pdf,2026-07-17T13:52:50+09:00
+inp0011,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2016/pdf_dir/P17-2.pdf,2026-07-17T13:52:50+09:00
+inp0012,inproceedings,理工,自然言語処理,english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2016/pdf_dir/P7-6.pdf,2026-07-17T13:52:50+09:00
+inp0013,inproceedings,理工,自然言語処理,english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2017/pdf_dir/A1-1.pdf,2026-07-17T13:52:52+09:00
+inp0014,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2017/pdf_dir/B4-5.pdf,2026-07-17T13:52:52+09:00
+inp0015,inproceedings,理工,自然言語処理,english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2017/pdf_dir/C5-1.pdf,2026-07-17T13:52:52+09:00
+inp0016,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2017/pdf_dir/P10-7.pdf,2026-07-17T13:52:52+09:00
+inp0017,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2017/pdf_dir/P17-2.pdf,2026-07-17T13:52:52+09:00
+inp0018,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2017/pdf_dir/P4-5.pdf,2026-07-17T13:52:52+09:00
+inp0019,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2018/pdf_dir/A1-1.pdf,2026-07-17T13:52:54+09:00
+inp0020,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2018/pdf_dir/B4-1.pdf,2026-07-17T13:52:54+09:00
+inp0021,inproceedings,理工,自然言語処理,subtitle,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2018/pdf_dir/C3-6.pdf,2026-07-17T13:52:54+09:00
+inp0022,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2018/pdf_dir/P11-3.pdf,2026-07-17T13:52:54+09:00
+inp0023,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2018/pdf_dir/P2-2.pdf,2026-07-17T13:52:54+09:00
+inp0024,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2018/pdf_dir/P8-7.pdf,2026-07-17T13:52:54+09:00
+inp0025,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/A1-1.pdf,2026-07-17T13:52:56+09:00
+inp0026,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/B4-6.pdf,2026-07-17T13:52:56+09:00
+inp0027,inproceedings,理工,自然言語処理,english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/D3-1.pdf,2026-07-17T13:52:56+09:00
+inp0028,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/P3-2.pdf,2026-07-17T13:52:56+09:00
+inp0029,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/P5-2.pdf,2026-07-17T13:52:56+09:00
+inp0030,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/P7-16.pdf,2026-07-17T13:52:56+09:00
+inp0031,inproceedings,理工,自然言語処理,subtitle;english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/G2-1.pdf,2026-07-17T13:52:58+09:00
+inp0032,inproceedings,理工,自然言語処理,english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/G4-1.pdf,2026-07-17T13:52:58+09:00
+inp0033,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/P1-1.pdf,2026-07-17T13:52:58+09:00
+inp0034,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/P2-31.pdf,2026-07-17T13:52:58+09:00
+inp0035,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/P3-36.pdf,2026-07-17T13:52:58+09:00
+inp0036,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/P5-34.pdf,2026-07-17T13:52:58+09:00
+inp0037,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2021/pdf_dir/A1-1.pdf,2026-07-17T13:53:01+09:00
+inp0038,inproceedings,理工,自然言語処理,english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2021/pdf_dir/A4-1.pdf,2026-07-17T13:53:01+09:00
+inp0039,inproceedings,理工,自然言語処理,english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2021/pdf_dir/A7-2.pdf,2026-07-17T13:53:01+09:00
+inp0040,inproceedings,理工,自然言語処理,english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2021/pdf_dir/E2-4.pdf,2026-07-17T13:53:01+09:00
+inp0041,inproceedings,理工,自然言語処理,subtitle;english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2021/pdf_dir/E5-4.pdf,2026-07-17T13:53:01+09:00
+inp0042,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2021/pdf_dir/P8-1.pdf,2026-07-17T13:53:01+09:00
+inp0043,inproceedings,理工,自然言語処理,english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2022/pdf_dir/A1-1.pdf,2026-07-17T13:53:03+09:00
+inp0044,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2022/pdf_dir/A4-1.pdf,2026-07-17T13:53:03+09:00
+inp0045,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2022/pdf_dir/A5-1.pdf,2026-07-17T13:53:03+09:00
+inp0046,inproceedings,理工,自然言語処理,english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2022/pdf_dir/D2-1.pdf,2026-07-17T13:53:03+09:00
+inp0047,inproceedings,理工,自然言語処理,english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2022/pdf_dir/D6-1.pdf,2026-07-17T13:53:03+09:00
+inp0048,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2022/pdf_dir/D7-1.pdf,2026-07-17T13:53:03+09:00
+inp0049,inproceedings,理工,自然言語処理,english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/A1-1.pdf,2026-07-17T13:53:05+09:00
+inp0050,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/A11-3.pdf,2026-07-17T13:53:05+09:00
+inp0051,inproceedings,理工,自然言語処理,english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/B7-5.pdf,2026-07-17T13:53:05+09:00
+inp0052,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/B9-1.pdf,2026-07-17T13:53:05+09:00
+inp0053,inproceedings,理工,自然言語処理,english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/Q2-8.pdf,2026-07-17T13:53:05+09:00
+inp0054,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/Q4-3.pdf,2026-07-17T13:53:05+09:00
+inp0055,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/A1-1.pdf,2026-07-17T13:53:07+09:00
+inp0056,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/C10-2.pdf,2026-07-17T13:53:07+09:00
+inp0057,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/D8-5.pdf,2026-07-17T13:53:07+09:00
+inp0058,inproceedings,理工,自然言語処理,subtitle;english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/P2-18.pdf,2026-07-17T13:53:07+09:00
+inp0059,inproceedings,理工,自然言語処理,,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/P4-8.pdf,2026-07-17T13:53:07+09:00
+inp0060,inproceedings,理工,自然言語処理,english_mixed,言語処理学会年次大会アーカイブ,https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/P6-4.pdf,2026-07-17T13:53:07+09:00
+inp0061,inproceedings,人文社会,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781768926084,2026-07-17T14:30:25+09:00
+inp0062,inproceedings,人文社会,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781782281227,2026-07-17T14:30:25+09:00
+inp0063,inproceedings,人文社会,心理学,english_mixed,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781792663809,2026-07-17T14:30:23+09:00
+inp0064,inproceedings,理工,建築学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781798068739,2026-07-17T14:30:28+09:00
+inp0065,inproceedings,人文社会,心理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781820172289,2026-07-17T14:30:23+09:00
+inp0066,inproceedings,理工,建築学,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781846510465,2026-07-17T14:30:28+09:00
+inp0067,inproceedings,人文社会,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781873096599,2026-07-17T14:30:25+09:00
+inp0068,inproceedings,人文社会,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781877780757,2026-07-17T14:30:25+09:00
+inp0069,inproceedings,人文社会,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781877859855,2026-07-17T14:30:25+09:00
+inp0070,inproceedings,人文社会,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781895286912,2026-07-17T14:30:25+09:00
+inp0071,inproceedings,理工,建築学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781901844864,2026-07-17T14:30:28+09:00
+inp0072,inproceedings,理工,建築学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781912374529,2026-07-17T14:30:28+09:00
+inp0073,inproceedings,理工,建築学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781933886472,2026-07-17T14:30:28+09:00
+inp0074,inproceedings,理工,建築学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781966519811,2026-07-17T14:30:28+09:00
+inp0075,inproceedings,理工,建築学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781982238472,2026-07-17T14:30:28+09:00
+inp0076,inproceedings,理工,建築学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000782071379331,2026-07-17T14:30:28+09:00
+inp0077,inproceedings,人文社会,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000782468853391,2026-07-17T14:30:25+09:00
+inp0078,inproceedings,人文社会,地理学,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010013168661844231,2026-07-17T14:30:25+09:00
+inp0079,inproceedings,人文社会,心理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010282256787858946,2026-07-17T14:30:23+09:00
+inp0080,inproceedings,人文社会,心理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010282256848482825,2026-07-17T14:30:23+09:00
+inp0081,inproceedings,人文社会,地理学,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010282256874759951,2026-07-17T14:30:25+09:00
+inp0082,inproceedings,人文社会,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010282256907467545,2026-07-17T14:30:25+09:00
+inp0083,inproceedings,人文社会,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010282256907467546,2026-07-17T14:30:25+09:00
+inp0084,inproceedings,人文社会,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010282256907467648,2026-07-17T14:30:25+09:00
+inp0085,inproceedings,人文社会,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010282256907467649,2026-07-17T14:30:25+09:00
+inp0086,inproceedings,人文社会,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010282256908466699,2026-07-17T14:30:25+09:00
+inp0087,inproceedings,人文社会,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010282256908862100,2026-07-17T14:30:25+09:00
+inp0088,inproceedings,人文社会,心理学,english_mixed,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010282256957692815,2026-07-17T14:30:23+09:00
+inp0089,inproceedings,人文社会,心理学,english_mixed,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1050011251830019456,2026-07-17T14:30:23+09:00
+inp0090,inproceedings,人文社会,心理学,english_mixed;subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1050022089734595584,2026-07-17T14:30:23+09:00
+inp0091,inproceedings,人文社会,心理学,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1050022089734597504,2026-07-17T14:30:23+09:00
+inp0092,inproceedings,理工,地質学,english_mixed;subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1050282813843095552,2026-07-17T14:30:30+09:00
+inp0093,inproceedings,人文社会,心理学,english_mixed;subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1050303564711306624,2026-07-17T14:30:23+09:00
+inp0094,inproceedings,人文社会,心理学,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1050585039688017280,2026-07-17T14:30:23+09:00
+inp0095,inproceedings,人文社会,心理学,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1050585039688018816,2026-07-17T14:30:23+09:00
+inp0096,inproceedings,人文社会,心理学,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1050866514664726656,2026-07-17T14:30:23+09:00
+inp0097,inproceedings,人文社会,心理学,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1050866514664727936,2026-07-17T14:30:23+09:00
+inp0098,inproceedings,医学生命,公衆衛生,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009750333438848,2026-07-17T14:30:32+09:00
+inp0099,inproceedings,医学生命,公衆衛生,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009750333522432,2026-07-17T14:30:32+09:00
+inp0100,inproceedings,医学生命,公衆衛生,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009750333536256,2026-07-17T14:30:32+09:00
+inp0101,inproceedings,医学生命,公衆衛生,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009750333694720,2026-07-17T14:30:32+09:00
+inp0102,inproceedings,医学生命,公衆衛生,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009750333715968,2026-07-17T14:30:32+09:00
+inp0103,inproceedings,医学生命,公衆衛生,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009750333778304,2026-07-17T14:30:32+09:00
+inp0104,inproceedings,医学生命,公衆衛生,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009750333936256,2026-07-17T14:30:32+09:00
+inp0105,inproceedings,医学生命,公衆衛生,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009750334121600,2026-07-17T14:30:32+09:00
+inp0106,inproceedings,医学生命,公衆衛生,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009750334137472,2026-07-17T14:30:32+09:00
+inp0107,inproceedings,医学生命,公衆衛生,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009750334271744,2026-07-17T14:30:32+09:00
+inp0108,inproceedings,医学生命,公衆衛生,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009750334371456,2026-07-17T14:30:32+09:00
+inp0109,inproceedings,医学生命,公衆衛生,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009750334386688,2026-07-17T14:30:32+09:00
+inp0110,inproceedings,医学生命,公衆衛生,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009750334508672,2026-07-17T14:30:32+09:00
+inp0111,inproceedings,医学生命,公衆衛生,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009750334519680,2026-07-17T14:30:32+09:00
+inp0112,inproceedings,医学生命,公衆衛生,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009750334860160,2026-07-17T14:30:32+09:00
+inp0113,inproceedings,理工,地質学,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009752399416576,2026-07-17T14:30:30+09:00
+inp0114,inproceedings,理工,地質学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009752400630144,2026-07-17T14:30:30+09:00
+inp0115,inproceedings,理工,地質学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009752400690304,2026-07-17T14:30:30+09:00
+inp0116,inproceedings,理工,地質学,english_mixed,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009752401033472,2026-07-17T14:30:30+09:00
+inp0117,inproceedings,理工,地質学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009752401055104,2026-07-17T14:30:30+09:00
+inp0118,inproceedings,理工,地質学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570009752525341696,2026-07-17T14:30:30+09:00
+inp0119,inproceedings,人文社会,心理学,english_mixed,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1570291225047900160,2026-07-17T14:30:23+09:00
+inp0120,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4F11,2026-07-17T18:22:31+09:00
+inp0121,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4F15in2,2026-07-17T18:22:31+09:00
+inp0122,inproceedings,理工,人工知能 (JSAI 全国大会),english_mixed;nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4G1OS14a4,2026-07-17T18:22:31+09:00
+inp0123,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4G2OS14b3,2026-07-17T18:22:31+09:00
+inp0124,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4H1OS27a3,2026-07-17T18:22:31+09:00
+inp0125,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4H23,2026-07-17T18:22:31+09:00
+inp0126,inproceedings,理工,人工知能 (JSAI 全国大会),english_mixed;nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4I12,2026-07-17T18:22:31+09:00
+inp0127,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4I21,2026-07-17T18:22:31+09:00
+inp0128,inproceedings,理工,人工知能 (JSAI 全国大会),english_mixed;nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4I25,2026-07-17T18:22:31+09:00
+inp0129,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4J14,2026-07-17T18:22:31+09:00
+inp0130,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style;subtitle,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4J23,2026-07-17T18:22:31+09:00
+inp0131,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4K12,2026-07-17T18:22:31+09:00
+inp0132,inproceedings,理工,人工知能 (JSAI 全国大会),english_mixed;nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4K23,2026-07-17T18:22:31+09:00
+inp0133,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4L13,2026-07-17T18:22:31+09:00
+inp0134,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4L22,2026-07-17T18:22:31+09:00
+inp0135,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4M11in1,2026-07-17T18:22:31+09:00
+inp0136,inproceedings,理工,人工知能 (JSAI 全国大会),english_mixed;nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4N1OS01a1,2026-07-17T18:22:31+09:00
+inp0137,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4N2OS01b2,2026-07-17T18:22:31+09:00
+inp0138,inproceedings,理工,人工知能 (JSAI 全国大会),english_mixed;nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4O1OS17a1,2026-07-17T18:22:31+09:00
+inp0139,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4O2OS17b1,2026-07-17T18:22:31+09:00
+inp0140,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4P1OS38a1,2026-07-17T18:22:31+09:00
+inp0141,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4P1OS38a4,2026-07-17T18:22:31+09:00
+inp0142,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4P2OS38b3,2026-07-17T18:22:31+09:00
+inp0143,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4Q112in2,2026-07-17T18:22:31+09:00
+inp0144,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2017.0_4Q17in2,2026-07-17T18:22:31+09:00
+inp0145,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1B1OS11a02,2026-07-17T18:22:31+09:00
+inp0146,inproceedings,理工,人工知能 (JSAI 全国大会),english_mixed;nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1B2OS11b01,2026-07-17T18:22:31+09:00
+inp0147,inproceedings,理工,人工知能 (JSAI 全国大会),english_mixed;nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1B301,2026-07-17T18:22:31+09:00
+inp0148,inproceedings,理工,人工知能 (JSAI 全国大会),english_mixed;nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1C101,2026-07-17T18:22:31+09:00
+inp0149,inproceedings,理工,人工知能 (JSAI 全国大会),english_mixed;nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1C104,2026-07-17T18:22:31+09:00
+inp0150,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1C2OS8a04,2026-07-17T18:22:31+09:00
+inp0151,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1D101,2026-07-17T18:22:31+09:00
+inp0152,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1D105,2026-07-17T18:22:31+09:00
+inp0153,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1D3OS28b01,2026-07-17T18:22:31+09:00
+inp0154,inproceedings,理工,人工知能 (JSAI 全国大会),english_mixed;nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1D3OS28b05,2026-07-17T18:22:31+09:00
+inp0155,inproceedings,理工,人工知能 (JSAI 全国大会),english_mixed;nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1E104,2026-07-17T18:22:31+09:00
+inp0156,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1E203,2026-07-17T18:22:31+09:00
+inp0157,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1E302,2026-07-17T18:22:31+09:00
+inp0158,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1F101,2026-07-17T18:22:31+09:00
+inp0159,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1F2OS5a01,2026-07-17T18:22:31+09:00
+inp0160,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1F3OS5b01,2026-07-17T18:22:31+09:00
+inp0161,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1G302,2026-07-17T18:22:31+09:00
+inp0162,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1H1OS13a02,2026-07-17T18:22:31+09:00
+inp0163,inproceedings,理工,人工知能 (JSAI 全国大会),english_mixed;nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1H2OS13b01,2026-07-17T18:22:31+09:00
+inp0164,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1J102,2026-07-17T18:22:31+09:00
+inp0165,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1J105,2026-07-17T18:22:31+09:00
+inp0166,inproceedings,理工,人工知能 (JSAI 全国大会),english_mixed;nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1J204,2026-07-17T18:22:31+09:00
+inp0167,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1J303,2026-07-17T18:22:31+09:00
+inp0168,inproceedings,理工,人工知能 (JSAI 全国大会),english_mixed;nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1K1OS2a03,2026-07-17T18:22:31+09:00
+inp0169,inproceedings,理工,人工知能 (JSAI 全国大会),nonstandard_volume;page_style,J-Stage WebAPI,https://doi.org/10.11517/pjsai.JSAI2018.0_1K2OS2b03,2026-07-17T18:22:31+09:00
+inp0170,inproceedings,医学生命,生態学 (日本生態学会大会),nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0.100.1,2026-07-17T18:22:33+09:00
+inp0171,inproceedings,医学生命,生態学 (日本生態学会大会),nonstandard_volume;subtitle,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_101_4,2026-07-17T18:22:33+09:00
+inp0172,inproceedings,医学生命,生態学 (日本生態学会大会),nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_103_3,2026-07-17T18:22:33+09:00
+inp0173,inproceedings,医学生命,生態学 (日本生態学会大会),nonstandard_volume;subtitle,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_106_2,2026-07-17T18:22:33+09:00
+inp0174,inproceedings,医学生命,生態学 (日本生態学会大会),nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_110_3,2026-07-17T18:22:33+09:00
+inp0175,inproceedings,医学生命,生態学 (日本生態学会大会),english_mixed;nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_112_3,2026-07-17T18:22:33+09:00
+inp0176,inproceedings,医学生命,生態学 (日本生態学会大会),english_mixed;nonstandard_volume;subtitle,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_114_2,2026-07-17T18:22:33+09:00
+inp0177,inproceedings,医学生命,生態学 (日本生態学会大会),nonstandard_volume;subtitle,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_116_2,2026-07-17T18:22:33+09:00
+inp0178,inproceedings,医学生命,生態学 (日本生態学会大会),nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0.118.1,2026-07-17T18:22:33+09:00
+inp0179,inproceedings,医学生命,生態学 (日本生態学会大会),english_mixed;nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_119_4,2026-07-17T18:22:33+09:00
+inp0180,inproceedings,医学生命,生態学 (日本生態学会大会),nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_121_3,2026-07-17T18:22:33+09:00
+inp0181,inproceedings,医学生命,生態学 (日本生態学会大会),nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_123_2,2026-07-17T18:22:33+09:00
+inp0182,inproceedings,医学生命,生態学 (日本生態学会大会),nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_125_2,2026-07-17T18:22:33+09:00
+inp0183,inproceedings,医学生命,生態学 (日本生態学会大会),nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_127_2,2026-07-17T18:22:33+09:00
+inp0184,inproceedings,医学生命,生態学 (日本生態学会大会),english_mixed;nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_129_3,2026-07-17T18:22:33+09:00
+inp0185,inproceedings,医学生命,生態学 (日本生態学会大会),nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_131_2,2026-07-17T18:22:33+09:00
+inp0186,inproceedings,医学生命,生態学 (日本生態学会大会),nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_133_2,2026-07-17T18:22:33+09:00
+inp0187,inproceedings,医学生命,生態学 (日本生態学会大会),nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_135_2,2026-07-17T18:22:33+09:00
+inp0188,inproceedings,医学生命,生態学 (日本生態学会大会),english_mixed;nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_137_2,2026-07-17T18:22:33+09:00
+inp0189,inproceedings,医学生命,生態学 (日本生態学会大会),english_mixed;nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0.139.1,2026-07-17T18:22:33+09:00
+inp0190,inproceedings,医学生命,生態学 (日本生態学会大会),nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0.141.1,2026-07-17T18:22:33+09:00
+inp0191,inproceedings,医学生命,生態学 (日本生態学会大会),nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_142_4,2026-07-17T18:22:33+09:00
+inp0192,inproceedings,医学生命,生態学 (日本生態学会大会),english_mixed;nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_146_4,2026-07-17T18:22:33+09:00
+inp0193,inproceedings,医学生命,生態学 (日本生態学会大会),english_mixed;nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_148_4,2026-07-17T18:22:33+09:00
+inp0194,inproceedings,医学生命,生態学 (日本生態学会大会),nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_150_4,2026-07-17T18:22:33+09:00
+inp0195,inproceedings,医学生命,生態学 (日本生態学会大会),english_mixed;nonstandard_volume;subtitle,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_152_3,2026-07-17T18:22:33+09:00
+inp0196,inproceedings,医学生命,生態学 (日本生態学会大会),nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_154_3,2026-07-17T18:22:33+09:00
+inp0197,inproceedings,医学生命,生態学 (日本生態学会大会),nonstandard_volume,J-Stage WebAPI,https://doi.org/10.14848/esj.ESJ50.0_156_2,2026-07-17T18:22:33+09:00
+inp0198,inproceedings,理工,照明工学 (照明学会全国大会),,J-Stage WebAPI,https://doi.org/10.11515/ieijac.35.0.1.0,2026-07-17T18:22:35+09:00
+inp0199,inproceedings,理工,照明工学 (照明学会全国大会),,J-Stage WebAPI,https://doi.org/10.11515/ieijac.35.0.107.0,2026-07-17T18:22:35+09:00
+inp0200,inproceedings,理工,照明工学 (照明学会全国大会),,J-Stage WebAPI,https://doi.org/10.11515/ieijac.35.0.116.0,2026-07-17T18:22:35+09:00
+inp0201,inproceedings,理工,照明工学 (照明学会全国大会),subtitle,J-Stage WebAPI,https://doi.org/10.11515/ieijac.35.0.124.0,2026-07-17T18:22:35+09:00
+inp0202,inproceedings,理工,照明工学 (照明学会全国大会),,J-Stage WebAPI,https://doi.org/10.11515/ieijac.35.0.133.0,2026-07-17T18:22:35+09:00
+inp0203,inproceedings,理工,照明工学 (照明学会全国大会),english_mixed,J-Stage WebAPI,https://doi.org/10.11515/ieijac.35.0.141.0,2026-07-17T18:22:35+09:00
+inp0204,inproceedings,理工,照明工学 (照明学会全国大会),,J-Stage WebAPI,https://doi.org/10.11515/ieijac.35.0.150.0,2026-07-17T18:22:35+09:00
+inp0205,inproceedings,理工,照明工学 (照明学会全国大会),,J-Stage WebAPI,https://doi.org/10.11515/ieijac.35.0.159.0,2026-07-17T18:22:35+09:00
+inp0206,inproceedings,理工,照明工学 (照明学会全国大会),,J-Stage WebAPI,https://doi.org/10.11515/ieijac.35.0.168.0,2026-07-17T18:22:35+09:00
+inp0207,inproceedings,理工,照明工学 (照明学会全国大会),,J-Stage WebAPI,https://doi.org/10.11515/ieijac.35.0.176.0,2026-07-17T18:22:35+09:00
+inp0208,inproceedings,理工,照明工学 (照明学会全国大会),,J-Stage WebAPI,https://doi.org/10.11515/ieijac.35.0.185.0,2026-07-17T18:22:35+09:00
+inp0209,inproceedings,理工,照明工学 (照明学会全国大会),,J-Stage WebAPI,https://doi.org/10.11515/ieijac.35.0.26.0,2026-07-17T18:22:35+09:00
+inp0210,inproceedings,理工,照明工学 (照明学会全国大会),,J-Stage WebAPI,https://doi.org/10.11515/ieijac.35.0.35.0,2026-07-17T18:22:35+09:00
+inp0211,inproceedings,理工,照明工学 (照明学会全国大会),,J-Stage WebAPI,https://doi.org/10.11515/ieijac.35.0.43.0,2026-07-17T18:22:35+09:00
+inp0212,inproceedings,理工,照明工学 (照明学会全国大会),english_mixed,J-Stage WebAPI,https://doi.org/10.11515/ieijac.35.0.52.0,2026-07-17T18:22:35+09:00
+inp0213,inproceedings,理工,照明工学 (照明学会全国大会),,J-Stage WebAPI,https://doi.org/10.11515/ieijac.35.0.60.0,2026-07-17T18:22:35+09:00
+inp0214,inproceedings,理工,照明工学 (照明学会全国大会),,J-Stage WebAPI,https://doi.org/10.11515/ieijac.35.0.7.0,2026-07-17T18:22:35+09:00
+inp0215,inproceedings,理工,照明工学 (照明学会全国大会),,J-Stage WebAPI,https://doi.org/10.11515/ieijac.35.0.78.0,2026-07-17T18:22:35+09:00
+inp0216,inproceedings,理工,照明工学 (照明学会全国大会),,J-Stage WebAPI,https://doi.org/10.11515/ieijac.35.0.87.0,2026-07-17T18:22:35+09:00
+inp0217,inproceedings,理工,照明工学 (照明学会全国大会),,J-Stage WebAPI,https://doi.org/10.11515/ieijac.35.0.95.0,2026-07-17T18:22:35+09:00
+inp0218,inproceedings,理工,照明工学 (照明学会全国大会),,J-Stage WebAPI,https://doi.org/10.11515/ieijac.36.0.103.0,2026-07-17T18:22:35+09:00
+inp0219,inproceedings,理工,照明工学 (照明学会全国大会),,J-Stage WebAPI,https://doi.org/10.11515/ieijac.36.0.111.0,2026-07-17T18:22:35+09:00
+inp0220,inproceedings,人文社会,経営システム (日本経営システム学会),english_mixed,J-Stage WebAPI,https://doi.org/10.11559/jams.28.0.101.0,2026-07-17T18:22:36+09:00
+inp0221,inproceedings,人文社会,経営システム (日本経営システム学会),subtitle,J-Stage WebAPI,https://doi.org/10.11559/jams.28.0.11.0,2026-07-17T18:22:36+09:00
+inp0222,inproceedings,人文社会,経営システム (日本経営システム学会),english_mixed;subtitle,J-Stage WebAPI,https://doi.org/10.11559/jams.28.0.121.0,2026-07-17T18:22:36+09:00
+inp0223,inproceedings,人文社会,経営システム (日本経営システム学会),,J-Stage WebAPI,https://doi.org/10.11559/jams.28.0.133.0,2026-07-17T18:22:36+09:00
+inp0224,inproceedings,人文社会,経営システム (日本経営システム学会),,J-Stage WebAPI,https://doi.org/10.11559/jams.28.0.149.0,2026-07-17T18:22:36+09:00
+inp0225,inproceedings,人文社会,経営システム (日本経営システム学会),,J-Stage WebAPI,https://doi.org/10.11559/jams.28.0.161.0,2026-07-17T18:22:36+09:00
+inp0226,inproceedings,人文社会,経営システム (日本経営システム学会),,J-Stage WebAPI,https://doi.org/10.11559/jams.28.0.173.0,2026-07-17T18:22:36+09:00
+inp0227,inproceedings,人文社会,経営システム (日本経営システム学会),,J-Stage WebAPI,https://doi.org/10.11559/jams.28.0.185.0,2026-07-17T18:22:36+09:00
+inp0228,inproceedings,人文社会,経営システム (日本経営システム学会),,J-Stage WebAPI,https://doi.org/10.11559/jams.28.0.193.0,2026-07-17T18:22:36+09:00
+inp0229,inproceedings,人文社会,経営システム (日本経営システム学会),,J-Stage WebAPI,https://doi.org/10.11559/jams.28.0.205.0,2026-07-17T18:22:36+09:00
+inp0230,inproceedings,人文社会,経営システム (日本経営システム学会),english_mixed,J-Stage WebAPI,https://doi.org/10.11559/jams.28.0.37.0,2026-07-17T18:22:36+09:00
+inp0231,inproceedings,人文社会,経営システム (日本経営システム学会),,J-Stage WebAPI,https://doi.org/10.11559/jams.28.0.57.0,2026-07-17T18:22:36+09:00
+inp0232,inproceedings,人文社会,経営システム (日本経営システム学会),english_mixed,J-Stage WebAPI,https://doi.org/10.11559/jams.28.0.71.0,2026-07-17T18:22:36+09:00
+inp0233,inproceedings,人文社会,経営システム (日本経営システム学会),english_mixed,J-Stage WebAPI,https://doi.org/10.11559/jams.28.0.83.0,2026-07-17T18:22:36+09:00
+inp0234,inproceedings,人文社会,経営システム (日本経営システム学会),,J-Stage WebAPI,https://doi.org/10.11559/jams.28.0.95.0,2026-07-17T18:22:36+09:00
+inp0235,inproceedings,理工,地震工学 (地震工学研究発表会),english_mixed;institutional_author,J-Stage WebAPI,https://doi.org/10.11532/proee2003.27.1,2026-07-17T18:22:38+09:00
+inp0236,inproceedings,理工,地震工学 (地震工学研究発表会),,J-Stage WebAPI,https://doi.org/10.11532/proee2003.27.112,2026-07-17T18:22:38+09:00
+inp0237,inproceedings,理工,地震工学 (地震工学研究発表会),,J-Stage WebAPI,https://doi.org/10.11532/proee2003.27.128,2026-07-17T18:22:38+09:00
+inp0238,inproceedings,理工,地震工学 (地震工学研究発表会),,J-Stage WebAPI,https://doi.org/10.11532/proee2003.27.141,2026-07-17T18:22:38+09:00
+inp0239,inproceedings,理工,地震工学 (地震工学研究発表会),,J-Stage WebAPI,https://doi.org/10.11532/proee2003.27.154,2026-07-17T18:22:38+09:00
+inp0240,inproceedings,理工,地震工学 (地震工学研究発表会),,J-Stage WebAPI,https://doi.org/10.11532/proee2003.27.168,2026-07-17T18:22:38+09:00
+inp0241,inproceedings,理工,地震工学 (地震工学研究発表会),,J-Stage WebAPI,https://doi.org/10.11532/proee2003.27.181,2026-07-17T18:22:38+09:00
+inp0242,inproceedings,理工,地震工学 (地震工学研究発表会),,J-Stage WebAPI,https://doi.org/10.11532/proee2003.27.195,2026-07-17T18:22:38+09:00
+inp0243,inproceedings,理工,地震工学 (地震工学研究発表会),,J-Stage WebAPI,https://doi.org/10.11532/proee2003.27.207,2026-07-17T18:22:38+09:00
+inp0244,inproceedings,理工,地震工学 (地震工学研究発表会),,J-Stage WebAPI,https://doi.org/10.11532/proee2003.27.220,2026-07-17T18:22:38+09:00
+inp0245,inproceedings,理工,地震工学 (地震工学研究発表会),,J-Stage WebAPI,https://doi.org/10.11532/proee2003.27.234,2026-07-17T18:22:38+09:00
+inp0246,inproceedings,理工,地震工学 (地震工学研究発表会),,J-Stage WebAPI,https://doi.org/10.11532/proee2003.27.249,2026-07-17T18:22:38+09:00
+inp0247,inproceedings,理工,地震工学 (地震工学研究発表会),,J-Stage WebAPI,https://doi.org/10.11532/proee2003.27.260,2026-07-17T18:22:38+09:00
+inp0248,inproceedings,理工,地震工学 (地震工学研究発表会),,J-Stage WebAPI,https://doi.org/10.11532/proee2003.27.274,2026-07-17T18:22:38+09:00
+inp0249,inproceedings,理工,地震工学 (地震工学研究発表会),english_mixed,J-Stage WebAPI,https://doi.org/10.11532/proee2003.27.287,2026-07-17T18:22:38+09:00
+bok0001,book,医学生命,,english_mixed,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970023484853127221,2026-07-17T14:27:54+09:00
+bok0002,book,理工,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970023484873655440,2026-07-17T14:27:54+09:00
+bok0003,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970023484884716067,2026-07-17T14:27:54+09:00
+bok0004,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970023484941842724,2026-07-17T14:27:54+09:00
+bok0005,book,医学生命,,english_mixed;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970023484961045768,2026-07-17T14:27:54+09:00
+bok0006,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970023484969324044,2026-07-17T14:27:54+09:00
+bok0007,book,理工,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970023484970969478,2026-07-17T14:27:54+09:00
+bok0008,book,理工,,nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970023484980584194,2026-07-17T14:27:54+09:00
+bok0009,book,人文社会,,nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970023484982484382,2026-07-17T14:27:54+09:00
+bok0010,book,医学生命,,nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970023484985202708,2026-07-17T14:27:54+09:00
+bok0011,book,医学生命,,english_mixed;institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970304959838192649,2026-07-17T14:27:54+09:00
+bok0012,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970304959846607290,2026-07-17T14:27:54+09:00
+bok0013,book,理工,,nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970304959866512168,2026-07-17T14:27:54+09:00
+bok0014,book,医学生命,,nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970304959905133860,2026-07-17T14:27:54+09:00
+bok0015,book,医学生命,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970304959908551587,2026-07-17T14:27:54+09:00
+bok0016,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970304959916995617,2026-07-17T14:27:54+09:00
+bok0017,book,医学生命,,,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970304959922698666,2026-07-17T14:27:54+09:00
+bok0018,book,医学生命,,nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970304959928356001,2026-07-17T14:27:54+09:00
+bok0019,book,人文社会,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970304959956496309,2026-07-17T14:27:54+09:00
+bok0020,book,人文社会,,,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970586434800553630,2026-07-17T14:27:54+09:00
+bok0021,book,理工,,institutional_author;subtitle,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970586434800666315,2026-07-17T14:27:54+09:00
+bok0022,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970586434802089483,2026-07-17T14:27:54+09:00
+bok0023,book,理工,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970586434820809894,2026-07-17T14:27:54+09:00
+bok0024,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970586434826472235,2026-07-17T14:27:54+09:00
+bok0025,book,理工,,nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970586434844543891,2026-07-17T14:27:54+09:00
+bok0026,book,医学生命,,nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970586434874418348,2026-07-17T14:27:54+09:00
+bok0027,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970586434897381260,2026-07-17T14:27:54+09:00
+bok0028,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970586434930588604,2026-07-17T14:27:54+09:00
+bok0029,book,医学生命,,institutional_author;nonstandard_volume;subtitle,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970867909764584112,2026-07-17T14:27:54+09:00
+bok0030,book,医学生命,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970867909787508542,2026-07-17T14:27:54+09:00
+bok0031,book,人文社会,,,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970867909799965358,2026-07-17T14:27:54+09:00
+bok0032,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970867909807730831,2026-07-17T14:27:54+09:00
+bok0033,book,理工,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970867909814671640,2026-07-17T14:27:54+09:00
+bok0034,book,医学生命,,,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970867909817674135,2026-07-17T14:27:54+09:00
+bok0035,book,医学生命,,nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970867909853705492,2026-07-17T14:27:54+09:00
+bok0036,book,理工,,,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970867909855207307,2026-07-17T14:27:54+09:00
+bok0037,book,理工,,institutional_author;subtitle,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970867909858701443,2026-07-17T14:27:54+09:00
+bok0038,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970867909873839758,2026-07-17T14:27:54+09:00
+bok0039,book,医学生命,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970867909874137288,2026-07-17T14:27:54+09:00
+bok0040,book,理工,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970867909874515886,2026-07-17T14:27:54+09:00
+bok0041,book,人文社会,,english_mixed;institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1970867909884152329,2026-07-17T14:27:54+09:00
+bok0042,book,理工,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971149384744558499,2026-07-17T14:27:54+09:00
+bok0043,book,理工,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971149384758843982,2026-07-17T14:27:54+09:00
+bok0044,book,人文社会,,institutional_author;subtitle,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971149384770493977,2026-07-17T14:27:54+09:00
+bok0045,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971149384779664791,2026-07-17T14:27:54+09:00
+bok0046,book,理工,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971149384800972049,2026-07-17T14:27:54+09:00
+bok0047,book,理工,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971149384805209534,2026-07-17T14:27:54+09:00
+bok0048,book,理工,,,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971149384806349340,2026-07-17T14:27:54+09:00
+bok0049,book,理工,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971149384810031793,2026-07-17T14:27:54+09:00
+bok0050,book,理工,,institutional_author;subtitle,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971149384810411412,2026-07-17T14:27:54+09:00
+bok0051,book,人文社会,,institutional_author;subtitle,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971149384818487832,2026-07-17T14:27:54+09:00
+bok0052,book,医学生命,,,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971149384824308133,2026-07-17T14:27:54+09:00
+bok0053,book,人文社会,,institutional_author;subtitle,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971149384827195914,2026-07-17T14:27:54+09:00
+bok0054,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971149384833975974,2026-07-17T14:27:54+09:00
+bok0055,book,医学生命,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971149384843201539,2026-07-17T14:27:54+09:00
+bok0056,book,理工,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971149384856587063,2026-07-17T14:27:54+09:00
+bok0057,book,理工,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971149384868992710,2026-07-17T14:27:54+09:00
+bok0058,book,医学生命,,,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971149384869999890,2026-07-17T14:27:54+09:00
+bok0059,book,医学生命,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971149384880205984,2026-07-17T14:27:54+09:00
+bok0060,book,人文社会,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971149384890384191,2026-07-17T14:27:54+09:00
+bok0061,book,医学生命,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971430859720896934,2026-07-17T14:27:54+09:00
+bok0062,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971430859729938697,2026-07-17T14:27:54+09:00
+bok0063,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971430859744107470,2026-07-17T14:27:54+09:00
+bok0064,book,理工,,,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971430859748204841,2026-07-17T14:27:54+09:00
+bok0065,book,医学生命,,nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971430859753757739,2026-07-17T14:27:54+09:00
+bok0066,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971430859766646460,2026-07-17T14:27:54+09:00
+bok0067,book,人文社会,,nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971430859776538675,2026-07-17T14:27:54+09:00
+bok0068,book,理工,,,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971430859782795025,2026-07-17T14:27:54+09:00
+bok0069,book,人文社会,,subtitle,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971430859786846861,2026-07-17T14:27:54+09:00
+bok0070,book,医学生命,,,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971430859811922751,2026-07-17T14:27:54+09:00
+bok0071,book,医学生命,,english_mixed,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971430859828146436,2026-07-17T14:27:54+09:00
+bok0072,book,理工,,nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971430859844238860,2026-07-17T14:27:54+09:00
+bok0073,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971430859844796175,2026-07-17T14:27:54+09:00
+bok0074,book,理工,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971430859851706766,2026-07-17T14:27:54+09:00
+bok0075,book,理工,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971430859866004272,2026-07-17T14:27:54+09:00
+bok0076,book,理工,,nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971712334710609835,2026-07-17T14:27:54+09:00
+bok0077,book,医学生命,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971712334715115142,2026-07-17T14:27:54+09:00
+bok0078,book,理工,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971712334726340899,2026-07-17T14:27:54+09:00
+bok0079,book,理工,,,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971712334730602127,2026-07-17T14:27:54+09:00
+bok0080,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971712334732483608,2026-07-17T14:27:54+09:00
+bok0081,book,理工,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971712334736623376,2026-07-17T14:27:54+09:00
+bok0082,book,理工,,,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971712334749649300,2026-07-17T14:27:54+09:00
+bok0083,book,医学生命,,subtitle,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971712334751163698,2026-07-17T14:27:54+09:00
+bok0084,book,理工,,,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971712334764864169,2026-07-17T14:27:54+09:00
+bok0085,book,人文社会,,nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971712334779083395,2026-07-17T14:27:54+09:00
+bok0086,book,人文社会,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971712334781830156,2026-07-17T14:27:54+09:00
+bok0087,book,理工,,,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971712334782921764,2026-07-17T14:27:54+09:00
+bok0088,book,医学生命,,nonstandard_volume;subtitle,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971712334801226118,2026-07-17T14:27:54+09:00
+bok0089,book,理工,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971712334808894133,2026-07-17T14:27:54+09:00
+bok0090,book,医学生命,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971712334820407326,2026-07-17T14:27:54+09:00
+bok0091,book,医学生命,,,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971712334824239409,2026-07-17T14:27:54+09:00
+bok0092,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971712334824239519,2026-07-17T14:27:54+09:00
+bok0093,book,理工,,english_mixed,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971712334839558329,2026-07-17T14:27:54+09:00
+bok0094,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971712334840637732,2026-07-17T14:27:54+09:00
+bok0095,book,人文社会,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971993809686382268,2026-07-17T14:27:54+09:00
+bok0096,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971993809699083014,2026-07-17T14:27:54+09:00
+bok0097,book,医学生命,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971993809722836871,2026-07-17T14:27:54+09:00
+bok0098,book,医学生命,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971993809735630242,2026-07-17T14:27:54+09:00
+bok0099,book,医学生命,,,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971993809758111028,2026-07-17T14:27:54+09:00
+bok0100,book,医学生命,,nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971993809764739257,2026-07-17T14:27:54+09:00
+bok0101,book,医学生命,,,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971993809770905380,2026-07-17T14:27:54+09:00
+bok0102,book,人文社会,,institutional_author;nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971993809803809577,2026-07-17T14:27:54+09:00
+bok0103,book,理工,,institutional_author,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971993809806948628,2026-07-17T14:27:54+09:00
+bok0104,book,医学生命,,nonstandard_volume,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971993809822236433,2026-07-17T14:27:54+09:00
+bok0105,book,理工,,,CiNii Research OpenSearch (Books),https://cir.nii.ac.jp/crid/1971993809822597296,2026-07-17T14:27:54+09:00
+bok0106,book,理工,NDC545,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000001-I11141111025432,2026-07-17T14:21:20+09:00
+bok0107,book,理工,,edited_volume;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000001-I25110520151,2026-07-17T14:21:25+09:00
+bok0108,book,理工,NDC566,edited_volume;nonstandard_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000001-I27211000080145017,2026-07-17T14:21:20+09:00
+bok0109,book,理工,NDC672,edited_volume;nonstandard_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000001-I34211100285432,2026-07-17T14:20:23+09:00
+bok0110,book,医学生命,,edited_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000001508024,2026-07-17T14:22:07+09:00
+bok0111,book,医学生命,,edited_volume;institutional_author;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000001579539,2026-07-17T14:22:07+09:00
+bok0112,book,医学生命,,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000001619541,2026-07-17T14:22:07+09:00
+bok0113,book,医学生命,,english_mixed;translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000001707715,2026-07-17T14:21:53+09:00
+bok0114,book,人文社会,,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000001764799,2026-07-17T14:20:28+09:00
+bok0115,book,人文社会,,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000001773054,2026-07-17T14:20:42+09:00
+bok0116,book,人文社会,,subtitle;translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000001778540,2026-07-17T14:20:32+09:00
+bok0117,book,人文社会,,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000001794277,2026-07-17T14:20:42+09:00
+bok0118,book,理工,,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000001812219,2026-07-17T14:21:29+09:00
+bok0119,book,人文社会,,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000001823302,2026-07-17T14:20:23+09:00
+bok0120,book,人文社会,,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000001840923,2026-07-17T14:20:42+09:00
+bok0121,book,医学生命,,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000001872691,2026-07-17T14:21:53+09:00
+bok0122,book,人文社会,,edited_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000001931799,2026-07-17T14:20:48+09:00
+bok0123,book,人文社会,,edited_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000001951680,2026-07-17T14:20:47+09:00
+bok0124,book,理工,,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000001993501,2026-07-17T14:21:29+09:00
+bok0125,book,人文社会,,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002044007,2026-07-17T14:20:33+09:00
+bok0126,book,人文社会,,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002105905,2026-07-17T14:20:33+09:00
+bok0127,book,医学生命,,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002117600,2026-07-17T14:22:07+09:00
+bok0128,book,人文社会,,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002224174,2026-07-17T14:20:47+09:00
+bok0129,book,理工,,english_mixed,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002250500,2026-07-17T14:21:25+09:00
+bok0130,book,医学生命,,edited_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002263730,2026-07-17T14:21:58+09:00
+bok0131,book,医学生命,,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002291638,2026-07-17T14:22:02+09:00
+bok0132,book,人文社会,,edited_volume;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002311951,2026-07-17T14:20:32+09:00
+bok0133,book,医学生命,,edited_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002313337,2026-07-17T14:21:53+09:00
+bok0134,book,医学生命,,english_mixed;nonstandard_volume;translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002333270,2026-07-17T14:21:53+09:00
+bok0135,book,医学生命,,edited_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002365749,2026-07-17T14:22:07+09:00
+bok0136,book,医学生命,,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002379049,2026-07-17T14:21:53+09:00
+bok0137,book,医学生命,,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002404723,2026-07-17T14:22:07+09:00
+bok0138,book,理工,,edited_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002440362,2026-07-17T14:21:15+09:00
+bok0139,book,人文社会,,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002497720,2026-07-17T14:20:23+09:00
+bok0140,book,理工,NDC410,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002541618,2026-07-17T14:21:01+09:00
+bok0141,book,人文社会,NDC369,edited_volume;institutional_author;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002544692,2026-07-17T14:20:42+09:00
+bok0142,book,医学生命,NDC492,edited_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002567024,2026-07-17T14:21:58+09:00
+bok0143,book,人文社会,NDC132,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002649783,2026-07-17T14:20:33+09:00
+bok0144,book,理工,NDC601,edited_volume;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002768102,2026-07-17T14:20:52+09:00
+bok0145,book,理工,NDC411,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002805313,2026-07-17T14:21:10+09:00
+bok0146,book,医学生命,NDC498,institutional_author;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002936975,2026-07-17T14:21:53+09:00
+bok0147,book,人文社会,NDC041,edited_volume;institutional_author,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002959506,2026-07-17T14:20:37+09:00
+bok0148,book,医学生命,NDC493,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000002966250,2026-07-17T14:21:43+09:00
+bok0149,book,医学生命,NDC495,edited_volume;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000003638763,2026-07-17T14:20:47+09:00
+bok0150,book,人文社会,NDC143,edited_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000003989483,2026-07-17T14:20:42+09:00
+bok0151,book,医学生命,NDC499,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000004218796,2026-07-17T14:22:07+09:00
+bok0152,book,理工,NDC411,subtitle;translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000007671216,2026-07-17T14:21:01+09:00
+bok0153,book,理工,NDC420,edited_volume;institutional_author,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000007681795,2026-07-17T14:21:01+09:00
+bok0154,book,人文社会,NDC914,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000008234984,2026-07-17T14:20:28+09:00
+bok0155,book,人文社会,NDC704,edited_volume;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000008304639,2026-07-17T14:20:37+09:00
+bok0156,book,人文社会,NDC143,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000008535580,2026-07-17T14:20:42+09:00
+bok0157,book,理工,NDC407,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000009186646,2026-07-17T14:21:15+09:00
+bok0158,book,人文社会,NDC209,translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000009206394,2026-07-17T14:20:47+09:00
+bok0159,book,人文社会,NDC319,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000009286964,2026-07-17T14:20:23+09:00
+bok0160,book,人文社会,NDC146,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000009517642,2026-07-17T14:20:42+09:00
+bok0161,book,人文社会,NDC334,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000010072251,2026-07-17T14:20:52+09:00
+bok0162,book,人文社会,NDC132,edited_volume;translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000010670813,2026-07-17T14:20:48+09:00
+bok0163,book,人文社会,NDC361,subtitle;translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I000011227138,2026-07-17T14:20:33+09:00
+bok0164,book,医学生命,NDC491,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I023114643,2026-07-17T14:21:53+09:00
+bok0165,book,人文社会,NDC150,english_mixed,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I023975151,2026-07-17T14:20:32+09:00
+bok0166,book,医学生命,NDC493,subtitle;translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I023999065,2026-07-17T14:21:53+09:00
+bok0167,book,理工,NDC547,english_mixed,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I024027226,2026-07-17T14:21:25+09:00
+bok0168,book,医学生命,NDC499,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I024174340,2026-07-17T14:21:15+09:00
+bok0169,book,理工,NDC410,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I024193534,2026-07-17T14:21:20+09:00
+bok0170,book,医学生命,NDC492,edited_volume;english_mixed,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I024254243,2026-07-17T14:21:53+09:00
+bok0171,book,理工,NDC417,edited_volume;nonstandard_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I024384036,2026-07-17T14:21:10+09:00
+bok0172,book,理工,NDC417,english_mixed;translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I024398280,2026-07-17T14:21:15+09:00
+bok0173,book,人文社会,NDC234,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I024418466,2026-07-17T14:20:42+09:00
+bok0174,book,理工,NDC417,edited_volume;nonstandard_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I024871586,2026-07-17T14:21:10+09:00
+bok0175,book,理工,NDC417,english_mixed,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I024871608,2026-07-17T14:21:10+09:00
+bok0176,book,理工,NDC417,english_mixed,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I025130479,2026-07-17T14:21:10+09:00
+bok0177,book,医学生命,NDC494,edited_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I025250482,2026-07-17T14:21:58+09:00
+bok0178,book,人文社会,NDC953,nonstandard_volume;translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I025294984,2026-07-17T14:20:28+09:00
+bok0179,book,人文社会,NDC953,nonstandard_volume;translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I025354286,2026-07-17T14:20:28+09:00
+bok0180,book,人文社会,NDC289,subtitle;translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I025387559,2026-07-17T14:20:52+09:00
+bok0181,book,人文社会,NDC709,edited_volume;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I025500438,2026-07-17T14:20:52+09:00
+bok0182,book,人文社会,NDC311,edited_volume;english_mixed;translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I026246137,2026-07-17T14:20:23+09:00
+bok0183,book,理工,NDC417,edited_volume;nonstandard_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I026411668,2026-07-17T14:21:10+09:00
+bok0184,book,人文社会,NDC121,english_mixed;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I026442214,2026-07-17T14:20:52+09:00
+bok0185,book,医学生命,NDC463,edited_volume;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I026751590,2026-07-17T14:22:02+09:00
+bok0186,book,医学生命,NDC492,edited_volume;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I027074733,2026-07-17T14:22:02+09:00
+bok0187,book,理工,NDC548,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I027190040,2026-07-17T14:21:29+09:00
+bok0188,book,医学生命,NDC492,edited_volume;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I027227873,2026-07-17T14:22:02+09:00
+bok0189,book,人文社会,NDC327,english_mixed,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I027241907,2026-07-17T14:20:23+09:00
+bok0190,book,医学生命,NDC493,edited_volume;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I027669783,2026-07-17T14:22:02+09:00
+bok0191,book,医学生命,NDC490,english_mixed;translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I027842897,2026-07-17T14:21:39+09:00
+bok0192,book,医学生命,NDC460,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I027926986,2026-07-17T14:21:43+09:00
+bok0193,book,理工,NDC007,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I027970380,2026-07-17T14:21:01+09:00
+bok0194,book,理工,NDC417,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I028035569,2026-07-17T14:21:29+09:00
+bok0195,book,理工,NDC417,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I028175420,2026-07-17T14:21:15+09:00
+bok0196,book,理工,NDC007,subtitle;translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I028384600,2026-07-17T14:20:33+09:00
+bok0197,book,理工,NDC514,english_mixed;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I028393594,2026-07-17T14:21:25+09:00
+bok0198,book,医学生命,NDC498,edited_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I028570971,2026-07-17T14:21:58+09:00
+bok0199,book,医学生命,NDC491,edited_volume;english_mixed,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I028577364,2026-07-17T14:21:43+09:00
+bok0200,book,医学生命,NDC492,edited_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I028760863,2026-07-17T14:20:48+09:00
+bok0201,book,医学生命,NDC493,english_mixed;nonstandard_volume;subtitle;translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I028810000,2026-07-17T14:21:53+09:00
+bok0202,book,理工,NDC417,english_mixed;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I028824171,2026-07-17T14:21:25+09:00
+bok0203,book,理工,NDC548,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I028865289,2026-07-17T14:21:20+09:00
+bok0204,book,理工,NDC417,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I028891922,2026-07-17T14:21:15+09:00
+bok0205,book,理工,NDC421,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I028934215,2026-07-17T14:21:01+09:00
+bok0206,book,理工,NDC007,edited_volume;institutional_author;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I028952930,2026-07-17T14:21:20+09:00
+bok0207,book,理工,NDC007,english_mixed;translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I029110928,2026-07-17T14:21:15+09:00
+bok0208,book,医学生命,NDC491,edited_volume;english_mixed;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I029169011,2026-07-17T14:22:02+09:00
+bok0209,book,理工,NDC417,edited_volume;nonstandard_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I029186685,2026-07-17T14:21:15+09:00
+bok0210,book,医学生命,NDC493,translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I029418340,2026-07-17T14:21:01+09:00
+bok0211,book,医学生命,NDC467,edited_volume;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I030085391,2026-07-17T14:22:02+09:00
+bok0212,book,理工,NDC007,english_mixed;subtitle;translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I030098369,2026-07-17T14:21:10+09:00
+bok0213,book,人文社会,NDC336,edited_volume;english_mixed;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I030113545,2026-07-17T14:20:23+09:00
+bok0214,book,人文社会,NDC002,edited_volume;english_mixed;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I030228259,2026-07-17T14:20:52+09:00
+bok0215,book,理工,NDC544,edited_volume;english_mixed;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I030408164,2026-07-17T14:21:25+09:00
+bok0216,book,医学生命,NDC493,translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I030438768,2026-07-17T14:21:01+09:00
+bok0217,book,人文社会,NDC289,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I030484615,2026-07-17T14:20:42+09:00
+bok0218,book,理工,NDC547,english_mixed,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I031365532,2026-07-17T14:21:25+09:00
+bok0219,book,理工,NDC654,english_mixed;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I031544876,2026-07-17T14:20:37+09:00
+bok0220,book,医学生命,NDC493,english_mixed;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I031703957,2026-07-17T14:21:58+09:00
+bok0221,book,人文社会,NDC311,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I031820719,2026-07-17T14:20:47+09:00
+bok0222,book,理工,NDC517,english_mixed,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I031840232,2026-07-17T14:21:29+09:00
+bok0223,book,理工,NDC524,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I031906471,2026-07-17T14:21:29+09:00
+bok0224,book,理工,NDC547,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I032160309,2026-07-17T14:21:29+09:00
+bok0225,book,人文社会,NDC709,english_mixed;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I032504500,2026-07-17T14:20:23+09:00
+bok0226,book,人文社会,NDC375,edited_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I032625148,2026-07-17T14:20:42+09:00
+bok0227,book,人文社会,NDC707,nonstandard_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I032746294,2026-07-17T14:20:52+09:00
+bok0228,book,人文社会,NDC707,edited_volume;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I033037651,2026-07-17T14:20:32+09:00
+bok0229,book,医学生命,NDC460,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I033159054,2026-07-17T14:21:43+09:00
+bok0230,book,医学生命,NDC492,edited_volume;english_mixed;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I033323645,2026-07-17T14:22:02+09:00
+bok0231,book,人文社会,NDC158,translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I033438193,2026-07-17T14:20:47+09:00
+bok0232,book,医学生命,NDC468,english_mixed,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I033541503,2026-07-17T14:21:10+09:00
+bok0233,book,医学生命,NDC464,edited_volume;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I033548681,2026-07-17T14:21:15+09:00
+bok0234,book,理工,NDC544,edited_volume;english_mixed;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I033838287,2026-07-17T14:21:25+09:00
+bok0235,book,医学生命,NDC493,english_mixed;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I033905467,2026-07-17T14:21:58+09:00
+bok0236,book,理工,NDC007,english_mixed;subtitle;translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I034221524,2026-07-17T14:21:10+09:00
+bok0237,book,理工,NDC417,english_mixed,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I034249280,2026-07-17T14:20:37+09:00
+bok0238,book,人文社会,NDC002,edited_volume;english_mixed;subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I034480225,2026-07-17T14:20:52+09:00
+bok0239,book,人文社会,NDC375,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I034516538,2026-07-17T14:20:37+09:00
+bok0240,book,理工,NDC007,english_mixed;subtitle;translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I034714816,2026-07-17T14:21:10+09:00
+bok0241,book,人文社会,NDC133,edited_volume;english_mixed;institutional_author;translated,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000002-I034774167,2026-07-17T14:20:47+09:00
+bok0242,book,理工,NDC413,english_mixed,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000136-I1970304959838111639,2026-07-17T14:21:15+09:00
+bok0243,book,理工,,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000136-I1970304959918429447,2026-07-17T14:21:29+09:00
+bok0244,book,人文社会,,institutional_author,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000136-I1970586434828518563,2026-07-17T14:20:23+09:00
+bok0245,book,医学生命,NDC460,nonstandard_volume,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000136-I1970586434935430096,2026-07-17T14:22:02+09:00
+bok0246,book,医学生命,NDC492,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000136-I1970867909860757504,2026-07-17T14:22:02+09:00
+bok0247,book,理工,NDC524,,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000136-I1970867909913481010,2026-07-17T14:21:29+09:00
+bok0248,book,人文社会,,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000136-I1971149384884957318,2026-07-17T14:20:23+09:00
+bok0249,book,理工,NDC501,subtitle,NDL Search SRU (dcndl),https://ndlsearch.ndl.go.jp/books/R100000136-I1971712334823934466,2026-07-17T14:21:29+09:00
+web0001,misc,人文社会,高齢化・社会保障,institutional_author;wareki;nonstandard_volume,内閣府 高齢社会白書,https://www8.cao.go.jp/kourei/whitepaper/w-2025/html/gaiyou/index.html,2026-07-17T00:00:00+09:00
+web0002,misc,人文社会,高齢化・社会保障,institutional_author;wareki;nonstandard_volume,内閣府 高齢社会白書,https://www8.cao.go.jp/kourei/whitepaper/w-2025/html/zenbun/index.html,2026-07-17T00:00:00+09:00
+web0003,misc,人文社会,高齢化・社会保障,institutional_author;wareki;nonstandard_volume,内閣府 高齢社会白書,https://www8.cao.go.jp/kourei/whitepaper/w-2024/html/gaiyou/index.html,2026-07-17T00:00:00+09:00
+web0004,misc,人文社会,高齢化・社会保障,institutional_author;wareki;nonstandard_volume,内閣府 高齢社会白書,https://www8.cao.go.jp/kourei/whitepaper/w-2024/html/zenbun/index.html,2026-07-17T00:00:00+09:00
+web0005,misc,人文社会,高齢化・社会保障,institutional_author;wareki;nonstandard_volume,内閣府 高齢社会白書,https://www8.cao.go.jp/kourei/whitepaper/w-2023/html/gaiyou/index.html,2026-07-17T00:00:00+09:00
+web0006,misc,人文社会,高齢化・社会保障,institutional_author;wareki;nonstandard_volume,内閣府 高齢社会白書,https://www8.cao.go.jp/kourei/whitepaper/w-2023/html/zenbun/index.html,2026-07-17T00:00:00+09:00
+web0007,misc,人文社会,高齢化・社会保障,institutional_author;wareki;nonstandard_volume,内閣府 高齢社会白書,https://www8.cao.go.jp/kourei/whitepaper/w-2022/html/gaiyou/index.html,2026-07-17T00:00:00+09:00
+web0008,misc,人文社会,高齢化・社会保障,institutional_author;wareki;nonstandard_volume,内閣府 高齢社会白書,https://www8.cao.go.jp/kourei/whitepaper/w-2022/html/zenbun/index.html,2026-07-17T00:00:00+09:00
+web0009,misc,人文社会,高齢化・社会保障,institutional_author;wareki;nonstandard_volume,内閣府 高齢社会白書,https://www8.cao.go.jp/kourei/whitepaper/w-2021/html/gaiyou/index.html,2026-07-17T00:00:00+09:00
+web0010,misc,人文社会,高齢化・社会保障,institutional_author;wareki;nonstandard_volume,内閣府 高齢社会白書,https://www8.cao.go.jp/kourei/whitepaper/w-2021/html/zenbun/index.html,2026-07-17T00:00:00+09:00
+web0011,misc,人文社会,高齢化・社会保障,institutional_author;wareki;nonstandard_volume,内閣府 高齢社会白書,https://www8.cao.go.jp/kourei/whitepaper/w-2020/html/gaiyou/index.html,2026-07-17T00:00:00+09:00
+web0012,misc,人文社会,高齢化・社会保障,institutional_author;wareki;nonstandard_volume,内閣府 高齢社会白書,https://www8.cao.go.jp/kourei/whitepaper/w-2020/html/zenbun/index.html,2026-07-17T00:00:00+09:00
+web0013,misc,人文社会,高齢化・社会保障,institutional_author;wareki;nonstandard_volume,内閣府 高齢社会白書,https://www8.cao.go.jp/kourei/whitepaper/w-2019/html/gaiyou/index.html,2026-07-17T00:00:00+09:00
+web0014,misc,人文社会,高齢化・社会保障,institutional_author;wareki;nonstandard_volume,内閣府 高齢社会白書,https://www8.cao.go.jp/kourei/whitepaper/w-2019/html/zenbun/index.html,2026-07-17T00:00:00+09:00
+web0015,misc,人文社会,高齢化・社会保障,institutional_author;wareki;nonstandard_volume,内閣府 高齢社会白書,https://www8.cao.go.jp/kourei/whitepaper/w-2018/html/gaiyou/index.html,2026-07-17T00:00:00+09:00
+web0016,misc,人文社会,ジェンダー,institutional_author;wareki;nonstandard_volume,内閣府 男女共同参画白書,https://www.gender.go.jp/about_danjo/whitepaper/r07/zentai/index.html,2026-07-17T00:00:00+09:00
+web0017,misc,人文社会,ジェンダー,institutional_author;wareki;nonstandard_volume,内閣府 男女共同参画白書,https://www.gender.go.jp/about_danjo/whitepaper/r06/zentai/index.html,2026-07-17T00:00:00+09:00
+web0018,misc,人文社会,ジェンダー,institutional_author;wareki;nonstandard_volume,内閣府 男女共同参画白書,https://www.gender.go.jp/about_danjo/whitepaper/r05/zentai/index.html,2026-07-17T00:00:00+09:00
+web0019,misc,人文社会,ジェンダー,institutional_author;wareki;nonstandard_volume,内閣府 男女共同参画白書,https://www.gender.go.jp/about_danjo/whitepaper/r04/zentai/index.html,2026-07-17T00:00:00+09:00
+web0020,misc,人文社会,ジェンダー,institutional_author;wareki;nonstandard_volume,内閣府 男女共同参画白書,https://www.gender.go.jp/about_danjo/whitepaper/r03/zentai/index.html,2026-07-17T00:00:00+09:00
+web0021,misc,人文社会,ジェンダー,institutional_author;wareki;nonstandard_volume,内閣府 男女共同参画白書,https://www.gender.go.jp/about_danjo/whitepaper/r02/zentai/index.html,2026-07-17T00:00:00+09:00
+web0022,misc,人文社会,ジェンダー,institutional_author;wareki;nonstandard_volume,内閣府 男女共同参画白書,https://www.gender.go.jp/about_danjo/whitepaper/r01/zentai/index.html,2026-07-17T00:00:00+09:00
+web0023,misc,理工,防災,institutional_author;wareki;nonstandard_volume,内閣府 防災白書,https://www.bousai.go.jp/kaigirep/hakusho/h25/index.htm,2026-07-17T00:00:00+09:00
+web0024,misc,理工,防災,institutional_author;wareki;nonstandard_volume,内閣府 防災白書,https://www.bousai.go.jp/kaigirep/hakusho/h24/index.htm,2026-07-17T00:00:00+09:00
+web0025,misc,理工,防災,institutional_author;wareki;nonstandard_volume,内閣府 防災白書,https://www.bousai.go.jp/kaigirep/hakusho/h23/index.htm,2026-07-17T00:00:00+09:00
+web0026,misc,理工,防災,institutional_author;wareki;nonstandard_volume,内閣府 防災白書,https://www.bousai.go.jp/kaigirep/hakusho/h22/index.htm,2026-07-17T00:00:00+09:00
+web0027,misc,理工,防災,institutional_author;wareki;nonstandard_volume,内閣府 防災白書,https://www.bousai.go.jp/kaigirep/hakusho/h21/index.htm,2026-07-17T00:00:00+09:00
+web0028,misc,理工,防災,institutional_author;wareki;nonstandard_volume,内閣府 防災白書,https://www.bousai.go.jp/kaigirep/hakusho/h20/index.htm,2026-07-17T00:00:00+09:00
+web0029,misc,理工,防災,institutional_author;wareki;nonstandard_volume,内閣府 防災白書,https://www.bousai.go.jp/kaigirep/hakusho/h19/index.htm,2026-07-17T00:00:00+09:00
+web0030,misc,理工,防災,institutional_author;wareki;nonstandard_volume,内閣府 防災白書,https://www.bousai.go.jp/kaigirep/hakusho/h18/index.htm,2026-07-17T00:00:00+09:00
+web0031,misc,理工,防災,institutional_author;wareki;nonstandard_volume,内閣府 防災白書,https://www.bousai.go.jp/kaigirep/hakusho/h17/index.htm,2026-07-17T00:00:00+09:00
+web0032,misc,理工,防災,institutional_author;wareki;nonstandard_volume,内閣府 防災白書,https://www.bousai.go.jp/kaigirep/hakusho/h16/index.htm,2026-07-17T00:00:00+09:00
+web0033,misc,理工,防災,institutional_author;wareki;nonstandard_volume,内閣府 防災白書,https://www.bousai.go.jp/kaigirep/hakusho/h15/index.html,2026-07-17T00:00:00+09:00
+web0034,misc,理工,防災,institutional_author;wareki;nonstandard_volume,内閣府 防災白書,https://www.bousai.go.jp/kaigirep/hakusho/h14/index.htm,2026-07-17T00:00:00+09:00
+web0035,misc,理工,情報通信,institutional_author;wareki;nonstandard_volume,総務省 情報通信白書,https://www.soumu.go.jp/johotsusintokei/whitepaper/ja/r07/index.html,2026-07-17T00:00:00+09:00
+web0036,misc,理工,情報通信,institutional_author;wareki;nonstandard_volume,総務省 情報通信白書,https://www.soumu.go.jp/johotsusintokei/whitepaper/ja/r07/html/datashu.html,2026-07-17T00:00:00+09:00
+web0037,misc,理工,環境,institutional_author,環境省 環境白書,https://www.env.go.jp/policy/hakusyo/index.html,2026-07-17T00:00:00+09:00
+web0038,misc,理工,環境,institutional_author;wareki;nonstandard_volume,環境省 環境白書,https://www.env.go.jp/policy/hakusyo/r08/index.html,2026-07-17T00:00:00+09:00
+web0039,misc,理工,国土交通,institutional_author;wareki;nonstandard_volume,国土交通白書,https://www.mlit.go.jp/statistics/hakusyo.mlit.r7.html,2026-07-17T00:00:00+09:00
+web0040,misc,理工,国土交通,institutional_author;wareki;nonstandard_volume,国土交通白書,https://www.mlit.go.jp/statistics/hakusyo.mlit.r6.html,2026-07-17T00:00:00+09:00
+web0041,misc,理工,国土交通,institutional_author;wareki;nonstandard_volume,国土交通白書,https://www.mlit.go.jp/statistics/hakusyo.mlit.r5.html,2026-07-17T00:00:00+09:00
+web0042,misc,理工,国土交通,institutional_author;wareki;nonstandard_volume,国土交通白書,https://www.mlit.go.jp/statistics/hakusyo.mlit.r4.html,2026-07-17T00:00:00+09:00
+web0043,misc,理工,国土交通,institutional_author;wareki;nonstandard_volume,国土交通白書,https://www.mlit.go.jp/statistics/hakusyo.mlit.r3.html,2026-07-17T00:00:00+09:00
+web0044,misc,理工,国土交通,institutional_author;wareki;nonstandard_volume,国土交通白書,https://www.mlit.go.jp/statistics/hakusyo.mlit.r2.html,2026-07-17T00:00:00+09:00
+web0045,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume;subtitle,厚生労働白書,https://www.mhlw.go.jp/stf/wp/hakusyo/kousei/25/index.html,2026-07-17T00:00:00+09:00
+web0046,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume;subtitle,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/25-3/,2026-07-17T00:00:00+09:00
+web0047,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/25-2/,2026-07-17T00:00:00+09:00
+web0048,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume;subtitle,厚生労働白書,https://www.mhlw.go.jp/stf/wp/hakusyo/kousei/23/index.html,2026-07-17T00:00:00+09:00
+web0049,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume;subtitle,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/23-3/,2026-07-17T00:00:00+09:00
+web0050,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/23-2/,2026-07-17T00:00:00+09:00
+web0051,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume;subtitle,厚生労働白書,https://www.mhlw.go.jp/stf/wp/hakusyo/kousei/22/,2026-07-17T00:00:00+09:00
+web0052,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume;subtitle,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/22-3/,2026-07-17T00:00:00+09:00
+web0053,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/22-2/,2026-07-17T00:00:00+09:00
+web0054,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume;subtitle,厚生労働白書,https://www.mhlw.go.jp/stf/wp/hakusyo/kousei/21/,2026-07-17T00:00:00+09:00
+web0055,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume;subtitle,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/21-3/,2026-07-17T00:00:00+09:00
+web0056,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/21-2/,2026-07-17T00:00:00+09:00
+web0057,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume;subtitle,厚生労働白書,https://www.mhlw.go.jp/stf/wp/hakusyo/kousei/20/,2026-07-17T00:00:00+09:00
+web0058,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume;subtitle,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/20-3/,2026-07-17T00:00:00+09:00
+web0059,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/20-2/,2026-07-17T00:00:00+09:00
+web0060,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume;subtitle,厚生労働白書,https://www.mhlw.go.jp/stf/wp/hakusyo/kousei/19/,2026-07-17T00:00:00+09:00
+web0061,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume;subtitle,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/19-3/,2026-07-17T00:00:00+09:00
+web0062,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/19-2/,2026-07-17T00:00:00+09:00
+web0063,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume;subtitle,厚生労働白書,https://www.mhlw.go.jp/stf/wp/hakusyo/kousei/18/,2026-07-17T00:00:00+09:00
+web0064,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume;subtitle,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/18-3/,2026-07-17T00:00:00+09:00
+web0065,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/18-2/,2026-07-17T00:00:00+09:00
+web0066,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume;subtitle,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/17/,2026-07-17T00:00:00+09:00
+web0067,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume;subtitle,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/17-3/,2026-07-17T00:00:00+09:00
+web0068,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/17-2/,2026-07-17T00:00:00+09:00
+web0069,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume;subtitle,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/16/,2026-07-17T00:00:00+09:00
+web0070,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume;subtitle,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/16-3/,2026-07-17T00:00:00+09:00
+web0071,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/16-2/,2026-07-17T00:00:00+09:00
+web0072,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume;subtitle,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/15/,2026-07-17T00:00:00+09:00
+web0073,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume;subtitle,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/15-3/,2026-07-17T00:00:00+09:00
+web0074,misc,医学生命,社会保障・厚生,institutional_author;wareki;nonstandard_volume,厚生労働白書,https://www.mhlw.go.jp/wp/hakusyo/kousei/15-2/,2026-07-17T00:00:00+09:00
+web0075,misc,人文社会,公的統計,institutional_author;wareki,総務省統計局 統計調査,https://www.stat.go.jp/data/kokusei/2025/index.html,2026-07-17T00:00:00+09:00
+web0076,misc,理工,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/e-census/index.html,2026-07-17T00:00:00+09:00
+web0077,misc,人文社会,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/jinsui/index.html,2026-07-17T00:00:00+09:00
+web0078,misc,人文社会,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/roudou/index.html,2026-07-17T00:00:00+09:00
+web0079,misc,人文社会,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/kakei/index.html,2026-07-17T00:00:00+09:00
+web0080,misc,理工,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/cpi/index.html,2026-07-17T00:00:00+09:00
+web0081,misc,人文社会,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/nenkan/index1.html,2026-07-17T00:00:00+09:00
+web0082,misc,人文社会,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/nihon/index1.html,2026-07-17T00:00:00+09:00
+web0083,misc,人文社会,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/sekai/index.html,2026-07-17T00:00:00+09:00
+web0084,misc,人文社会,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/sougou/index.html,2026-07-17T00:00:00+09:00
+web0085,misc,人文社会,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/idou/index.html,2026-07-17T00:00:00+09:00
+web0086,misc,理工,公的統計,institutional_author;wareki,総務省統計局 統計調査,https://www.stat.go.jp/data/jyutaku/index.html,2026-07-17T00:00:00+09:00
+web0087,misc,人文社会,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/joukyou/index.html,2026-07-17T00:00:00+09:00
+web0088,misc,人文社会,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/cti/index.html,2026-07-17T00:00:00+09:00
+web0089,misc,人文社会,公的統計,institutional_author;wareki,総務省統計局 統計調査,https://www.stat.go.jp/data/zenkokukakei/2024/index.html,2026-07-17T00:00:00+09:00
+web0090,misc,人文社会,公的統計,institutional_author;wareki,総務省統計局 統計調査,https://www.stat.go.jp/data/zensho/2014/index.html,2026-07-17T00:00:00+09:00
+web0091,misc,人文社会,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/tanshin/2024/index.html,2026-07-17T00:00:00+09:00
+web0092,misc,理工,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/kouri/index.html,2026-07-17T00:00:00+09:00
+web0093,misc,理工,公的統計,institutional_author;wareki,総務省統計局 統計調査,https://www.stat.go.jp/data/zenbutu/2007/index.html,2026-07-17T00:00:00+09:00
+web0094,misc,人文社会,公的統計,institutional_author;wareki,総務省統計局 統計調査,https://www.stat.go.jp/data/shakai/2026/index.html,2026-07-17T00:00:00+09:00
+web0095,misc,理工,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/kagaku/index.html,2026-07-17T00:00:00+09:00
+web0096,misc,理工,公的統計,institutional_author;wareki;subtitle,総務省統計局 統計調査,https://www.stat.go.jp/data/e-census/2024/index.html,2026-07-17T00:00:00+09:00
+web0097,misc,理工,公的統計,institutional_author;wareki,総務省統計局 統計調査,https://www.stat.go.jp/data/e-census/2026/index-2.html,2026-07-17T00:00:00+09:00
+web0098,misc,理工,公的統計,institutional_author;wareki,総務省統計局 統計調査,https://www.stat.go.jp/data/jigyou/2006/index.html,2026-07-17T00:00:00+09:00
+web0099,misc,理工,公的統計,institutional_author;wareki,総務省統計局 統計調査,https://www.stat.go.jp/data/service/2004/index.html,2026-07-17T00:00:00+09:00
+web0100,misc,理工,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/kojinke/index.html,2026-07-17T00:00:00+09:00
+web0101,misc,理工,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/kojinei/index.html,2026-07-17T00:00:00+09:00
+web0102,misc,理工,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/mbss/index.html,2026-07-17T00:00:00+09:00
+web0103,misc,理工,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/mssi/index.html,2026-07-17T00:00:00+09:00
+web0104,misc,人文社会,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/kkj/index.html,2026-07-17T00:00:00+09:00
+web0105,misc,人文社会,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/tuushin/index.html,2026-07-17T00:00:00+09:00
+web0106,misc,人文社会,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/ssds/index.html,2026-07-17T00:00:00+09:00
+web0107,misc,人文社会,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/mesh/index.html,2026-07-17T00:00:00+09:00
+web0108,misc,人文社会,公的統計,institutional_author;english_mixed,総務省統計局 統計調査,https://www.stat.go.jp/data/handbook/index.html,2026-07-17T00:00:00+09:00
+web0109,misc,人文社会,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/k-sugata/index.html,2026-07-17T00:00:00+09:00
+web0110,misc,人文社会,公的統計,institutional_author,総務省統計局 統計調査,https://www.stat.go.jp/data/s-sugata/index.html,2026-07-17T00:00:00+09:00
+web0111,misc,医学生命,診療ガイドライン,institutional_author,Minds 診療ガイドライン,https://minds.jcqhc.or.jp/summary/c00895/,2026-07-17T00:00:00+09:00
+web0112,misc,医学生命,診療ガイドライン,institutional_author;nonstandard_volume,Minds 診療ガイドライン,https://minds.jcqhc.or.jp/summary/c00814/,2026-07-17T00:00:00+09:00
+web0113,misc,医学生命,診療ガイドライン,institutional_author,Minds 診療ガイドライン,https://minds.jcqhc.or.jp/summary/c00862/,2026-07-17T00:00:00+09:00
+web0114,misc,医学生命,診療ガイドライン,institutional_author,Minds 診療ガイドライン,https://minds.jcqhc.or.jp/summary/c00863/,2026-07-17T00:00:00+09:00
+web0115,misc,医学生命,診療ガイドライン,institutional_author;nonstandard_volume,Minds 診療ガイドライン,https://minds.jcqhc.or.jp/summary/c00878/,2026-07-17T00:00:00+09:00
+web0116,misc,人文社会,個人情報保護,institutional_author;wareki,個人情報保護委員会 ガイドライン,https://www.ppc.go.jp/personalinfo/legal/kaiseihogohou/,2026-07-17T00:00:00+09:00
+web0117,misc,人文社会,個人情報保護,institutional_author;wareki,個人情報保護委員会 ガイドライン,https://www.ppc.go.jp/personalinfo/legal/r8kaiseihogohou/,2026-07-17T00:00:00+09:00
+web0118,misc,人文社会,個人情報保護,institutional_author,個人情報保護委員会 ガイドライン,https://www.ppc.go.jp/personalinfo/legal/kengenInin/,2026-07-17T00:00:00+09:00
+web0119,misc,人文社会,個人情報保護,institutional_author,個人情報保護委員会 ガイドライン,https://www.ppc.go.jp/personalinfo/legal/supervision/,2026-07-17T00:00:00+09:00
+web0120,misc,人文社会,個人情報保護,institutional_author,個人情報保護委員会 ガイドライン,https://www.ppc.go.jp/legal/laws/,2026-07-17T00:00:00+09:00
+web0121,misc,人文社会,個人情報保護,institutional_author,個人情報保護委員会 ガイドライン,https://www.ppc.go.jp/legal/policy/,2026-07-17T00:00:00+09:00
+web0122,misc,人文社会,個人情報保護,institutional_author,個人情報保護委員会 ガイドライン,https://www.ppc.go.jp/legal/policy/faq/,2026-07-17T00:00:00+09:00
+web0123,misc,人文社会,個人情報保護,institutional_author,個人情報保護委員会 ガイドライン,https://www.ppc.go.jp/legal/rouei/,2026-07-17T00:00:00+09:00
+web0124,misc,人文社会,個人情報保護,institutional_author,個人情報保護委員会 ガイドライン,https://www.ppc.go.jp/legal/assessment/,2026-07-17T00:00:00+09:00
+web0125,misc,人文社会,個人情報保護,institutional_author,個人情報保護委員会 ガイドライン,https://www.ppc.go.jp/legal/dokujiriyoujimu/,2026-07-17T00:00:00+09:00
+web0126,misc,人文社会,個人情報保護,institutional_author,個人情報保護委員会 ガイドライン,https://www.ppc.go.jp/legal/complaints/,2026-07-17T00:00:00+09:00
+web0127,misc,人文社会,個人情報保護,institutional_author,個人情報保護委員会 ガイドライン,https://www.ppc.go.jp/legal/supervision/,2026-07-17T00:00:00+09:00
+web0128,misc,人文社会,個人情報保護,institutional_author,個人情報保護委員会 ガイドライン,https://www.ppc.go.jp/legal/teikihoukoku/,2026-07-17T00:00:00+09:00
+web0129,misc,人文社会,個人情報保護,institutional_author,個人情報保護委員会 ガイドライン,https://www.ppc.go.jp/personalinfo/legal/fundamental_policy/,2026-07-17T00:00:00+09:00
+web0130,misc,理工,研究倫理,institutional_author,情報処理学会 倫理綱領,https://www.ipsj.or.jp/ipsjcode.html,2026-07-17T00:00:00+09:00
+web0131,misc,理工,研究倫理,institutional_author,情報処理学会 倫理綱領,https://www.ipsj.or.jp/ipsjcode-jirei.html,2026-07-17T00:00:00+09:00
+web0132,misc,理工,AI倫理,institutional_author,人工知能学会 倫理指針,https://www.ai-gakkai.or.jp/ai-elsi/about/purpose,2026-07-17T00:00:00+09:00
+web0133,misc,理工,AI倫理,institutional_author,人工知能学会 倫理指針,https://www.ai-gakkai.or.jp/ai-elsi/about/member,2026-07-17T00:00:00+09:00
+web0134,misc,理工,AI倫理,institutional_author,人工知能学会 倫理指針,https://www.ai-gakkai.or.jp/ai-elsi/report/committee,2026-07-17T00:00:00+09:00
+web0135,misc,理工,AI倫理,institutional_author,人工知能学会 倫理指針,https://www.ai-gakkai.or.jp/ai-elsi/report/ethical_guidlines,2026-07-17T00:00:00+09:00
+web0136,misc,人文社会,教育・科学技術,institutional_author,文部科学省 白書,https://www.mext.go.jp/b_menu/hakusho/html/kagaku.htm,2026-07-17T00:00:00+09:00
+web0137,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/ifs-105,2026-07-17T00:00:00+09:00
+web0138,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E5%9E%8B%E5%A4%89%E6%8F%9B-2381,2026-07-17T00:00:00+09:00
+web0139,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E6%A4%9C%E7%B4%A2%E9%80%A3%E5%8B%95%E5%9E%8B%E5%BA%83%E5%91%8A-3210,2026-07-17T00:00:00+09:00
+web0140,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E5%AE%9F%E8%B3%AA%E9%A0%90%E9%87%91-4255,2026-07-17T00:00:00+09:00
+web0141,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E6%94%BF%E5%BA%9C%E7%B3%BB%E9%87%91%E8%9E%8D%E6%A9%9F%E9%96%A2-5132,2026-07-17T00:00:00+09:00
+web0142,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E6%89%8B%E6%9B%B8%E3%81%8D%E5%85%A5%E5%8A%9B-6235,2026-07-17T00:00:00+09:00
+web0143,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/bps-7723,2026-07-17T00:00:00+09:00
+web0144,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E5%8A%B4%E5%83%8D%E8%80%85%E6%B4%BE%E9%81%A3%E4%BA%8B%E6%A5%AD%E6%B3%95-10007,2026-07-17T00:00:00+09:00
+web0145,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E5%AD%90%E5%AE%AE%E5%8F%A3-14084,2026-07-17T00:00:00+09:00
+web0146,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E9%98%BF%E4%BB%8F%E5%B0%BC-14362,2026-07-17T00:00:00+09:00
+web0147,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E8%90%A9%E5%8E%9F%E8%98%BF%E6%9C%88-14617,2026-07-17T00:00:00+09:00
+web0148,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E5%BA%83%E7%80%AC%E6%B7%A1%E7%AA%93-14840,2026-07-17T00:00:00+09:00
+web0149,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E8%97%A4%E6%9C%AC%E9%89%84%E7%9F%B3-15062,2026-07-17T00:00:00+09:00
+web0150,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E7%A3%AF%E9%87%8E%E6%96%87%E6%96%8E-15289,2026-07-17T00:00:00+09:00
+web0151,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E5%B2%A9%E4%BD%90%E5%8F%88%E5%85%B5%E8%A1%9B-15570,2026-07-17T00:00:00+09:00
+web0152,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E7%8B%A9%E9%87%8E%E8%8A%B3%E5%B4%96-15791,2026-07-17T00:00:00+09:00
+web0153,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E9%A2%A8%E6%97%A9%E5%85%AC%E7%B4%80-16005,2026-07-17T00:00:00+09:00
+web0154,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E9%AB%98%E8%8A%99%E8%93%89-16227,2026-07-17T00:00:00+09:00
+web0155,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E9%BB%92%E7%94%B0%E9%95%B7%E6%88%90-16429,2026-07-17T00:00:00+09:00
+web0156,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E6%9D%BE%E5%B1%B1%E7%8E%96%E4%B9%9F-16631,2026-07-17T00:00:00+09:00
+web0157,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E4%B8%89%E5%B3%B6%E4%B8%AD%E6%B4%B2-16819,2026-07-17T00:00:00+09:00
+web0158,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E6%9D%91%E4%B8%8A%E6%B5%AA%E5%85%AD-17025,2026-07-17T00:00:00+09:00
+web0159,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E6%A5%A2%E5%B4%8E%E5%AE%97%E9%87%8D-17235,2026-07-17T00:00:00+09:00
+web0160,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E9%87%8E%E7%94%B0%E5%BF%A0%E7%B2%9B-17474,2026-07-17T00:00:00+09:00
+web0161,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E5%B0%BE%E5%BD%A2%E4%B9%BE%E5%B1%B1-17710,2026-07-17T00:00:00+09:00
+web0162,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E5%86%B7%E6%B3%89%E7%82%BA%E5%AE%88-17933,2026-07-17T00:00:00+09:00
+web0163,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E5%9D%82%E9%AB%98%E9%BA%97%E5%B7%A6%E8%A1%9B%E9%96%80-18142,2026-07-17T00:00:00+09:00
+web0164,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E5%AE%8D%E6%88%B8%E6%98%8C%E6%98%8E-18387,2026-07-17T00:00:00+09:00
+web0165,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E4%BD%8F%E5%8F%8B%E5%90%89%E5%B7%A6%E8%A1%9B%E9%96%80-18599,2026-07-17T00:00:00+09:00
+web0166,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E8%B0%B7%E6%96%87%E4%B8%80-18788,2026-07-17T00:00:00+09:00
+web0167,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E5%9C%9F%E4%BD%90%E5%85%89%E5%90%89-18999,2026-07-17T00:00:00+09:00
+web0168,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E6%B4%A5%E5%AE%88%E5%9B%BD%E5%86%AC-19191,2026-07-17T00:00:00+09:00
+web0169,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E8%B6%99%E6%98%8C-19910,2026-07-17T00:00:00+09:00
+web0170,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E5%B1%B1%E5%8F%A3%E8%93%AC%E6%98%A5-21860,2026-07-17T00:00:00+09:00
+web0171,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E6%A8%AA%E6%BA%9D%E6%AD%A3%E5%8F%B2-22098,2026-07-17T00:00:00+09:00
+web0172,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E4%BA%8C%E7%95%AA%E8%8A%BD-22299,2026-07-17T00:00:00+09:00
+web0173,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E5%8E%9F%E7%94%A3%E5%9B%BD-22512,2026-07-17T00:00:00+09:00
+web0174,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E7%9B%AE%E6%A8%99%E5%88%A9%E7%9B%8A%E4%BE%A1%E6%A0%BC%E8%A8%AD%E5%AE%9A-22739,2026-07-17T00:00:00+09:00
+web0175,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E5%BB%83%E6%A3%84%E5%80%99%E8%A3%9C%E3%81%B6%E3%82%89%E3%82%93%E3%81%A9-23020,2026-07-17T00:00:00+09:00
+web0176,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E3%81%B6%E3%82%89%E3%82%93%E3%81%A9%E9%80%A3%E6%83%B3%E3%81%AE%E3%82%86%E3%81%AB%E3%83%BC%E3%81%8F%E3%81%95-23256,2026-07-17T00:00:00+09:00
+web0177,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E3%81%82%E3%81%84%E3%82%8A%E3%81%A4%E3%81%97%E3%82%86%E3%81%AF%E3%82%93%E3%81%A9%E3%81%BC%E3%83%BC%E3%82%8B-23901,2026-07-17T00:00:00+09:00
+web0178,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E8%B5%A4%E4%BA%95%E5%B7%9D%E6%9D%91-24224,2026-07-17T00:00:00+09:00
+web0179,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E9%98%BF%E5%AF%92-24506,2026-07-17T00:00:00+09:00
+web0180,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E6%82%AA%E8%A9%95%E5%AD%A6%E6%A0%A1-24764,2026-07-17T00:00:00+09:00
+web0181,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E6%B5%85%E6%B2%BC%E4%BA%8B%E4%BB%B6-25038,2026-07-17T00:00:00+09:00
+web0182,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E8%98%86%E5%90%8D%E6%B0%8F-25298,2026-07-17T00:00:00+09:00
+web0183,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E3%81%82%E3%81%9A%E3%82%89%E3%83%BC%E3%82%89-25624,2026-07-17T00:00:00+09:00
+web0184,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E5%8E%9A%E6%B2%A2%E9%83%A8%E7%94%BA-25954,2026-07-17T00:00:00+09:00
+web0185,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E3%81%82%E3%81%A9%E3%82%8A%E3%81%82%E3%81%AB-26273,2026-07-17T00:00:00+09:00
+web0186,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E3%81%82%E3%81%B3%E3%81%97%E3%81%AB%E3%81%82%E5%9B%BD%E9%9A%9B%E3%81%82%E3%81%B5%E3%82%8A%E3%81%8B%E5%8F%8B%E5%A5%BD%E5%8D%94%E4%BC%9A-26590,2026-07-17T00:00:00+09:00
+web0187,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E3%81%82%E3%81%B6%E3%82%8B%E3%81%8C%E3%83%BC%E3%81%98%E3%83%BC%E3%81%B0%E3%81%AF%E3%83%BC%E3%81%A9%E3%81%86%E3%82%8B%E3%81%AF%E3%82%93-26913,2026-07-17T00:00:00+09:00
+web0188,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E5%A4%A9%E6%A9%8B%E7%AB%8B-27202,2026-07-17T00:00:00+09:00
+web0189,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E3%81%82%E3%82%81%E3%82%8A%E3%81%8B%E5%8F%8D%E5%A5%B4%E9%9A%B7%E5%88%B6%E5%8D%94%E4%BC%9A-27519,2026-07-17T00:00:00+09:00
+web0190,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E3%81%82%E3%82%89%E3%81%B5%E3%82%89%E6%B5%B7%E7%9C%9F%E7%8F%A0%E8%B2%9D%E6%BC%81%E6%A5%AD%E4%BA%8B%E4%BB%B6-27850,2026-07-17T00:00:00+09:00
+web0191,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E3%81%82%E3%82%8B%E3%81%8F%E3%81%A8%E3%81%86%E3%83%BC%E3%82%8B%E3%81%99-28222,2026-07-17T00:00:00+09:00
+web0192,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E3%81%82%E3%82%8B%E3%81%B7%E3%81%A9%E3%81%8A%E3%83%BC%E3%81%A8%E3%81%B7%E3%82%8D%E3%81%B0%E3%82%93%E3%81%99%E7%9C%8C-28613,2026-07-17T00:00:00+09:00
+web0193,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E9%98%BF%E6%B3%A2%E8%97%A9-28999,2026-07-17T00:00:00+09:00
+web0194,misc,人文社会,オンライン百科事典,,コトバンク 辞典項目,https://kotobank.jp/word/%E3%81%82%E3%82%93%E3%81%9F%E3%81%84%E3%81%A9%E3%82%8D%E3%83%BC%E3%82%93-29276,2026-07-17T00:00:00+09:00

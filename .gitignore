@@ -1,0 +1,29 @@
+# rebuilt artefacts (generated locally by scripts/rebuild.py — not redistributed
+# in this repository; see README for the licensing rationale)
+dataset/
+
+# python
+.venv/
+__pycache__/
+*.pyc
+
+# latex build artefacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.dvi
+*.fls
+*.fdb_latexmk
+
+# non-redistributable .bst fetched by scripts/generate_refs_bst/fetch_styles.sh
+# (IPSJ / JSAI distributions; only LPPL-licensed jecon.bst / jecon-mod.bst are vendored)
+scripts/generate_refs_bst/bst/ipsjsort.bst
+scripts/generate_refs_bst/bst/ipsjunsrt.bst
+scripts/generate_refs_bst/bst/jsai.bst
+
+# local work dir for re-fetched raw/interim data (see scripts/rebuild.py)
+data/
+
+# os
+.DS_Store
