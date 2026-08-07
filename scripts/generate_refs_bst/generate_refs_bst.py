@@ -145,6 +145,27 @@ def parse_bbl(bbl: str) -> dict[str, str]:
     return out
 
 
+# --- style-specific output fixes ------------------------------------------
+
+_PLAIN_NUM = re.compile(r"[0-9０-９]+")
+
+
+def fix_jecon_edition(ref: str, edition: str) -> str:
+    """Undo jecon's 第…版 wrap when the edition field is already a full phrase.
+
+    jecon renders Japanese-entry editions as 第{edition}版, which is correct
+    only for bare-number values (edition={2} -> 第2版). Our records keep the
+    source-faithful full designation (第2版, 新装版, 改訂3版, ver.2, POD版 ...),
+    so the wrap doubles it (第第2版版) or mis-wraps it (第新装版版, 第ver.2版).
+    Replace the wrapped form with the source phrase; bare numbers are left to
+    jecon's own (correct) formatting.
+    """
+    ed = edition.strip()
+    if not ed or _PLAIN_NUM.fullmatch(ed):
+        return ref
+    return ref.replace(f"第{ed}版", ed)
+
+
 # --- LaTeX doc + run ------------------------------------------------------
 
 def doc_tex(style: str, natbib: bool, bibbase: str) -> str:
@@ -232,12 +253,17 @@ def main() -> int:
                                ref_string="", generation_status=f"failed: {reason}")
                     n_fail += 1
                 elif key in refs and refs[key]:
+                    ref = refs[key]
+                    if s["style"].startswith("jecon"):
+                        edition = meta.get(key, {}).get("edition", "")
+                        if edition:
+                            ref = fix_jecon_edition(ref, edition)
                     # container フィールドが記録にあるのに出力に現れない組は
                     # ok_partial:<field> として識別可能にする（手整形はしない）。
-                    missing = biblib.partial_container_fields(meta.get(key, {}), refs[key])
+                    missing = biblib.partial_container_fields(meta.get(key, {}), ref)
                     status = "ok_partial:" + ",".join(missing) if missing else "ok"
                     rec = dict(key=key, style=s["style"], style_impl="bst",
-                               ref_string=refs[key], generation_status=status)
+                               ref_string=ref, generation_status=status)
                     n_ok += 1
                 else:
                     rec = dict(key=key, style=s["style"], style_impl="bst",

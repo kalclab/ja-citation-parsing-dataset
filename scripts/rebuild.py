@@ -22,6 +22,8 @@
 * **人手で付けた属性は再計算しない。** discipline / subfield / difficulty_flags /
   source_name / source_url / retrieved_at はマニフェストの値をそのまま使う
   （difficulty_flags は収集時のヒューリスティックに人手の是正が入っている）。
+  書誌値そのものへの人手の是正は `annotations/field_overrides.jsonl` の
+  ガード付き置換だけで、上流の値が置換の前提と一致するときにしか当たらない。
 * **日付は実行日ではなく取得日から導く。** @misc の `urldate` はマニフェストの
   `retrieved_at` の日付部分。今日の日付を書き込むと原本と食い違う。
 * **取れなかったものは捏造しない。** 取得失敗・同定失敗・必須フィールド欠落は
@@ -103,6 +105,7 @@ class Target:
     source_name: str
     source_url: str
     retrieved_at: str
+    overrides: list[dict] = field(default_factory=list)
 
     @property
     def urldate(self) -> str:
@@ -117,11 +120,31 @@ class Failure:
     reason: str
 
 
-def load_targets(manifest: Path, key_map: Path) -> list[Target]:
+def load_overrides(path: Path) -> dict[str, list[dict]]:
+    """`field_overrides.jsonl` を最終キー別に読む。無ければ空。
+
+    1 行が「`from` の各フィールドが再取得値と一致したときに限り `to` を当てる」
+    という条件付きの置換。上流の記述そのものが誤っている（CiNii の prism:volume
+    が巻に号を埋め込んでいる等）ものを、出典で人手確認したうえで直すための層。
+    """
+    by_key: dict[str, list[dict]] = {}
+    if not path.exists():
+        return by_key
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        ov = json.loads(line)
+        by_key.setdefault(ov["key"], []).append(ov)
+    return by_key
+
+
+def load_targets(manifest: Path, key_map: Path,
+                 overrides: Path | None = None) -> list[Target]:
     prov: dict[str, dict] = {}
     with key_map.open(encoding="utf-8", newline="") as fh:
         for row in csv.DictReader(fh):
             prov[row["key"]] = row
+    ov_by_key = load_overrides(overrides) if overrides else {}
     targets: list[Target] = []
     with manifest.open(encoding="utf-8", newline="") as fh:
         for row in csv.DictReader(fh):
@@ -139,16 +162,51 @@ def load_targets(manifest: Path, key_map: Path) -> list[Target]:
                 source_name=row["source_name"],
                 source_url=row["source_url"],
                 retrieved_at=row["retrieved_at"],
+                overrides=ov_by_key.get(row["key"], []),
             ))
+    if unknown := set(ov_by_key) - {t.key for t in targets}:
+        raise SystemExit(f"field_overrides.jsonl にマニフェスト外のキー: {sorted(unknown)}")
     return targets
 
 
-def stamp(rec: dict, t: Target) -> dict:
+def apply_overrides(rec: dict, t: Target) -> str | None:
+    """`field_overrides.jsonl` のガード付き置換を当てる。当たらなければ理由を返す。
+
+    `from` に挙げたフィールドが**すべて**再取得値と一致したときだけ `to` を当てる。
+    一つでも食い違えば当てずに理由を返し、呼び出し側が他の再取得失敗と同じ経路で
+    報告する（上流が既に直った、あるいは別の値に変わったのに黙って人手の値で
+    上書きすると、確認済みという前提が崩れたことが見えなくなるため）。
+    """
+    if not t.overrides:
+        return None
+    fields = rec["bibtex_fields"]
+    notes: list[str] = []
+    for ov in t.overrides:
+        stale = [(f, v) for f, v in ov["from"].items()
+                 if str(fields.get(f, "")).strip() != v]
+        if stale:
+            detail = ", ".join(f"{f} が {v!r} でなく {fields.get(f, '')!r}"
+                               for f, v in stale)
+            return f"field_override の前提と一致しない: {detail}"
+        before = " / ".join(f"{f}={v!r}" for f, v in ov["from"].items())
+        after = " / ".join(f"{f}={v}" for f, v in ov["to"].items())
+        fields.update(ov["to"])
+        notes.append(f"field_override: 原文 {before} → {after}"
+                     f"（{ov['provenance']}・{ov['verified_against']} で確認）")
+    rec["notes"] = "; ".join(n for n in [rec.get("notes", ""), *notes] if n)
+    return None
+
+
+def stamp(rec: dict, t: Target) -> str | None:
     """コレクタが組んだレコードに、マニフェスト側の確定値を被せる。
 
     人手が入りうる属性（discipline / subfield / difficulty_flags / source_name /
     source_url / retrieved_at）は再取得結果で上書きしない。provisional_key も
     key_map の値に合わせる（cinii_supp などは連番で、URL から復元できないため）。
+
+    bibtex_fields は原則そのまま通すが、`field_overrides.jsonl` に該当行がある
+    レコードだけはガード付きで書き換える（`apply_overrides`）。当たらなかった
+    場合はその理由を返すので、check_fields と同じ経路で報告する。
     """
     rec["provisional_key"] = t.provisional_key
     rec["entry_type"] = t.entry_type
@@ -161,7 +219,7 @@ def stamp(rec: dict, t: Target) -> dict:
     rec.pop("_doi", None)
     rec.pop("_crid", None)
     rec.pop("_sort", None)
-    return rec
+    return apply_overrides(rec, t)
 
 
 def check_fields(rec: dict, t: Target) -> str | None:
@@ -298,8 +356,7 @@ def rebuild_jstage(targets: list[Target], fetch: Fetcher) -> tuple[list[dict], l
         jstage.fix_missing_authors([rec], cache)
         jstage.enrich_subtitles([rec], cache)
 
-        stamp(rec, t)
-        if (why := check_fields(rec, t)):
+        if (why := stamp(rec, t) or check_fields(rec, t)):
             failures.append(Failure(t.key, t.source, why))
             continue
         records.append(rec)
@@ -335,8 +392,7 @@ def rebuild_crossref(targets: list[Target], fetch: Fetcher) -> tuple[list[dict],
         if rec is None:
             failures.append(Failure(t.key, t.source, "title/author/journal のいずれかが欠けた"))
             continue
-        stamp(rec, t)
-        if (why := check_fields(rec, t)):
+        if (why := stamp(rec, t) or check_fields(rec, t)):
             failures.append(Failure(t.key, t.source, why))
             continue
         records.append(rec)
@@ -392,8 +448,7 @@ def rebuild_cinii(targets: list[Target], fetch: Fetcher) -> tuple[list[dict], li
             failures.append(Failure(t.key, t.source,
                                     f"別レコードを引いた ({rec['provisional_key']} != {t.provisional_key})"))
             continue
-        stamp(rec, t)
-        if (why := check_fields(rec, t)):
+        if (why := stamp(rec, t) or check_fields(rec, t)):
             failures.append(Failure(t.key, t.source, why))
             continue
         records.append(rec)
@@ -417,8 +472,7 @@ def rebuild_cinii_supp(targets: list[Target], fetch: Fetcher) -> tuple[list[dict
             failures.append(Failure(t.key, t.source, "タイトルが空"))
             continue
         rec = cinii_supp.build_record(item, t.entry_type, t.discipline, t.subfield, t.retrieved_at)
-        stamp(rec, t)
-        if (why := check_fields(rec, t)):
+        if (why := stamp(rec, t) or check_fields(rec, t)):
             failures.append(Failure(t.key, t.source, why))
             continue
         records.append(rec)
@@ -463,8 +517,7 @@ def rebuild_ndl(targets: list[Target], fetch: Fetcher) -> tuple[list[dict], list
                                     f"書誌 ID {bib_id} の図書レコードを取得できない"
                                     "（削除・品質ゲート不通過の可能性）"))
             continue
-        stamp(rec, t)
-        if (why := check_fields(rec, t)):
+        if (why := stamp(rec, t) or check_fields(rec, t)):
             failures.append(Failure(t.key, t.source, why))
             continue
         records.append(rec)
@@ -504,8 +557,7 @@ def rebuild_anlp(targets: list[Target], raw_dir: Path,
                 failures.append(Failure(t.key, t.source, "PDF URL が索引に無い（上流で改稿の可能性）"))
                 continue
             rec = anlp.build_record(paper, kai, page_year, t.source_url, t.retrieved_at)
-            stamp(rec, t)
-            if (why := check_fields(rec, t)):
+            if (why := stamp(rec, t) or check_fields(rec, t)):
                 failures.append(Failure(t.key, t.source, why))
                 continue
             records.append(rec)
@@ -617,8 +669,7 @@ def rebuild_webmisc(targets: list[Target], fetch: Fetcher) -> tuple[list[dict], 
 
         rec = {"provisional_key": t.provisional_key, "entry_type": "misc",
                "bibtex_fields": fields, "notes": "; ".join(notes)}
-        stamp(rec, t)
-        if (why := check_fields(rec, t)):
+        if (why := stamp(rec, t) or check_fields(rec, t)):
             failures.append(Failure(t.key, t.source, why))
             continue
         records.append(rec)
@@ -696,7 +747,8 @@ def main() -> int:
                     help="records.jsonl まででマージ・派生生成を行わない")
     args = ap.parse_args()
 
-    targets = load_targets(args.manifest, args.key_map)
+    targets = load_targets(args.manifest, args.key_map,
+                           args.annotations / "field_overrides.jsonl")
     if args.only_source:
         wanted = set(args.only_source.split(","))
         if unknown := wanted - set(SOURCES):

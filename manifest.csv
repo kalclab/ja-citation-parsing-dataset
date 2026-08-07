@@ -1,13 +1,13 @@
 key,entry_type,discipline,subfield,difficulty_flags,source_name,source_url,retrieved_at
 art0001,article,人文社会,歴史学,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781796603650,2026-07-17T14:30:14+09:00
-art0002,article,人文社会,歴史学,nonstandard_volume,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781798116621,2026-07-17T14:30:14+09:00
-art0003,article,人文社会,歴史学,nonstandard_volume;subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781824720774,2026-07-17T14:30:14+09:00
-art0004,article,人文社会,歴史学,nonstandard_volume,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781836516381,2026-07-17T14:30:14+09:00
-art0005,article,人文社会,歴史学,nonstandard_volume,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781841829899,2026-07-17T14:30:14+09:00
+art0002,article,人文社会,歴史学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781798116621,2026-07-17T14:30:14+09:00
+art0003,article,人文社会,歴史学,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781824720774,2026-07-17T14:30:14+09:00
+art0004,article,人文社会,歴史学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781836516381,2026-07-17T14:30:14+09:00
+art0005,article,人文社会,歴史学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781841829899,2026-07-17T14:30:14+09:00
 art0006,article,医学生命,老年社会科学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781843321352,2026-07-17T14:30:21+09:00
-art0007,article,人文社会,歴史学,nonstandard_volume,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781895470208,2026-07-17T14:30:14+09:00
-art0008,article,人文社会,歴史学,nonstandard_volume,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781897949450,2026-07-17T14:30:14+09:00
-art0009,article,医学生命,老年社会科学,nonstandard_volume,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000782088742531,2026-07-17T14:30:21+09:00
+art0007,article,人文社会,歴史学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781895470208,2026-07-17T14:30:14+09:00
+art0008,article,人文社会,歴史学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000781897949450,2026-07-17T14:30:14+09:00
+art0009,article,医学生命,老年社会科学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000782088742531,2026-07-17T14:30:21+09:00
 art0010,article,医学生命,老年社会科学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000782115138177,2026-07-17T14:30:21+09:00
 art0011,article,医学生命,老年社会科学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000782115138181,2026-07-17T14:30:21+09:00
 art0012,article,理工,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000782142698243,2026-07-17T14:30:19+09:00
@@ -15,13 +15,13 @@ art0013,article,理工,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.j
 art0014,article,理工,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000782271978755,2026-07-17T14:30:19+09:00
 art0015,article,医学生命,老年社会科学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000782281617681,2026-07-17T14:30:21+09:00
 art0016,article,医学生命,老年社会科学,english_mixed,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010000782307551104,2026-07-17T14:30:21+09:00
-art0017,article,医学生命,老年社会科学,nonstandard_volume,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010282257052801679,2026-07-17T14:30:21+09:00
+art0017,article,医学生命,老年社会科学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010282257052801679,2026-07-17T14:30:21+09:00
 art0018,article,医学生命,老年社会科学,english_mixed,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010282257065235072,2026-07-17T14:30:21+09:00
 art0019,article,医学生命,老年社会科学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010282257090114563,2026-07-17T14:30:21+09:00
 art0020,article,医学生命,老年社会科学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010282257272612101,2026-07-17T14:30:21+09:00
-art0021,article,医学生命,老年社会科学,nonstandard_volume,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010285300563378048,2026-07-17T14:30:21+09:00
+art0021,article,医学生命,老年社会科学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010285300563378048,2026-07-17T14:30:21+09:00
 art0022,article,医学生命,老年社会科学,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010302693954752129,2026-07-17T14:30:21+09:00
-art0023,article,医学生命,老年社会科学,nonstandard_volume,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010306730179195140,2026-07-17T14:30:21+09:00
+art0023,article,医学生命,老年社会科学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1010306730179195140,2026-07-17T14:30:21+09:00
 art0024,article,理工,地理学,,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1050001339237143168,2026-07-17T14:30:19+09:00
 art0025,article,人文社会,教育社会学,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1050001339237145344,2026-07-17T14:30:16+09:00
 art0026,article,人文社会,教育社会学,subtitle,CiNii Research OpenSearch,https://cir.nii.ac.jp/crid/1390001205396255488,2026-07-17T14:30:16+09:00

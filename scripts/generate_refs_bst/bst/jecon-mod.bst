@@ -1,10 +1,14 @@
-%% jecon-mod.bst: jecon.bst の改変版（1 箇所のみ変更・提案）
+%% jecon-mod.bst: jecon.bst の改変版（2 箇所変更）
 %%
-%% 変更点（format.output.in.ed.booktitle, 元 line 2913）:
+%% 変更点 1（format.output.in.ed.booktitle, 元 line 2913）:
 %%   is.kanji.entry かつ editor 空 の @inproceedings/@incollection で
 %%   booktitle を出力しない挙動 `{ }` を `{ format.btitle }` に変更し、
 %%   会議録名を『…』（bst.btitle.pre.jp/post.jp）で出力する。
-%% 影響: @inproceedings のみ（会議録名を追加）。@article/@book/@misc は無変更。
+%%   影響: @inproceedings のみ（会議録名を追加）。@article/@book/@misc は無変更。
+%% 変更点 2（bst.use.bysame, v1.1）:
+%%   公式カスタマイズ変数を #1 → #0 に変更（同一著者連続の --- 省略を無効化）。
+%%   逆生成した参照文字列を 1 件単位でシャッフル利用する前提のため、
+%%   前後の文脈に依存する省略表記を排除する。
 %% 本体は下記オリジナル jecon.bst（LPPL 1.3+）。
 %%
 %% jecon.bst: 経済学用 BibTeX スタイルファイル（BibTeX style file for economics）
@@ -97,8 +101,9 @@ ENTRY
 % \bysame とは、参考文献部分同じ著者名が連続するときに --- で省略するもの。
 %
 FUNCTION {bst.use.bysame}
-% { #0 }    % Not use \bysame
-{ #1 }	  % -> Use \bysame (default)
+{ #0 }    % Not use \bysame (v1.1: 逆生成データはシャッフル利用が前提のため、
+          % 同一著者連続の --- 省略を無効化。default は #1)
+% { #1 }	  % -> Use \bysame (default)
 % { #2 }    % -> Use \bysame of alternative style.
 
 % \bysame の定義。\bysame を使ったときの横棒の形式を変えるには以下の定義を修正

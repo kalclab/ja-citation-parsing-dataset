@@ -11,6 +11,8 @@ merge_assign_keys.py ─▶ dataset/{ja_bib_full.bib（原本・ソース忠実�
        └─ generate_refs_bst/*.py ───▶ ref_strings（bst 4スタイル）
 ```
 
+この図の上流（`rebuild.py` の再取得段）で、`annotations/field_overrides.jsonl` のガード付きフィールド置換が当たる。適用点は `rebuild.py` の `stamp()` の末尾、すなわち必須フィールド検査（`check_fields`）より前で、`ja_bib_full.bib` は置換後の値で書き出される。`from` に記した取得時の値と再取得値が食い違うレコードには当てず、他の再取得失敗と同じ経路で報告する（詳細は `rebuild.py` の `apply_overrides`）。
+
 `make_derived_bib.py` の変換（原本は不変）:
 1. **典拠 enrichment**（`--names-table`）: NDL 典拠レコード由来の姓名分割（姓, 名）と author 読みの `yomi` を該当レコードに適用。テーブルは `provisional_key` キーなので `key_map.csv`（merge が出力する final↔provisional 対応表）で最終キーへ突合。原本と著者が一致しない件は適用せず stderr にログ。yomi は jecon/ipsjsort の**著者ソートキー**（NDL 図書が持つ題目読みの yomi を上書き）。
 2. **手動/Web 確定の姓名分割**（`--manual-table`）: 目視確認＋Web 典拠で確定した名前→分割テーブル（`manual_name_table.jsonl`、名前キー）を、連結形著者に適用（provenance: `manual` / `web-verified`+URL を記録）。既にカンマ形の名は不変。団体・保留名は対象外。
@@ -38,7 +40,14 @@ merge_assign_keys.py ─▶ dataset/{ja_bib_full.bib（原本・ソース忠実�
 
 **junsrt は除外（2026-07-17 決定）**: 出力文字列が jplain と per-record で完全一致し、両者の差はリスト（全書誌一覧）の並び順のみ。1 件単位で生成する逆生成データには現れないため、jplain 1 本に集約した。
 
-**jecon-mod.bst — jecon ver.6.6 の 1 トークン改変版（2026-07-17 決定）**: 素の jecon.bst は、和文（`is.kanji.entry`）かつ `editor` 空の @inproceedings/@incollection で会議録名（booktitle）を出力しない（`format.output.in.ed.booktitle`, line 2913 の空分岐 `{ }`）。日本の会議録は編者を持たないことが多く、venue が復元不能になるため、当該分岐を `{ format.btitle }` に変更し、会議録名を『…』（`bst.btitle.pre.jp/post.jp`）で題目直後に出力する。公式のカスタマイズ変数・派生版（jecon-a/b/cjk/no-sort/number/reverse/tategaki）にはこの切替が無いことを確認済み。**改変は 1 箇所のみで、全件回帰で変化は @inproceedings のみ（会議録名の追加）、@article/@book/@misc はバイト完全一致。** ref_strings.jsonl の `style` は `jecon-mod`（真正 jecon と区別）。LPPL 1.3+ に従い、改変版はファイル名を変え、冒頭に改変点を明記している。編者の捏造は一切行わない。
+**jecon-mod.bst — jecon ver.6.6 の改変版（2 箇所）**:
+
+1. **会議録名の出力（2026-07-17 決定）**: 素の jecon.bst は、和文（`is.kanji.entry`）かつ `editor` 空の @inproceedings/@incollection で会議録名（booktitle）を出力しない（`format.output.in.ed.booktitle`, line 2913 の空分岐 `{ }`）。日本の会議録は編者を持たないことが多く、venue が復元不能になるため、当該分岐を `{ format.btitle }` に変更し、会議録名を『…』（`bst.btitle.pre.jp/post.jp`）で題目直後に出力する。公式のカスタマイズ変数・派生版（jecon-a/b/cjk/no-sort/number/reverse/tategaki）にはこの切替が無いことを確認済み。導入時の全件回帰で変化は @inproceedings のみ（会議録名の追加）、@article/@book/@misc はバイト完全一致だった。編者の捏造は一切行わない。
+2. **`\bysame` の無効化（v1.1・2026-08-07 決定）**: 公式カスタマイズ変数 `bst.use.bysame` を `#1` → `#0` に変更。同一著者が連続すると横棒（`\bysame`）で著者名を省略する既定挙動は、参照文字列を 1 件単位でシャッフルして使う評価データでは前後文脈依存となり不適当（旧版では省略著者が detex 後に消失していた）。
+
+ref_strings.jsonl の `style` は `jecon-mod`（真正 jecon と区別）。LPPL 1.3+ に従い、改変版はファイル名を変え、冒頭に改変点を明記している。
+
+**jecon の edition 後処理（v1.1）**: jecon は和文エントリの edition を `第{edition}版` で包む（裸の数字 edition のみ正しい）。本データセットの edition はソース忠実な完全表記（`第2版`・`新装版`・`ver.2` 等）のため、`generate_refs_bst.py` の `fix_jecon_edition` が jecon 出力のみ包みを外す。.bib レコード側は不変（他スタイルは edition をそのまま出力するため、`edition = {第2版}` が正しい和文表記になる）。
 
 ### generation_status の値
 

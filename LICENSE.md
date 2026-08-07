@@ -54,7 +54,7 @@ Provenance notes:
 |---|---|---|
 | `scripts/csl/sist02.csl`, `jpa2022.csl`, `chicago-author-date.csl` | CC BY-SA 3.0 | Citation Style Language project and the authors named in each file header |
 | `scripts/generate_refs_bst/bst/jecon.bst` | LPPL 1.3+ | jecon-bst project (author named in the file header) |
-| `scripts/generate_refs_bst/bst/jecon-mod.bst` | LPPL 1.3+ | Modified from `jecon.bst`; renamed as LPPL requires, with the modification documented at the top of the file |
+| `scripts/generate_refs_bst/bst/jecon-mod.bst` | LPPL 1.3+ | Modified from `jecon.bst`; renamed as LPPL requires, with the modifications documented at the top of the file |
 
 `ipsjsort.bst` and `jsai.bst` are **not** redistributed here (society
 distributions without redistribution rights). `scripts/generate_refs_bst/fetch_styles.sh`

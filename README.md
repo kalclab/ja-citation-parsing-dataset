@@ -8,6 +8,9 @@ with authentic BibTeX/CSL processors. This repository is the companion
 artefact of a paper under double-blind review; author and affiliation
 information is withheld.
 
+**Version: v1.1** (2026-08-07). See `CHANGELOG.md` for what changed since
+v1.0; a rebuild run on this revision reproduces the v1.1 artefacts.
+
 ## Why this is a manifest, not the data
 
 The terms of use of some source services — most restrictively the J-STAGE
@@ -22,8 +25,10 @@ dataset locally, deterministically, from the original sources**:
 | `key_map.csv` | Mapping from final keys to per-source provisional keys (pins key assignment during rebuild) |
 | `sample_100.txt` | Keys of the 100-record evaluation sample used in the paper |
 | `annotations/` | Name-boundary annotations: NDL-authority-based splits (`name_boundaries.jsonl`) and manually/web-verified splits (`manual_name_table.jsonl`) applied during rebuild |
+| `annotations/field_overrides.jsonl` | Guarded field corrections applied during rebuild: 10 CiNii `@article` records whose source `volume` embeds the issue number, decoded into `volume` + `number`. Each row records the expected source value and only applies if the re-fetched record still carries it |
 | `scripts/` | Collection, rebuild, validation, and reference-string generation pipeline |
 | `DATASET.md` | Schema and conventions of the rebuilt artefacts |
+| `CHANGELOG.md` | Release history |
 
 The rebuilt files (`dataset/ja_bib_full.bib`, `dataset/ja_bib_derived.bib`,
 `dataset/metadata.csv`, `dataset/ref_strings.jsonl`) appear locally after
@@ -71,12 +76,22 @@ no longer matches expectations rather than silently substituting content.
 | jpa2022 | CSL | Psychology |
 | chicago-author-date | CSL | Contrastive / mixed-script control |
 
-`jecon-mod` is a one-token modification of `jecon.bst` (LPPL 1.3+): for
-Japanese `@inproceedings` without an editor, the unmodified style omits the
-proceedings title, making the venue unrecoverable; the modification restores
-it. The change is documented at the top of
-`scripts/generate_refs_bst/bst/jecon-mod.bst`, and all other entry types are
-byte-identical to unmodified `jecon` output.
+`jecon-mod` is `jecon.bst` (LPPL 1.3+) with two modifications, both
+documented at the top of `scripts/generate_refs_bst/bst/jecon-mod.bst`:
+
+1. **Proceedings title restored.** For Japanese `@inproceedings` without an
+   editor, the unmodified style omits the proceedings title, making the venue
+   unrecoverable; the modification outputs it. This affects `@inproceedings`
+   only — when it was introduced, `@article`/`@book`/`@misc` output was
+   byte-identical to the unmodified style.
+2. **`\bysame` disabled** (v1.1). `jecon`'s own customisation variable
+   `bst.use.bysame` is set to `#0`, so a repeated author is printed in full
+   instead of being replaced by a dash. The suppression depends on the
+   preceding entry in the same bibliography, which is meaningless for
+   reference strings that are used one at a time.
+
+`generate_refs_bst.py` additionally post-processes `jecon` output for the
+`edition` field; see `scripts/README.md`.
 
 ## Collection ethics
 
